@@ -14,6 +14,7 @@
 		B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */; };
 		B8DFF074218096D900B1B4ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF073218096D900B1B4ED /* LoginViewController.swift */; };
 		B8DFF076218097DC00B1B4ED /* ExpertHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF075218097DC00B1B4ED /* ExpertHelpViewController.swift */; };
+		B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF0772180E07D00B1B4ED /* Community.storyboard */; };
 		B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14BC2177299D0019FAA0 /* AppDelegate.swift */; };
 		B8FD14C12177299D0019FAA0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8FD14C02177299D0019FAA0 /* Actions.sks */; };
 		B8FD14C32177299D0019FAA0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14C22177299D0019FAA0 /* GameScene.swift */; };
@@ -63,6 +64,7 @@
 		B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpertHelp.storyboard; sourceTree = "<group>"; };
 		B8DFF073218096D900B1B4ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B8DFF075218097DC00B1B4ED /* ExpertHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertHelpViewController.swift; sourceTree = "<group>"; };
+		B8DFF0772180E07D00B1B4ED /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		B8FD14B92177299D0019FAA0 /* QuitCatIsoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitCatIsoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FD14BC2177299D0019FAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8FD14C02177299D0019FAA0 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = ExpertHelp;
 			sourceTree = "<group>";
 		};
+		B8DFF0792180E08200B1B4ED /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				B8DFF0772180E07D00B1B4ED /* Community.storyboard */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
 		B8FD14B02177299D0019FAA0 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 				B8FD14C02177299D0019FAA0 /* Actions.sks */,
 				B8FD1505217C3A2D0019FAA0 /* Login */,
 				B8FD1500217C38970019FAA0 /* Game */,
+				B8DFF0792180E08200B1B4ED /* Community */,
 				B8DFF071217F51A500B1B4ED /* ExpertHelp */,
 				B8FD14C92177299F0019FAA0 /* Assets.xcassets */,
 				B8FD14F4217739D30019FAA0 /* sprites.atlas */,
@@ -354,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */,
 				B8FD14C82177299D0019FAA0 /* Main.storyboard in Resources */,
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
 				B8FD14CA2177299F0019FAA0 /* Assets.xcassets in Resources */,
