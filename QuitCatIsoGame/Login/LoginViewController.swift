@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
             }
             
             
-            // 取得登入者的token失敗
+            // 取得登入者的token失敗敗
             if FBSDKAccessToken.current() == nil {
                 print("Failed to get access token")
                 return
