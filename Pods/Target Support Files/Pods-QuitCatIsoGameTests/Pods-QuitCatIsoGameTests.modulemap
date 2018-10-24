@@ -1,0 +1,6 @@
+framework module Pods_QuitCatIsoGameTests {
+  umbrella header "Pods-QuitCatIsoGameTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
