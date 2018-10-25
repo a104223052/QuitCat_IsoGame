@@ -10,6 +10,10 @@
 		449EFFA6E093D896E512052F /* Pods_QuitCatIsoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8F68940DE27B4ECCA44691 /* Pods_QuitCatIsoGame.framework */; };
 		9953CB032180E73A00F6044A /* DBFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953CB022180E73A00F6044A /* DBFunc.swift */; };
 		996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996EB431217FA0FC009DC764 /* GoogleService-Info.plist */; };
+		B81034412181E47D0082D003 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81034402181E47D0082D003 /* Course.storyboard */; };
+		B81034442181E75B0082D003 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034432181E75B0082D003 /* CourseViewController.swift */; };
+		B81034462181F6050082D003 /* PraticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034452181F6050082D003 /* PraticeViewController.swift */; };
+		B81034482181F61F0082D003 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034472181F61F0082D003 /* MissionViewController.swift */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
 		B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */; };
 		B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */; };
@@ -61,6 +65,10 @@
 		62E3C21770FBD2981804E0F2 /* Pods_QuitCatIsoGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9953CB022180E73A00F6044A /* DBFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFunc.swift; sourceTree = "<group>"; };
 		996EB431217FA0FC009DC764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B81034402181E47D0082D003 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
+		B81034432181E75B0082D003 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		B81034452181F6050082D003 /* PraticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraticeViewController.swift; sourceTree = "<group>"; };
+		B81034472181F61F0082D003 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
 		B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpertHelp.storyboard; sourceTree = "<group>"; };
@@ -138,6 +146,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B81034422181E58B0082D003 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				B81034402181E47D0082D003 /* Course.storyboard */,
+				B81034432181E75B0082D003 /* CourseViewController.swift */,
+				B81034452181F6050082D003 /* PraticeViewController.swift */,
+				B81034472181F61F0082D003 /* MissionViewController.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
 		B8DFF06A217F3C5400B1B4ED /* SSRadioButtonController */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +215,7 @@
 				B8FD1500217C38970019FAA0 /* Game */,
 				B8DFF0792180E08200B1B4ED /* Community */,
 				B8DFF071217F51A500B1B4ED /* ExpertHelp */,
+				B81034422181E58B0082D003 /* Course */,
 				B8FD14C92177299F0019FAA0 /* Assets.xcassets */,
 				B8FD14F4217739D30019FAA0 /* sprites.atlas */,
 				B8FD14CB2177299F0019FAA0 /* LaunchScreen.storyboard */,
@@ -371,6 +391,7 @@
 				B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */,
 				B8FD14C82177299D0019FAA0 /* Main.storyboard in Resources */,
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
+				B81034412181E47D0082D003 /* Course.storyboard in Resources */,
 				B8FD14CA2177299F0019FAA0 /* Assets.xcassets in Resources */,
 				B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */,
 				B8FD1502217C39500019FAA0 /* Login.storyboard in Resources */,
@@ -553,15 +574,18 @@
 				B8DFF074218096D900B1B4ED /* LoginViewController.swift in Sources */,
 				9953CB032180E73A00F6044A /* DBFunc.swift in Sources */,
 				B8FD14C32177299D0019FAA0 /* GameScene.swift in Sources */,
+				B81034482181F61F0082D003 /* MissionViewController.swift in Sources */,
 				B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */,
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
 				B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */,
+				B81034442181E75B0082D003 /* CourseViewController.swift in Sources */,
 				B8FD1504217C3A250019FAA0 /* InformationSettingViewController.swift in Sources */,
 				B8DFF076218097DC00B1B4ED /* ExpertHelpViewController.swift in Sources */,
 				B8FD14C52177299D0019FAA0 /* GameViewController.swift in Sources */,
 				B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */,
+				B81034462181F6050082D003 /* PraticeViewController.swift in Sources */,
 				B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */,
 				B8FD14FD2179DAA60019FAA0 /* Global.swift in Sources */,
 			);
@@ -740,7 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K569772QX4;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -759,7 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K569772QX4;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
