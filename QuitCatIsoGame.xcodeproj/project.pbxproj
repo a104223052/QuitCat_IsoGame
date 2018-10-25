@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		449EFFA6E093D896E512052F /* Pods_QuitCatIsoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8F68940DE27B4ECCA44691 /* Pods_QuitCatIsoGame.framework */; };
+		4E2FD646218214C800D66222 /* DB_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2FD645218214C800D66222 /* DB_Data.swift */; };
 		9953CB032180E73A00F6044A /* DBFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953CB022180E73A00F6044A /* DBFunc.swift */; };
 		996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996EB431217FA0FC009DC764 /* GoogleService-Info.plist */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
@@ -58,6 +59,7 @@
 		1C75ADF2621C8D73B8398138 /* Pods_QuitCatIsoGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8F68940DE27B4ECCA44691 /* Pods_QuitCatIsoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA350FB3226F3B130A3115B /* Pods-QuitCatIsoGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitCatIsoGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitCatIsoGameUITests/Pods-QuitCatIsoGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E2FD645218214C800D66222 /* DB_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Data.swift; sourceTree = "<group>"; };
 		62E3C21770FBD2981804E0F2 /* Pods_QuitCatIsoGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9953CB022180E73A00F6044A /* DBFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFunc.swift; sourceTree = "<group>"; };
 		996EB431217FA0FC009DC764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				B8FD14CE2177299F0019FAA0 /* Info.plist */,
 				B8DFF06A217F3C5400B1B4ED /* SSRadioButtonController */,
 				9953CB022180E73A00F6044A /* DBFunc.swift */,
+				4E2FD645218214C800D66222 /* DB_Data.swift */,
 			);
 			path = QuitCatIsoGame;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				B8FD14C52177299D0019FAA0 /* GameViewController.swift in Sources */,
 				B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */,
 				B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */,
+				4E2FD646218214C800D66222 /* DB_Data.swift in Sources */,
 				B8FD14FD2179DAA60019FAA0 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
