@@ -161,5 +161,31 @@ class DBFunc {
             }
         }
     }
+
+    func setFunc(schema:String,collection:String,document:String,upload:Int){
+        
+        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+            [schema:upload]
+        ) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
+    
+    func setFunc(schema:String,collection:String,document:String,upload:String){
+        
+        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+            [schema:upload]
+        ) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
     
 }
