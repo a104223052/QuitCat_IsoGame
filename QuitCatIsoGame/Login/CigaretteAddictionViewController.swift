@@ -8,6 +8,12 @@
 
 import UIKit
 
+/***
+ database
+ 1. 完成測驗上傳資料庫
+ */
+
+
 class CigaretteAddictionViewController: UIViewController, SSRadioButtonControllerDelegate {
     
     func didSelectButton(selectedButton: UIButton?) {

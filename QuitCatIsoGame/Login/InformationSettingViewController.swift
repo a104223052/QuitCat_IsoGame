@@ -9,6 +9,11 @@
 import UIKit
 import Photos
 
+/***
+ database
+ 1. 大頭照編輯完需上傳
+ */
+
 class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate {
 
     @IBOutlet weak var PersonalPhotoImage: UIButton!
