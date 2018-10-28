@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KHM-FI-NQ2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="Y0H-z5-ZDS">
+            <objects>
+                <viewController id="KHM-FI-NQ2" customClass="SettingViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMo-Ux-y4y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SettingBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="IEY-rr-LqY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8i-mm-rkJ">
+                                <rect key="frame" x="117.5" y="70" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="dyO-yR-tsd"/>
+                                    <constraint firstAttribute="width" constant="140" id="vpg-ue-feY"/>
+                                </constraints>
+                                <state key="normal" title="編輯頭像">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setHeaderImage:" destination="KHM-FI-NQ2" eventType="touchUpInside" id="B7t-z7-Nt6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID : XXXXXXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9n-tx-Vka">
+                                <rect key="frame" x="122.5" y="225" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.47058823529999999" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-Ke-7Eb">
+                                <rect key="frame" x="0.0" y="256" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="B53-Y1-iUD"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="KHM-FI-NQ2" id="uNN-lq-eLE"/>
+                                    <outlet property="delegate" destination="KHM-FI-NQ2" id="x7R-fh-Q4A"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64d-up-rmh">
+                                <rect key="frame" x="103.5" y="614" width="168" height="33"/>
+                                <state key="normal" image="登出"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6OO-Ke-7Eb" firstAttribute="trailing" secondItem="Cr6-Wl-1ox" secondAttribute="trailing" id="1nM-kq-GwK"/>
+                            <constraint firstItem="IEY-rr-LqY" firstAttribute="top" secondItem="bMo-Ux-y4y" secondAttribute="top" id="7jd-qR-IUt"/>
+                            <constraint firstItem="IEY-rr-LqY" firstAttribute="leading" secondItem="Cr6-Wl-1ox" secondAttribute="leading" id="AtM-Qw-aLU"/>
+                            <constraint firstItem="j8i-mm-rkJ" firstAttribute="centerX" secondItem="bMo-Ux-y4y" secondAttribute="centerX" id="EtW-Fo-EmO"/>
+                            <constraint firstItem="IEY-rr-LqY" firstAttribute="trailing" secondItem="Cr6-Wl-1ox" secondAttribute="trailing" id="GHd-ah-wUQ"/>
+                            <constraint firstItem="6OO-Ke-7Eb" firstAttribute="leading" secondItem="Cr6-Wl-1ox" secondAttribute="leading" id="KZd-Vo-sFZ"/>
+                            <constraint firstItem="j8i-mm-rkJ" firstAttribute="top" secondItem="Cr6-Wl-1ox" secondAttribute="top" constant="50" id="Ny7-vL-Sxb"/>
+                            <constraint firstItem="6OO-Ke-7Eb" firstAttribute="top" secondItem="f9n-tx-Vka" secondAttribute="bottom" constant="10" id="RpO-oJ-lxR"/>
+                            <constraint firstItem="Cr6-Wl-1ox" firstAttribute="bottom" secondItem="64d-up-rmh" secondAttribute="bottom" constant="20" id="Xm3-92-KR2"/>
+                            <constraint firstItem="IEY-rr-LqY" firstAttribute="bottom" secondItem="bMo-Ux-y4y" secondAttribute="bottom" id="iwm-fJ-mTf"/>
+                            <constraint firstItem="64d-up-rmh" firstAttribute="centerX" secondItem="bMo-Ux-y4y" secondAttribute="centerX" id="kMn-p5-KWD"/>
+                            <constraint firstItem="f9n-tx-Vka" firstAttribute="centerX" secondItem="bMo-Ux-y4y" secondAttribute="centerX" id="oAj-YM-RuD"/>
+                            <constraint firstItem="f9n-tx-Vka" firstAttribute="top" secondItem="j8i-mm-rkJ" secondAttribute="bottom" constant="15" id="uvb-8x-aPM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cr6-Wl-1ox"/>
+                    </view>
+                    <connections>
+                        <outlet property="SettingtableView" destination="6OO-Ke-7Eb" id="svS-U3-tQE"/>
+                        <outlet property="datePickerView" destination="CiK-AS-C3Z" id="sj9-iW-yy9"/>
+                        <outlet property="personalPhotoImage" destination="j8i-mm-rkJ" id="Bmh-Eq-HdR"/>
+                        <outlet property="timeDatePicker" destination="6wr-Vu-RN0" id="H0o-F7-4sN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ae-yO-w9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="CiK-AS-C3Z">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6wr-Vu-RN0">
+                            <rect key="frame" x="0.0" y="15" width="240" height="98"/>
+                            <date key="date" timeIntervalSinceReferenceDate="562430697.60763502">
+                                <!--2018-10-28 14:44:57 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="6wr-Vu-RN0" firstAttribute="top" secondItem="0Jd-Wv-7Cq" secondAttribute="top" constant="15" id="KLt-io-wHn"/>
+                        <constraint firstAttribute="bottom" secondItem="6wr-Vu-RN0" secondAttribute="bottom" constant="15" id="YCh-pM-RXK"/>
+                        <constraint firstItem="6wr-Vu-RN0" firstAttribute="leading" secondItem="0Jd-Wv-7Cq" secondAttribute="leading" id="azS-nk-Qa4"/>
+                        <constraint firstAttribute="trailing" secondItem="6wr-Vu-RN0" secondAttribute="trailing" id="dlR-UD-7wK"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="0Jd-Wv-7Cq"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-308" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SettingBackgroundImage" width="375" height="722"/>
+        <image name="登出" width="168" height="33"/>
+    </resources>
+</document>

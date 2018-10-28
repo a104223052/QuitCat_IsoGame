@@ -24,7 +24,7 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
         }
         // Do any additional setup after loading the view.
     }
-    ///////
+    
     @IBAction func showSFSafari(_ sender: Any) {
         let url = URL(string: "https://line.me/R/ti/p/6JUjC6n5Zg")!
         if #available(iOS 9.0, *) { //確保是在 iOS9 之後的版本執行

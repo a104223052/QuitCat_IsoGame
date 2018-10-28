@@ -15,6 +15,8 @@
 		B81034442181E75B0082D003 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034432181E75B0082D003 /* CourseViewController.swift */; };
 		B81034462181F6050082D003 /* PraticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034452181F6050082D003 /* PraticeViewController.swift */; };
 		B81034482181F61F0082D003 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034472181F61F0082D003 /* MissionViewController.swift */; };
+		B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B811F5AE2185C94B0099D148 /* Setting.storyboard */; };
+		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
 		B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */; };
 		B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */; };
@@ -71,6 +73,8 @@
 		B81034432181E75B0082D003 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		B81034452181F6050082D003 /* PraticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraticeViewController.swift; sourceTree = "<group>"; };
 		B81034472181F61F0082D003 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
+		B811F5AE2185C94B0099D148 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		B811F5B12185C9C10099D148 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpertHelp.storyboard; sourceTree = "<group>"; };
@@ -159,6 +163,15 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
+		B811F5B02185C99B0099D148 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B811F5AE2185C94B0099D148 /* Setting.storyboard */,
+				B811F5B12185C9C10099D148 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		B8DFF06A217F3C5400B1B4ED /* SSRadioButtonController */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +230,7 @@
 				B8FD1500217C38970019FAA0 /* Game */,
 				B8DFF0792180E08200B1B4ED /* Community */,
 				B8DFF071217F51A500B1B4ED /* ExpertHelp */,
+				B811F5B02185C99B0099D148 /* Setting */,
 				B81034422181E58B0082D003 /* Course */,
 				B8FD14C92177299F0019FAA0 /* Assets.xcassets */,
 				B8FD14F4217739D30019FAA0 /* sprites.atlas */,
@@ -400,6 +414,7 @@
 				B8FD1502217C39500019FAA0 /* Login.storyboard in Resources */,
 				B8FD14CD2177299F0019FAA0 /* LaunchScreen.storyboard in Resources */,
 				B8FD14F5217739D30019FAA0 /* sprites.atlas in Resources */,
+				B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */,
 				B8FD14C12177299D0019FAA0 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +605,7 @@
 				B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */,
 				B81034462181F6050082D003 /* PraticeViewController.swift in Sources */,
 				B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */,
+				B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */,
 				4E2FD646218214C800D66222 /* DB_Data.swift in Sources */,
 				B8FD14FD2179DAA60019FAA0 /* Global.swift in Sources */,
 			);
