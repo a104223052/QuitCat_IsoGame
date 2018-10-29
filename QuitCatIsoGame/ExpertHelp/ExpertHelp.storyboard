@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mh6-5U-kls">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mh6-5U-kls">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,84 +14,227 @@
             <objects>
                 <viewController id="Mh6-5U-kls" customClass="ExpertHelpViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OVb-ig-zIl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-9e-Z9W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="綜合資訊_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-9e-Z9W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-87-GZN">
-                                <rect key="frame" x="23" y="76" width="328" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="戒菸專線" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1G-Gm-jHJ">
-                                        <rect key="frame" x="127" y="53" width="70" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6o-4G-yzF">
-                                        <rect key="frame" x="26" y="38" width="53" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="戒菸專線"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-Hp-u2Z">
-                                <rect key="frame" x="22" y="30" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-Hp-u2Z">
+                                <rect key="frame" x="22" y="54" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-eK-4Gk">
-                                <rect key="frame" x="23" y="223" width="328" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cho-sa-iEL">
+                                <rect key="frame" x="8" y="92" width="359" height="678"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="諮詢輔導" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaG-tD-JSq">
-                                        <rect key="frame" x="127" y="53" width="70" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-R8-xQL">
-                                        <rect key="frame" x="26" y="38" width="53" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="戒菸Line@"/>
-                                        <connections>
-                                            <action selector="showSFSafari:" destination="Mh6-5U-kls" eventType="touchUpInside" id="ok6-vz-drB"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-87-GZN">
+                                        <rect key="frame" x="15" y="144" width="329" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="填寫資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1G-Gm-jHJ">
+                                                <rect key="frame" x="195" y="37" width="70" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BO4-oV-Xr9">
+                                                <rect key="frame" x="8" y="19" width="90" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-8e-MWi">
+                                                        <rect key="frame" x="20" y="8" width="50" height="50"/>
+                                                        <state key="normal" image="戒菸專線"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戒菸專線" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-LT-nBl">
+                                                        <rect key="frame" x="10" y="66" width="70" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="YU4-8e-MWi" firstAttribute="centerX" secondItem="BO4-oV-Xr9" secondAttribute="centerX" id="80W-X5-YFb"/>
+                                                    <constraint firstAttribute="height" constant="90" id="MQz-NR-Vvy"/>
+                                                    <constraint firstItem="YU4-8e-MWi" firstAttribute="top" secondItem="BO4-oV-Xr9" secondAttribute="top" constant="8" id="OBO-bn-zSd"/>
+                                                    <constraint firstItem="1Ux-LT-nBl" firstAttribute="centerX" secondItem="YU4-8e-MWi" secondAttribute="centerX" id="cHG-4C-3Ey"/>
+                                                    <constraint firstItem="1Ux-LT-nBl" firstAttribute="top" secondItem="YU4-8e-MWi" secondAttribute="bottom" constant="8" id="nYd-qO-Gzb"/>
+                                                    <constraint firstAttribute="width" constant="90" id="zYB-ei-tJY"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="讓我們解決你的煩惱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb3-Lz-NYU">
+                                                <rect key="frame" x="145" y="66" width="156" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="BO4-oV-Xr9" firstAttribute="leading" secondItem="y5f-87-GZN" secondAttribute="leading" constant="8" id="INa-j7-8F4"/>
+                                            <constraint firstItem="BO4-oV-Xr9" firstAttribute="centerY" secondItem="y5f-87-GZN" secondAttribute="centerY" id="jqa-Lj-XZC"/>
+                                            <constraint firstAttribute="width" secondItem="y5f-87-GZN" secondAttribute="height" multiplier="329:128" id="oTe-6w-V80"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snr-f1-MGL">
+                                        <rect key="frame" x="15" y="8" width="329" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="了解最近" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0E-7Y-xt7">
+                                                <rect key="frame" x="187" y="37" width="70" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="的比賽、活動、展覽吧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcG-rx-EEV">
+                                                <rect key="frame" x="135" y="66" width="174" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4x-xS-cmc">
+                                                <rect key="frame" x="8" y="19" width="90" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm1-FZ-TS3">
+                                                        <rect key="frame" x="17.666666666666664" y="8" width="54.999999999999993" height="54"/>
+                                                        <state key="normal" image="活動"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活動" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcC-se-0rR">
+                                                        <rect key="frame" x="27.666666666666664" y="70" width="35" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Fm1-FZ-TS3" firstAttribute="centerX" secondItem="U4x-xS-cmc" secondAttribute="centerX" id="6K7-se-1az"/>
+                                                    <constraint firstAttribute="width" constant="90" id="7ip-hS-yMn"/>
+                                                    <constraint firstAttribute="height" constant="90" id="FVk-ad-2fX"/>
+                                                    <constraint firstItem="Fm1-FZ-TS3" firstAttribute="top" secondItem="U4x-xS-cmc" secondAttribute="top" constant="8" id="cJ0-ye-u9p"/>
+                                                    <constraint firstItem="mcC-se-0rR" firstAttribute="top" secondItem="Fm1-FZ-TS3" secondAttribute="bottom" constant="8" id="jsJ-1N-TvQ"/>
+                                                    <constraint firstItem="mcC-se-0rR" firstAttribute="centerX" secondItem="Fm1-FZ-TS3" secondAttribute="centerX" id="m14-08-jKK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="U4x-xS-cmc" firstAttribute="leading" secondItem="snr-f1-MGL" secondAttribute="leading" constant="8" id="jUD-6g-zgu"/>
+                                            <constraint firstAttribute="width" secondItem="snr-f1-MGL" secondAttribute="height" multiplier="329:128" id="pwN-EQ-htp"/>
+                                            <constraint firstItem="U4x-xS-cmc" firstAttribute="centerY" secondItem="snr-f1-MGL" secondAttribute="centerY" id="zr1-jX-4b2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-eK-4Gk">
+                                        <rect key="frame" x="15" y="280" width="329" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-da-Uwi">
+                                                <rect key="frame" x="8" y="19" width="90" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nr-sT-kW3">
+                                                        <rect key="frame" x="20" y="8" width="50" height="50"/>
+                                                        <state key="normal" image="戒菸Line@"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戒菸LINE@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtO-7M-HVb">
+                                                        <rect key="frame" x="2" y="66" width="86" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="7Nr-sT-kW3" firstAttribute="top" secondItem="AFB-da-Uwi" secondAttribute="top" constant="8" id="6f5-3r-nSK"/>
+                                                    <constraint firstAttribute="height" constant="90" id="LzY-lR-BK3"/>
+                                                    <constraint firstAttribute="width" constant="90" id="W85-Ho-NMQ"/>
+                                                    <constraint firstItem="7Nr-sT-kW3" firstAttribute="centerX" secondItem="AFB-da-Uwi" secondAttribute="centerX" id="YDH-xj-zl3"/>
+                                                    <constraint firstItem="EtO-7M-HVb" firstAttribute="centerX" secondItem="7Nr-sT-kW3" secondAttribute="centerX" id="YTl-79-eR4"/>
+                                                    <constraint firstItem="EtO-7M-HVb" firstAttribute="top" secondItem="7Nr-sT-kW3" secondAttribute="bottom" constant="8" id="dl0-F5-Xje"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="利用LINE@回答你的問題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaG-tD-JSq">
+                                                <rect key="frame" x="122" y="54" width="190" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="AFB-da-Uwi" firstAttribute="leading" secondItem="OVz-eK-4Gk" secondAttribute="leading" constant="8" id="0c2-Nu-YgM"/>
+                                            <constraint firstItem="AFB-da-Uwi" firstAttribute="centerY" secondItem="OVz-eK-4Gk" secondAttribute="centerY" id="J0a-So-gf0"/>
+                                            <constraint firstAttribute="width" secondItem="OVz-eK-4Gk" secondAttribute="height" multiplier="329:128" id="cF2-Em-aGR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-86-bAo">
+                                        <rect key="frame" x="15" y="416" width="329" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0P-Ue-K4m">
+                                                <rect key="frame" x="8" y="19" width="90" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wli-4Y-5vI">
+                                                        <rect key="frame" x="19" y="8" width="52" height="51"/>
+                                                        <state key="normal" image="查詢醫療機構"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="醫療機構" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffH-vj-W02">
+                                                        <rect key="frame" x="10" y="67" width="70" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ffH-vj-W02" firstAttribute="top" secondItem="wli-4Y-5vI" secondAttribute="bottom" constant="8" id="2Gj-Y3-2u7"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Lcy-Ev-cdo"/>
+                                                    <constraint firstItem="ffH-vj-W02" firstAttribute="centerX" secondItem="wli-4Y-5vI" secondAttribute="centerX" id="MMH-6I-kYc"/>
+                                                    <constraint firstItem="wli-4Y-5vI" firstAttribute="top" secondItem="R0P-Ue-K4m" secondAttribute="top" constant="8" id="YzB-VX-4C0"/>
+                                                    <constraint firstItem="wli-4Y-5vI" firstAttribute="centerX" secondItem="R0P-Ue-K4m" secondAttribute="centerX" id="fgz-kH-L3U"/>
+                                                    <constraint firstAttribute="height" constant="90" id="s9N-TE-kMo"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="查詢各縣市醫療機構" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmp-5s-xFa">
+                                                <rect key="frame" x="140" y="54" width="156" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xF4-86-bAo" secondAttribute="height" multiplier="329:128" id="7EN-Ci-pwN"/>
+                                            <constraint firstItem="R0P-Ue-K4m" firstAttribute="centerY" secondItem="xF4-86-bAo" secondAttribute="centerY" id="WEL-hC-6Lg"/>
+                                            <constraint firstItem="R0P-Ue-K4m" firstAttribute="leading" secondItem="xF4-86-bAo" secondAttribute="leading" constant="8" id="tsh-TU-kQg"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-86-bAo">
-                                <rect key="frame" x="23" y="369" width="328" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="查詢醫療機構" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmp-5s-xFa">
-                                        <rect key="frame" x="127" y="53" width="104" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psV-9N-utj">
-                                        <rect key="frame" x="24" y="37" width="56" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="查詢醫療機構"/>
-                                        <connections>
-                                            <segue destination="We5-gA-5yl" kind="show" id="Gy2-hu-2JD"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="snr-f1-MGL" firstAttribute="leading" secondItem="cho-sa-iEL" secondAttribute="leading" constant="15" id="2PB-2i-bCu"/>
+                                    <constraint firstAttribute="trailing" secondItem="y5f-87-GZN" secondAttribute="trailing" constant="15" id="39A-gI-lwF"/>
+                                    <constraint firstItem="y5f-87-GZN" firstAttribute="top" secondItem="snr-f1-MGL" secondAttribute="bottom" constant="8" id="4BF-V2-PVs"/>
+                                    <constraint firstItem="xF4-86-bAo" firstAttribute="leading" secondItem="cho-sa-iEL" secondAttribute="leading" constant="15" id="577-QO-gaG"/>
+                                    <constraint firstItem="xF4-86-bAo" firstAttribute="top" secondItem="OVz-eK-4Gk" secondAttribute="bottom" constant="8" id="E2W-rm-IJX"/>
+                                    <constraint firstItem="OVz-eK-4Gk" firstAttribute="leading" secondItem="cho-sa-iEL" secondAttribute="leading" constant="15" id="LJk-he-je4"/>
+                                    <constraint firstAttribute="trailing" secondItem="snr-f1-MGL" secondAttribute="trailing" constant="15" id="iSw-Tu-dua"/>
+                                    <constraint firstItem="y5f-87-GZN" firstAttribute="leading" secondItem="cho-sa-iEL" secondAttribute="leading" constant="15" id="mpz-pJ-NMa"/>
+                                    <constraint firstAttribute="trailing" secondItem="OVz-eK-4Gk" secondAttribute="trailing" constant="15" id="nSC-yg-eYK"/>
+                                    <constraint firstItem="snr-f1-MGL" firstAttribute="top" secondItem="cho-sa-iEL" secondAttribute="top" constant="8" id="tYn-at-bzl"/>
+                                    <constraint firstItem="OVz-eK-4Gk" firstAttribute="top" secondItem="y5f-87-GZN" secondAttribute="bottom" constant="8" id="wLX-oA-Iuz"/>
+                                    <constraint firstAttribute="trailing" secondItem="xF4-86-bAo" secondAttribute="trailing" constant="15" id="wT3-DV-3VU"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7il-7N-PG6" firstAttribute="bottom" secondItem="cho-sa-iEL" secondAttribute="bottom" constant="8" id="4B7-mQ-dg0"/>
+                            <constraint firstItem="7il-7N-PG6" firstAttribute="trailing" secondItem="cho-sa-iEL" secondAttribute="trailing" constant="8" id="7Ml-qP-xRx"/>
+                            <constraint firstItem="cho-sa-iEL" firstAttribute="top" secondItem="PNQ-Hp-u2Z" secondAttribute="bottom" constant="8" id="Rb1-hr-7rX"/>
+                            <constraint firstItem="PNQ-Hp-u2Z" firstAttribute="top" secondItem="7il-7N-PG6" secondAttribute="top" constant="10" id="X28-ka-0HR"/>
                             <constraint firstItem="FrF-9e-Z9W" firstAttribute="bottom" secondItem="OVb-ig-zIl" secondAttribute="bottom" id="Ynf-gV-bZa"/>
+                            <constraint firstItem="PNQ-Hp-u2Z" firstAttribute="leading" secondItem="7il-7N-PG6" secondAttribute="leading" constant="22" id="euw-fY-gfP"/>
+                            <constraint firstItem="cho-sa-iEL" firstAttribute="leading" secondItem="7il-7N-PG6" secondAttribute="leading" constant="8" id="jJb-j5-b8O"/>
                             <constraint firstItem="FrF-9e-Z9W" firstAttribute="top" secondItem="OVb-ig-zIl" secondAttribute="top" id="pkH-cW-HxC"/>
                             <constraint firstItem="FrF-9e-Z9W" firstAttribute="trailing" secondItem="7il-7N-PG6" secondAttribute="trailing" id="qPT-cJ-vEW"/>
                             <constraint firstItem="FrF-9e-Z9W" firstAttribute="leading" secondItem="7il-7N-PG6" secondAttribute="leading" id="soH-5p-xRC"/>
@@ -100,8 +243,9 @@
                     </view>
                     <connections>
                         <outletCollection property="OptionViewCollection" destination="y5f-87-GZN" collectionClass="NSMutableArray" id="Xke-Fh-sqd"/>
-                        <outletCollection property="OptionViewCollection" destination="OVz-eK-4Gk" collectionClass="NSMutableArray" id="o9x-Kj-7hh"/>
                         <outletCollection property="OptionViewCollection" destination="xF4-86-bAo" collectionClass="NSMutableArray" id="nLz-fn-Bb1"/>
+                        <outletCollection property="OptionViewCollection" destination="OVz-eK-4Gk" collectionClass="NSMutableArray" id="o9x-Kj-7hh"/>
+                        <outletCollection property="OptionViewCollection" destination="snr-f1-MGL" collectionClass="NSMutableArray" id="ANP-X3-FK8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nz-Hr-r1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,7 +257,7 @@
             <objects>
                 <viewController id="Dgh-kN-VBI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tfv-ab-qne">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="戒菸專線-填寫資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oea-0W-1Lw">
@@ -137,7 +281,7 @@
             <objects>
                 <viewController id="We5-gA-5yl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="caO-Wf-Xy5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uic-d7-98K">
@@ -163,9 +307,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="375" height="667"/>
-        <image name="戒菸Line@" width="53" height="53"/>
-        <image name="戒菸專線" width="53" height="53"/>
-        <image name="查詢醫療機構" width="56" height="54"/>
+        <image name="戒菸Line@" width="50" height="50"/>
+        <image name="戒菸專線" width="50" height="50"/>
+        <image name="查詢醫療機構" width="52" height="51"/>
+        <image name="活動" width="55" height="54"/>
+        <image name="綜合資訊_bg" width="187.66667175292969" height="333.66665649414062"/>
     </resources>
 </document>

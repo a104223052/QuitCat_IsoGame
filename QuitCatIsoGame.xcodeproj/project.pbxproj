@@ -17,6 +17,7 @@
 		B81034482181F61F0082D003 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81034472181F61F0082D003 /* MissionViewController.swift */; };
 		B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B811F5AE2185C94B0099D148 /* Setting.storyboard */; };
 		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
+		B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
 		B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */; };
 		B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */; };
@@ -75,6 +76,7 @@
 		B81034472181F61F0082D003 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
 		B811F5AE2185C94B0099D148 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B811F5B12185C9C10099D148 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpertHelp.storyboard; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DFF0772180E07D00B1B4ED /* Community.storyboard */,
+				B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -229,9 +232,9 @@
 				B8FD1505217C3A2D0019FAA0 /* Login */,
 				B8FD1500217C38970019FAA0 /* Game */,
 				B8DFF0792180E08200B1B4ED /* Community */,
+				B81034422181E58B0082D003 /* Course */,
 				B8DFF071217F51A500B1B4ED /* ExpertHelp */,
 				B811F5B02185C99B0099D148 /* Setting */,
-				B81034422181E58B0082D003 /* Course */,
 				B8FD14C92177299F0019FAA0 /* Assets.xcassets */,
 				B8FD14F4217739D30019FAA0 /* sprites.atlas */,
 				B8FD14CB2177299F0019FAA0 /* LaunchScreen.storyboard */,
@@ -597,6 +600,7 @@
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
+				B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */,
 				B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */,
 				B81034442181E75B0082D003 /* CourseViewController.swift in Sources */,
 				B8FD1504217C3A250019FAA0 /* InformationSettingViewController.swift in Sources */,
