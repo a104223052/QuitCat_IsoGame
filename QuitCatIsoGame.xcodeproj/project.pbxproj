@@ -19,7 +19,8 @@
 		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
 		B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BB1462188600800A6C1E6 /* EditContactViewController.swift */; };
 		B84C18702188D83100E08A47 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84C186F2188D83100E08A47 /* Game.storyboard */; };
-		B84C18722188DC7100E08A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18712188DC7100E08A47 /* GameViewController.swift */; };
+		B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18712188DC7100E08A47 /* TestGameViewController.swift */; };
+		B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18742188DE5500E08A47 /* GameViewController.swift */; };
 		B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
 		B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */; };
@@ -81,7 +82,8 @@
 		B81BB1462188600800A6C1E6 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 		B84C186E2188D18600E08A47 /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
 		B84C186F2188D83100E08A47 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
-		B84C18712188DC7100E08A47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B84C18712188DC7100E08A47 /* TestGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameViewController.swift; sourceTree = "<group>"; };
+		B84C18742188DE5500E08A47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
@@ -177,6 +179,15 @@
 				B811F5B12185C9C10099D148 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		B84C18732188DDF100E08A47 /* TestGame */ = {
+			isa = PBXGroup;
+			children = (
+				B84C186F2188D83100E08A47 /* Game.storyboard */,
+				B84C18712188DC7100E08A47 /* TestGameViewController.swift */,
+			);
+			path = TestGame;
 			sourceTree = "<group>";
 		};
 		B8DFF06A217F3C5400B1B4ED /* SSRadioButtonController */ = {
@@ -276,10 +287,10 @@
 			children = (
 				B8FD14C22177299D0019FAA0 /* GameScene.swift */,
 				B8FD14FA2179D9CE0019FAA0 /* PathFinder.swift */,
+				B84C18742188DE5500E08A47 /* GameViewController.swift */,
 				B8FD14FC2179DAA60019FAA0 /* Global.swift */,
 				B8FD14F62178AFB20019FAA0 /* Texture.swift */,
-				B84C186F2188D83100E08A47 /* Game.storyboard */,
-				B84C18712188DC7100E08A47 /* GameViewController.swift */,
+				B84C18732188DDF100E08A47 /* TestGame */,
 				B8FD14F82178B7FF0019FAA0 /* Character.swift */,
 				B8FD14C62177299D0019FAA0 /* Main.storyboard */,
 			);
@@ -608,7 +619,7 @@
 				B81034482181F61F0082D003 /* MissionViewController.swift in Sources */,
 				B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */,
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
-				B84C18722188DC7100E08A47 /* GameViewController.swift in Sources */,
+				B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
 				B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */,
@@ -621,6 +632,7 @@
 				B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */,
 				B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */,
 				4E2FD646218214C800D66222 /* DB_Data.swift in Sources */,
+				B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */,
 				B8FD14FD2179DAA60019FAA0 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

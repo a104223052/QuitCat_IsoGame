@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test Game View Controller-->
         <scene sceneID="Z84-Wk-n5X">
             <objects>
-                <viewController id="Ju6-rt-JIy" sceneMemberID="viewController">
+                <viewController id="Ju6-rt-JIy" customClass="TestGameViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="htb-21-o4C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
