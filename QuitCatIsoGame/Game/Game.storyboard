@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ju6-rt-JIy">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Z84-Wk-n5X">
+            <objects>
+                <viewController id="Ju6-rt-JIy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="htb-21-o4C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景圖" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-g3-eNc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d60-7R-xxY">
+                                <rect key="frame" x="0.0" y="44" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="tio-5c-Ps5"/>
+                                    <constraint firstAttribute="width" constant="70" id="uwr-hw-g75"/>
+                                </constraints>
+                                <state key="normal" image="FISH"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJt-NW-07P">
+                                <rect key="frame" x="0.0" y="688" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="frQ-x7-eaI"/>
+                                    <constraint firstAttribute="height" constant="90" id="jj4-iG-yQ1"/>
+                                </constraints>
+                                <state key="normal" image="feed.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-4f-97O">
+                                <rect key="frame" x="231" y="269" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="電話.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-X9-drH">
+                                <rect key="frame" x="171" y="394" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="飼料.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-vY-LY7">
+                                <rect key="frame" x="102" y="472" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="桌子.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5i-H9-lgc">
+                                <rect key="frame" x="123" y="362" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="跳台.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glm-Th-Yd9">
+                                <rect key="frame" x="247" y="417" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="書櫃.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQi-hn-13g">
+                                <rect key="frame" x="20" y="375" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="電視.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-hg-p21">
+                                <rect key="frame" x="71" y="237" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="日曆.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-cQ-tXT">
+                                <rect key="frame" x="216" y="526" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="沙發.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-wx-JTx">
+                                <rect key="frame" x="305" y="44" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1Cj-W9-zKL"/>
+                                    <constraint firstAttribute="height" constant="70" id="PCB-NV-pD2"/>
+                                </constraints>
+                                <state key="normal" image="CART"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d60-7R-xxY" firstAttribute="leading" secondItem="igs-sO-Rpl" secondAttribute="leading" id="94P-bT-Vhi"/>
+                            <constraint firstItem="tJt-NW-07P" firstAttribute="leading" secondItem="igs-sO-Rpl" secondAttribute="leading" id="Jy0-J0-kdi"/>
+                            <constraint firstItem="qRZ-g3-eNc" firstAttribute="bottom" secondItem="htb-21-o4C" secondAttribute="bottom" id="STp-nI-uDM"/>
+                            <constraint firstItem="qRZ-g3-eNc" firstAttribute="trailing" secondItem="igs-sO-Rpl" secondAttribute="trailing" id="cQe-ob-eKa"/>
+                            <constraint firstItem="dWd-wx-JTx" firstAttribute="top" secondItem="igs-sO-Rpl" secondAttribute="top" id="gx6-XP-JIo"/>
+                            <constraint firstItem="d60-7R-xxY" firstAttribute="top" secondItem="igs-sO-Rpl" secondAttribute="top" id="iyA-Ip-7u3"/>
+                            <constraint firstItem="qRZ-g3-eNc" firstAttribute="leading" secondItem="igs-sO-Rpl" secondAttribute="leading" id="jQf-dR-JrN"/>
+                            <constraint firstItem="dWd-wx-JTx" firstAttribute="trailing" secondItem="igs-sO-Rpl" secondAttribute="trailing" id="mF5-If-ZLT"/>
+                            <constraint firstItem="qRZ-g3-eNc" firstAttribute="top" secondItem="htb-21-o4C" secondAttribute="top" id="rXR-OP-Qbb"/>
+                            <constraint firstItem="tJt-NW-07P" firstAttribute="bottom" secondItem="igs-sO-Rpl" secondAttribute="bottom" id="tUF-dk-5A4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="igs-sO-Rpl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIs-NM-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.59999999999999" y="143.47826086956522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CART" width="200" height="200"/>
+        <image name="FISH" width="200" height="200"/>
+        <image name="feed.png" width="200" height="200"/>
+        <image name="日曆.png" width="128" height="128"/>
+        <image name="書櫃.png" width="128" height="128"/>
+        <image name="桌子.png" width="128" height="128"/>
+        <image name="沙發.png" width="128" height="128"/>
+        <image name="背景圖" width="375" height="667"/>
+        <image name="跳台.png" width="128" height="128"/>
+        <image name="電視.png" width="128" height="128"/>
+        <image name="電話.png" width="128" height="128"/>
+        <image name="飼料.png" width="128" height="128"/>
+    </resources>
+</document>

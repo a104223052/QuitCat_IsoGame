@@ -103,6 +103,8 @@ class GameScene: SKScene {
     let nthFrame = 6
     var nthFrameCount = 0
     
+    var background = SKSpriteNode(imageNamed: "背景圖.png")
+    
     //4
     override init(size: CGSize) {
         
@@ -125,6 +127,8 @@ class GameScene: SKScene {
     //5
     override func didMove(to: SKView) {
         
+        background.position = CGPoint(x: 0, y: 0)
+        addChild(background)
         let deviceScale = self.size.width/667
         
         view2D.position = CGPoint(x:-self.size.width*0.45, y:self.size.height*0.17)

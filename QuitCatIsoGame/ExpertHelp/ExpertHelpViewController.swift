@@ -22,11 +22,28 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
             view.layer.shadowRadius = 5
             view.layer.shadowColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0).cgColor
             view.layer.cornerRadius = 5
+            
+            view.isUserInteractionEnabled = true
+            
+            
+            switch view.tag
+            {
+            case 0:
+                break
+            case 1:
+                break
+            case 2:
+                break
+            case 3:
+                break
+            default:
+                break
+            }
         }
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func showSFSafari(_ sender: Any) {
+    @objc func showSFSafari() {
         let url = URL(string: "https://line.me/R/ti/p/6JUjC6n5Zg")!
         if #available(iOS 9.0, *) { //確保是在 iOS9 之後的版本執行
             let safariVC = SFSafariViewController(url: url, entersReaderIfAvailable: false)
@@ -36,7 +53,47 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
             UIApplication.shared.openURL(url)
         }
     }
-
+    @IBAction func showLINE(_ sender: Any) {
+        let url = URL(string: "https://line.me/R/ti/p/6JUjC6n5Zg")!
+        if #available(iOS 9.0, *) { //確保是在 iOS9 之後的版本執行
+            let safariVC = SFSafariViewController(url: url, entersReaderIfAvailable: false)
+            safariVC.delegate = self
+            self.present(safariVC, animated: true, completion: nil)
+        } else { // iOS 8 以下的話跳出 App 使用 Safari 開啟
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    @IBAction func showQuittingLine(_ sender: Any) {
+        // 建立一個提示框
+        let alertController = UIAlertController(
+            title: "填寫資料",
+            message: "將由『國民健康署-諮商中心』在您方便的時間聯絡您",
+            preferredStyle: .alert)
+        
+        // 建立[確認]按鈕
+        let okAction = UIAlertAction(
+            title: "同意並填寫資料",
+            style: .default,
+            handler: {
+                (action: UIAlertAction!) -> Void in
+                print("按下確認後，閉包裡的動作")
+        })
+        alertController.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(
+            title: "再想想",
+            style: .cancel,
+            handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // 顯示提示框
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

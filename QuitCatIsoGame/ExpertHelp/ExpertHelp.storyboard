@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mh6-5U-kls">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dgh-kN-VBI">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cho-sa-iEL">
                                 <rect key="frame" x="8" y="92" width="359" height="678"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-87-GZN">
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-87-GZN">
                                         <rect key="frame" x="15" y="144" width="329" height="128"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="填寫資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1G-Gm-jHJ">
@@ -43,6 +43,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-8e-MWi">
                                                         <rect key="frame" x="20" y="8" width="50" height="50"/>
                                                         <state key="normal" image="戒菸專線"/>
+                                                        <connections>
+                                                            <action selector="showQuittingLine:" destination="Mh6-5U-kls" eventType="touchUpInside" id="Aug-6e-TDO"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戒菸專線" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-LT-nBl">
                                                         <rect key="frame" x="10" y="66" width="70" height="21"/>
@@ -125,7 +128,7 @@
                                             <constraint firstItem="U4x-xS-cmc" firstAttribute="centerY" secondItem="snr-f1-MGL" secondAttribute="centerY" id="zr1-jX-4b2"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-eK-4Gk">
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-eK-4Gk">
                                         <rect key="frame" x="15" y="280" width="329" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-da-Uwi">
@@ -134,6 +137,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nr-sT-kW3">
                                                         <rect key="frame" x="20" y="8" width="50" height="50"/>
                                                         <state key="normal" image="戒菸Line@"/>
+                                                        <connections>
+                                                            <action selector="showLINE:" destination="Mh6-5U-kls" eventType="touchUpInside" id="DgC-wi-032"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戒菸LINE@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtO-7M-HVb">
                                                         <rect key="frame" x="2" y="66" width="86" height="21"/>
@@ -167,7 +173,7 @@
                                             <constraint firstAttribute="width" secondItem="OVz-eK-4Gk" secondAttribute="height" multiplier="329:128" id="cF2-Em-aGR"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-86-bAo">
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-86-bAo">
                                         <rect key="frame" x="15" y="416" width="329" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0P-Ue-K4m">
@@ -252,29 +258,233 @@
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="164.16791604197903"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Contact View Controller-->
         <scene sceneID="xni-0y-fO8">
             <objects>
-                <viewController id="Dgh-kN-VBI" sceneMemberID="viewController">
+                <viewController id="Dgh-kN-VBI" customClass="EditContactViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tfv-ab-qne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="戒菸專線-填寫資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oea-0W-1Lw">
-                                <rect key="frame" x="114" y="45" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro7-cw-xfN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <color key="backgroundColor" red="0.60392156860000001" green="0.74901960779999999" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="MZL-H2-maj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="Qmu-ef-aqp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwi-8J-F2p">
+                                <rect key="frame" x="20" y="94" width="335" height="664"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="填寫聯絡資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-Qq-Ijg">
+                                        <rect key="frame" x="88" y="10" width="159" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" red="0.1647058824" green="0.23137254900000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-rI-ftq">
+                                        <rect key="frame" x="8" y="50" width="319" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓氏" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSx-DG-h2C">
+                                                <rect key="frame" x="8" y="0.0" width="189" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zpa-nq-GKO">
+                                                <rect key="frame" x="204" y="0.0" width="115" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="先生"/>
+                                                    <segment title="女士"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.78431372549019607" blue="0.14901960784313725" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zzp-Cl-4z7">
+                                        <rect key="frame" x="8" y="88" width="201" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="電話" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-lZ-vFs">
+                                                <rect key="frame" x="8" y="0.0" width="189" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.7843137255" blue="0.14901960780000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b82-cz-fNl">
+                                        <rect key="frame" x="217" y="88" width="110" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="年齡" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-db-SXV">
+                                                <rect key="frame" x="8" y="0.0" width="87" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.7843137255" blue="0.14901960780000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="想要諮詢（可複選）：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWE-qP-9At">
+                                        <rect key="frame" x="8" y="138" width="174" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-NN-Wez">
+                                        <rect key="frame" x="22" y="171" width="19" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="未選取Btn"/>
+                                        <connections>
+                                            <action selector="selectConsultationOption:" destination="Dgh-kN-VBI" eventType="touchUpInside" id="v9g-Cf-ggc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etn-I5-LHg">
+                                        <rect key="frame" x="22" y="209" width="19" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="未選取Btn"/>
+                                        <connections>
+                                            <action selector="selectConsultationOption:" destination="Dgh-kN-VBI" eventType="touchUpInside" id="BxJ-Ua-H8y"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="戒菸" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-zF-ulP">
+                                        <rect key="frame" x="68" y="172" width="35" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iEN-hq-hmE">
+                                        <rect key="frame" x="68" y="205" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.7843137255" blue="0.14901960780000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="方便聯絡的時間：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWg-x7-MVQ">
+                                        <rect key="frame" x="8" y="359" width="139" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-uV-Gth">
+                                        <rect key="frame" x="96" y="623" width="143" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Btn_送出"/>
+                                        <connections>
+                                            <action selector="submitContact:" destination="Dgh-kN-VBI" eventType="touchUpInside" id="k7j-Yq-J3H"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-ey-1ry">
+                                        <rect key="frame" x="41" y="388" width="235" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ove-ah-vdP">
+                                                <rect key="frame" x="0.0" y="3" width="235" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-3w-NB6">
+                                        <rect key="frame" x="41" y="422" width="235" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-lk-idx">
+                                                <rect key="frame" x="0.0" y="3" width="235" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF5-XO-xLg">
+                                        <rect key="frame" x="293" y="390" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="addDate:" destination="Dgh-kN-VBI" eventType="touchUpInside" id="WAE-Zp-odV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFd-B2-LXj">
+                                        <rect key="frame" x="293" y="424" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="addDate:" destination="Dgh-kN-VBI" eventType="touchUpInside" id="hIy-1Q-a2R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Oyv-Qq-Ijg" firstAttribute="top" secondItem="Wwi-8J-F2p" secondAttribute="top" constant="10" id="MOb-kC-3Ut"/>
+                                    <constraint firstItem="Oyv-Qq-Ijg" firstAttribute="centerX" secondItem="Wwi-8J-F2p" secondAttribute="centerX" id="jdT-fm-rNJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kJx-pf-ByW" firstAttribute="bottom" secondItem="Wwi-8J-F2p" secondAttribute="bottom" constant="20" id="Ag2-7d-Enz"/>
+                            <constraint firstItem="ro7-cw-xfN" firstAttribute="trailing" secondItem="kJx-pf-ByW" secondAttribute="trailing" id="LDX-nN-PtO"/>
+                            <constraint firstItem="kJx-pf-ByW" firstAttribute="trailing" secondItem="Wwi-8J-F2p" secondAttribute="trailing" constant="20" id="bIR-Vr-XuX"/>
+                            <constraint firstItem="ro7-cw-xfN" firstAttribute="top" secondItem="Tfv-ab-qne" secondAttribute="top" id="bKG-1r-uuB"/>
+                            <constraint firstItem="ro7-cw-xfN" firstAttribute="leading" secondItem="kJx-pf-ByW" secondAttribute="leading" id="bMp-yv-Bzk"/>
+                            <constraint firstItem="Wwi-8J-F2p" firstAttribute="leading" secondItem="kJx-pf-ByW" secondAttribute="leading" constant="20" id="rp3-zf-qKQ"/>
+                            <constraint firstItem="Wwi-8J-F2p" firstAttribute="top" secondItem="kJx-pf-ByW" secondAttribute="top" constant="50" id="sch-aI-fci"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kJx-pf-ByW"/>
                     </view>
+                    <connections>
+                        <outlet property="ContentView" destination="Wwi-8J-F2p" id="sdm-x3-NpQ"/>
+                        <outlet property="datePicker" destination="c5S-2R-1iX" id="80R-D0-9Y9"/>
+                        <outlet property="datePickerView" destination="6l0-dt-UIv" id="bdV-SH-L2k"/>
+                        <outlet property="otherTextView" destination="iEN-hq-hmE" id="Gqm-BC-CrN"/>
+                        <outletCollection property="selectDateView" destination="1hM-ey-1ry" collectionClass="NSMutableArray" id="wfq-DD-M27"/>
+                        <outletCollection property="selectDateView" destination="Hrs-3w-NB6" collectionClass="NSMutableArray" id="vKt-RI-Gla"/>
+                        <outletCollection property="selectDateLabel" destination="ove-ah-vdP" collectionClass="NSMutableArray" id="xut-ma-1bI"/>
+                        <outletCollection property="selectDateLabel" destination="afa-lk-idx" collectionClass="NSMutableArray" id="Bls-z5-1uO"/>
+                        <outletCollection property="consultationOptionButton" destination="Etn-I5-LHg" collectionClass="NSMutableArray" id="eyH-mH-8Lj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KES-MV-3nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="6l0-dt-UIv">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-2R-1iX">
+                            <rect key="frame" x="0.0" y="15" width="240" height="98"/>
+                            <date key="date" timeIntervalSinceReferenceDate="562601680.70013297">
+                                <!--2018-10-30 14:14:40 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="c5S-2R-1iX" secondAttribute="trailing" id="6cz-FD-I9w"/>
+                        <constraint firstItem="c5S-2R-1iX" firstAttribute="top" secondItem="6l0-dt-UIv" secondAttribute="top" constant="15" id="9is-CS-GNM"/>
+                        <constraint firstAttribute="bottom" secondItem="c5S-2R-1iX" secondAttribute="bottom" constant="15" id="LRm-58-G48"/>
+                        <constraint firstItem="c5S-2R-1iX" firstAttribute="leading" secondItem="6l0-dt-UIv" secondAttribute="leading" id="yFP-GN-tcr"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="5XL-Q3-PNE"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="1016" y="-225"/>
+            <point key="canvasLocation" x="1015.2" y="-225.36945812807883"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PgF-TG-0nC">
@@ -307,8 +517,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Btn_送出" width="143" height="36"/>
         <image name="戒菸Line@" width="50" height="50"/>
         <image name="戒菸專線" width="50" height="50"/>
+        <image name="未選取Btn" width="19" height="19"/>
         <image name="查詢醫療機構" width="52" height="51"/>
         <image name="活動" width="55" height="54"/>
         <image name="綜合資訊_bg" width="187.66667175292969" height="333.66665649414062"/>

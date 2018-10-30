@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yuanti.ttc">
+            <string>STYuanti-SC-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -13,13 +21,44 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQ0-Pq-vLb">
+                                <rect key="frame" x="103" y="214.5" width="169" height="238"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="j2B-gw-7Wl">
+                                        <rect key="frame" x="4.5" y="0.0" width="160" height="182"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIT CAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPc-zF-Xbx">
+                                        <rect key="frame" x="0.0" y="182" width="169" height="56"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Bold" family="Yuanti SC" pointSize="40"/>
+                                        <color key="textColor" red="0.25490196078431371" green="0.45882352941176469" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="1bi-GL-3Au"/>
+                                    <constraint firstItem="kPc-zF-Xbx" firstAttribute="top" secondItem="j2B-gw-7Wl" secondAttribute="bottom" id="OO6-eh-lf2"/>
+                                    <constraint firstItem="j2B-gw-7Wl" firstAttribute="top" secondItem="BQ0-Pq-vLb" secondAttribute="top" id="a5a-M9-p9p"/>
+                                    <constraint firstItem="j2B-gw-7Wl" firstAttribute="centerX" secondItem="BQ0-Pq-vLb" secondAttribute="centerX" id="lEi-1h-vOP"/>
+                                    <constraint firstItem="kPc-zF-Xbx" firstAttribute="centerX" secondItem="BQ0-Pq-vLb" secondAttribute="centerX" id="qn0-Gn-1rZ"/>
+                                    <constraint firstAttribute="height" constant="238" id="wZ9-7y-xnh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.98039215686274506" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BQ0-Pq-vLb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DCm-ID-XoJ"/>
+                            <constraint firstItem="BQ0-Pq-vLb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rXw-qh-ptr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppLogo" width="160" height="182"/>
+    </resources>
 </document>
