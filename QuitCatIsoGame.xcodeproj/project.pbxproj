@@ -18,7 +18,8 @@
 		B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B811F5AE2185C94B0099D148 /* Setting.storyboard */; };
 		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
 		B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BB1462188600800A6C1E6 /* EditContactViewController.swift */; };
-		B84C18702188D83100E08A47 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84C186F2188D83100E08A47 /* Game.storyboard */; };
+		B84442602188F666000C69E0 /* cccadd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844425F2188F666000C69E0 /* cccadd2ViewController.swift */; };
+		B84C18702188D83100E08A47 /* TestGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84C186F2188D83100E08A47 /* TestGame.storyboard */; };
 		B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18712188DC7100E08A47 /* TestGameViewController.swift */; };
 		B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18742188DE5500E08A47 /* GameViewController.swift */; };
 		B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */; };
@@ -80,8 +81,9 @@
 		B811F5AE2185C94B0099D148 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B811F5B12185C9C10099D148 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B81BB1462188600800A6C1E6 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		B844425F2188F666000C69E0 /* cccadd2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cccadd2ViewController.swift; sourceTree = "<group>"; };
 		B84C186E2188D18600E08A47 /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
-		B84C186F2188D83100E08A47 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		B84C186F2188D83100E08A47 /* TestGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestGame.storyboard; sourceTree = "<group>"; };
 		B84C18712188DC7100E08A47 /* TestGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameViewController.swift; sourceTree = "<group>"; };
 		B84C18742188DE5500E08A47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +186,7 @@
 		B84C18732188DDF100E08A47 /* TestGame */ = {
 			isa = PBXGroup;
 			children = (
-				B84C186F2188D83100E08A47 /* Game.storyboard */,
+				B84C186F2188D83100E08A47 /* TestGame.storyboard */,
 				B84C18712188DC7100E08A47 /* TestGameViewController.swift */,
 			);
 			path = TestGame;
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				B8FD1501217C39500019FAA0 /* Login.storyboard */,
+				B844425F2188F666000C69E0 /* cccadd2ViewController.swift */,
 				B8FD1503217C3A250019FAA0 /* InformationSettingViewController.swift */,
 				B8FD1506217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift */,
 				B8DFF073218096D900B1B4ED /* LoginViewController.swift */,
@@ -427,7 +430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B84C18702188D83100E08A47 /* Game.storyboard in Resources */,
+				B84C18702188D83100E08A47 /* TestGame.storyboard in Resources */,
 				B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */,
 				B8FD14C82177299D0019FAA0 /* Main.storyboard in Resources */,
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
@@ -614,6 +617,7 @@
 			files = (
 				B8DFF074218096D900B1B4ED /* LoginViewController.swift in Sources */,
 				9953CB032180E73A00F6044A /* DBFunc.swift in Sources */,
+				B84442602188F666000C69E0 /* cccadd2ViewController.swift in Sources */,
 				B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */,
 				B8FD14C32177299D0019FAA0 /* GameScene.swift in Sources */,
 				B81034482181F61F0082D003 /* MissionViewController.swift in Sources */,

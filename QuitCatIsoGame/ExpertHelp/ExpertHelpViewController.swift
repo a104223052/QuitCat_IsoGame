@@ -65,6 +65,8 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
     }
     
     @IBAction func showQuittingLine(_ sender: Any) {
+        let viewController = EditContactViewController()
+        
         // 建立一個提示框
         let alertController = UIAlertController(
             title: "填寫資料",
@@ -77,7 +79,7 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
             style: .default,
             handler: {
                 (action: UIAlertAction!) -> Void in
-                print("按下確認後，閉包裡的動作")
+                self.performSegue(withIdentifier: "expert.push.edit", sender: self)
         })
         alertController.addAction(okAction)
         
@@ -94,6 +96,9 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
             completion: nil)
     }
     
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

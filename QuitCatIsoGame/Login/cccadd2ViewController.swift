@@ -1,32 +1,23 @@
 //
-//  CigaretteAddictionViewController.swift
+//  cccadd2ViewController.swift
 //  QuitCatIsoGame
 //
-//  Created by 熊開智 on 2018/10/21.
+//  Created by 熊開智 on 2018/10/31.
 //  Copyright © 2018 Kai Kuma. All rights reserved.
 //
 
 import UIKit
 
-/***
- database
- 1. 完成測驗上傳資料庫
- */
-
-
-class CigaretteAddictionViewController: UIViewController, SSRadioButtonControllerDelegate {
-    
+class cccadd2ViewController: UIViewController, SSRadioButtonControllerDelegate {
     func didSelectButton(selectedButton: UIButton?) {
         
     }
     
 
     @IBOutlet weak var TestQuestionView: UIView!
-    @IBOutlet weak var Question1View: UIView!
     @IBOutlet var Question1Button: [UIButton]!
     @IBOutlet var Question2Button: [UIButton]!
     @IBOutlet var Question3Button: [UIButton]!
-    
     
     var radioButtonController1: SSRadioButtonsController?
     var radioButtonController2: SSRadioButtonsController?
@@ -39,7 +30,7 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
         TestQuestionView.layer.shadowOpacity = 0.7
         TestQuestionView.layer.shadowRadius = 5
         TestQuestionView.layer.shadowColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0).cgColor
-
+        
         
         radioButtonController1 = SSRadioButtonsController(buttons: Question1Button)
         radioButtonController2 = SSRadioButtonsController(buttons: Question2Button)

@@ -40,6 +40,9 @@
                                 <rect key="frame" x="231" y="269" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="電話.png"/>
+                                <connections>
+                                    <segue destination="ADA-b8-Awl" kind="show" id="iEg-Fd-cPW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-X9-drH">
                                 <rect key="frame" x="171" y="394" width="128" height="128"/>
@@ -60,11 +63,17 @@
                                 <rect key="frame" x="247" y="417" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="書櫃.png"/>
+                                <connections>
+                                    <segue destination="TIh-7C-2zD" kind="show" id="Zv3-gM-52K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQi-hn-13g">
                                 <rect key="frame" x="20" y="375" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="電視.png"/>
+                                <connections>
+                                    <segue destination="g5F-eL-AJ3" kind="show" id="MvU-NH-64Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-hg-p21">
                                 <rect key="frame" x="71" y="237" width="128" height="128"/>
@@ -104,6 +113,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIs-NM-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="143.47826086956522"/>
+        </scene>
+        <!--Community-->
+        <scene sceneID="pIP-uM-tFQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Community" id="ADA-b8-Awl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ov-tC-dtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="2"/>
+        </scene>
+        <!--Course-->
+        <scene sceneID="bwt-jf-nUr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Course" id="TIh-7C-2zD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPR-1O-wRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="154"/>
+        </scene>
+        <!--ExpertHelp-->
+        <scene sceneID="OOA-Qy-NCA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExpertHelp" id="g5F-eL-AJ3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWJ-2R-pNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="346"/>
         </scene>
     </scenes>
     <resources>
