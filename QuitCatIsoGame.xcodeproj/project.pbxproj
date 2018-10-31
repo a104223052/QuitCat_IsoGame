@@ -19,6 +19,9 @@
 		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
 		B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BB1462188600800A6C1E6 /* EditContactViewController.swift */; };
 		B84442602188F666000C69E0 /* cccadd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844425F2188F666000C69E0 /* cccadd2ViewController.swift */; };
+		B8444262218A241E000C69E0 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8444261218A241E000C69E0 /* gif.swift */; };
+		B8444264218A248D000C69E0 /* PStest.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8444263218A248D000C69E0 /* PStest.gif */; };
+		B844426A218A2C02000C69E0 /* standtest_0.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8444269218A2C01000C69E0 /* standtest_0.gif */; };
 		B84C18702188D83100E08A47 /* TestGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84C186F2188D83100E08A47 /* TestGame.storyboard */; };
 		B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18712188DC7100E08A47 /* TestGameViewController.swift */; };
 		B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18742188DE5500E08A47 /* GameViewController.swift */; };
@@ -82,6 +85,9 @@
 		B811F5B12185C9C10099D148 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B81BB1462188600800A6C1E6 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 		B844425F2188F666000C69E0 /* cccadd2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cccadd2ViewController.swift; sourceTree = "<group>"; };
+		B8444261218A241E000C69E0 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
+		B8444263218A248D000C69E0 /* PStest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PStest.gif; sourceTree = "<group>"; };
+		B8444269218A2C01000C69E0 /* standtest_0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = standtest_0.gif; sourceTree = "<group>"; };
 		B84C186E2188D18600E08A47 /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
 		B84C186F2188D83100E08A47 /* TestGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestGame.storyboard; sourceTree = "<group>"; };
 		B84C18712188DC7100E08A47 /* TestGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameViewController.swift; sourceTree = "<group>"; };
@@ -257,11 +263,14 @@
 				B811F5B02185C99B0099D148 /* Setting */,
 				B8FD14C92177299F0019FAA0 /* Assets.xcassets */,
 				B8FD14F4217739D30019FAA0 /* sprites.atlas */,
+				B8444263218A248D000C69E0 /* PStest.gif */,
+				B8444269218A2C01000C69E0 /* standtest_0.gif */,
 				B8FD14CB2177299F0019FAA0 /* LaunchScreen.storyboard */,
 				B8FD14CE2177299F0019FAA0 /* Info.plist */,
 				B8DFF06A217F3C5400B1B4ED /* SSRadioButtonController */,
 				9953CB022180E73A00F6044A /* DBFunc.swift */,
 				4E2FD645218214C800D66222 /* DB_Data.swift */,
+				B8444261218A241E000C69E0 /* gif.swift */,
 			);
 			path = QuitCatIsoGame;
 			sourceTree = "<group>";
@@ -431,10 +440,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84C18702188D83100E08A47 /* TestGame.storyboard in Resources */,
+				B8444264218A248D000C69E0 /* PStest.gif in Resources */,
 				B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */,
 				B8FD14C82177299D0019FAA0 /* Main.storyboard in Resources */,
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
 				B81034412181E47D0082D003 /* Course.storyboard in Resources */,
+				B844426A218A2C02000C69E0 /* standtest_0.gif in Resources */,
 				B8FD14CA2177299F0019FAA0 /* Assets.xcassets in Resources */,
 				B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */,
 				B8FD1502217C39500019FAA0 /* Login.storyboard in Resources */,
@@ -625,6 +636,7 @@
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
+				B8444262218A241E000C69E0 /* gif.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
 				B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */,
 				B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */,

@@ -54,9 +54,17 @@
                                 <rect key="frame" x="103.5" y="614" width="168" height="33"/>
                                 <state key="normal" image="登出"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYm-Vr-Bpg">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Vmo-kL-2kD" kind="show" id="N5u-bm-oku"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aYm-Vr-Bpg" firstAttribute="leading" secondItem="Cr6-Wl-1ox" secondAttribute="leading" constant="16" id="0lQ-mZ-Cod"/>
                             <constraint firstItem="6OO-Ke-7Eb" firstAttribute="trailing" secondItem="Cr6-Wl-1ox" secondAttribute="trailing" id="1nM-kq-GwK"/>
                             <constraint firstItem="IEY-rr-LqY" firstAttribute="top" secondItem="bMo-Ux-y4y" secondAttribute="top" id="7jd-qR-IUt"/>
                             <constraint firstItem="IEY-rr-LqY" firstAttribute="leading" secondItem="Cr6-Wl-1ox" secondAttribute="leading" id="AtM-Qw-aLU"/>
@@ -65,6 +73,7 @@
                             <constraint firstItem="6OO-Ke-7Eb" firstAttribute="leading" secondItem="Cr6-Wl-1ox" secondAttribute="leading" id="KZd-Vo-sFZ"/>
                             <constraint firstItem="j8i-mm-rkJ" firstAttribute="top" secondItem="Cr6-Wl-1ox" secondAttribute="top" constant="50" id="Ny7-vL-Sxb"/>
                             <constraint firstItem="6OO-Ke-7Eb" firstAttribute="top" secondItem="f9n-tx-Vka" secondAttribute="bottom" constant="10" id="RpO-oJ-lxR"/>
+                            <constraint firstItem="aYm-Vr-Bpg" firstAttribute="top" secondItem="Cr6-Wl-1ox" secondAttribute="top" id="VUO-7M-WaC"/>
                             <constraint firstItem="Cr6-Wl-1ox" firstAttribute="bottom" secondItem="64d-up-rmh" secondAttribute="bottom" constant="20" id="Xm3-92-KR2"/>
                             <constraint firstItem="IEY-rr-LqY" firstAttribute="bottom" secondItem="bMo-Ux-y4y" secondAttribute="bottom" id="iwm-fJ-mTf"/>
                             <constraint firstItem="64d-up-rmh" firstAttribute="centerX" secondItem="bMo-Ux-y4y" secondAttribute="centerX" id="kMn-p5-KWD"/>
@@ -103,6 +112,14 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="-308" y="124.58770614692655"/>
+        </scene>
+        <!--TestGame-->
+        <scene sceneID="1Lt-OO-svN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TestGame" id="Vmo-kL-2kD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0E-wF-1cX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="124"/>
         </scene>
     </scenes>
     <resources>

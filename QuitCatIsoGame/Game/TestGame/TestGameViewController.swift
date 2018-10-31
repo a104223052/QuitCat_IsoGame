@@ -10,9 +10,16 @@ import UIKit
 
 class TestGameViewController: UIViewController {
 
+    @IBOutlet weak var myGifView: UIImageView!
+    @IBOutlet var recordView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        recordView.layer.borderWidth = 3
+        recordView.layer.borderColor = UIColor.white.cgColor
+        
+        myGifView.loadGif(name: "standtest_0")
+        
         // Do any additional setup after loading the view.
     }
     
