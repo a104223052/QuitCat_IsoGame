@@ -9,6 +9,7 @@ target 'QuitCatIsoGame' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Messaging'
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
   pod 'SDWebImage'
