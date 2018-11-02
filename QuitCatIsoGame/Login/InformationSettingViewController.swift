@@ -14,7 +14,11 @@ import Photos
  1. 大頭照編輯完需上傳
  */
 
-class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate {
+class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, SSRadioButtonControllerDelegate {
+    func didSelectButton(selectedButton: UIButton?) {
+        
+    }
+    
 
     @IBOutlet weak var PersonalPhotoImage: UIButton!
     
@@ -22,12 +26,26 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     var sheet:UIAlertController!
     var sourceType = UIImagePickerController.SourceType.photoLibrary //將sourceType賦一個初值類型，防止調用時不賦值出現崩潰
     
+    @IBOutlet var quitedButtonCollection: [UIButton]!
+    
+    @IBOutlet weak var question1: UITextField!
+    @IBOutlet weak var question2: UITextField!
+    @IBOutlet weak var question3: UITextField!
+    
+    
+    var radioButtonController: SSRadioButtonsController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         PersonalPhotoImage.layer.cornerRadius = PersonalPhotoImage.frame.size.width/2
         PersonalPhotoImage.layer.borderColor = UIColor.init(red: 83/255, green: 120/255, blue: 158/255, alpha: 1).cgColor
         PersonalPhotoImage.layer.borderWidth = 4
         PersonalPhotoImage.clipsToBounds = true
+        
+        radioButtonController = SSRadioButtonsController(buttons: quitedButtonCollection)
+        radioButtonController!.delegate = self
+        radioButtonController!.shouldLetDeSelect = true
+        
     }
     
     @IBAction func setHeaderImage(_ sender: Any) {
@@ -144,6 +162,9 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         let chosenImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage //2
         
         PersonalPhotoImage.setImage(chosenImage, for: .normal) //3
+        question1.text = "王小明"
+        question2.text = "1年"
+        question3.text = "10支"
         dismiss(animated:true, completion: nil) //4
     }
     
