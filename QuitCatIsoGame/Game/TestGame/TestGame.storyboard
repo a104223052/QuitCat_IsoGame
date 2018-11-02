@@ -26,7 +26,9 @@
                                     <constraint firstAttribute="height" constant="70" id="tio-5c-Ps5"/>
                                     <constraint firstAttribute="width" constant="70" id="uwr-hw-g75"/>
                                 </constraints>
-                                <state key="normal" image="FISH"/>
+                                <state key="normal" image="FISH">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJt-NW-07P">
                                 <rect key="frame" x="0.0" y="688" width="90" height="90"/>
@@ -80,22 +82,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="日曆"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-wx-JTx">
-                                <rect key="frame" x="152" y="708" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="1Cj-W9-zKL"/>
-                                    <constraint firstAttribute="height" constant="70" id="PCB-NV-pD2"/>
-                                </constraints>
-                                <state key="normal" image="CART"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObQ-In-adR">
-                                <rect key="frame" x="297" y="728" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Setting"/>
-                                <connections>
-                                    <segue destination="Z6m-xT-3mj" kind="show" id="nFQ-Oc-8E1"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwd-XU-5yJ">
                                 <rect key="frame" x="29" y="552" width="119" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -105,6 +91,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="沙發"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObQ-In-adR">
+                                <rect key="frame" x="319" y="56" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="2wi-l1-78Q"/>
+                                    <constraint firstAttribute="height" constant="47" id="Skx-Gf-z3r"/>
+                                </constraints>
+                                <state key="normal" image="設定BTN"/>
+                                <connections>
+                                    <segue destination="Z6m-xT-3mj" kind="show" id="nFQ-Oc-8E1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-wx-JTx">
+                                <rect key="frame" x="305" y="698" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1Cj-W9-zKL"/>
+                                    <constraint firstAttribute="height" constant="70" id="PCB-NV-pD2"/>
+                                </constraints>
+                                <state key="normal" image="CART"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -112,10 +117,12 @@
                             <constraint firstItem="tJt-NW-07P" firstAttribute="leading" secondItem="igs-sO-Rpl" secondAttribute="leading" id="Jy0-J0-kdi"/>
                             <constraint firstItem="qRZ-g3-eNc" firstAttribute="bottom" secondItem="htb-21-o4C" secondAttribute="bottom" id="STp-nI-uDM"/>
                             <constraint firstItem="qRZ-g3-eNc" firstAttribute="trailing" secondItem="igs-sO-Rpl" secondAttribute="trailing" id="cQe-ob-eKa"/>
-                            <constraint firstItem="dWd-wx-JTx" firstAttribute="top" secondItem="igs-sO-Rpl" secondAttribute="top" id="gx6-XP-JIo"/>
                             <constraint firstItem="d60-7R-xxY" firstAttribute="top" secondItem="igs-sO-Rpl" secondAttribute="top" id="iyA-Ip-7u3"/>
                             <constraint firstItem="qRZ-g3-eNc" firstAttribute="leading" secondItem="igs-sO-Rpl" secondAttribute="leading" id="jQf-dR-JrN"/>
+                            <constraint firstItem="dWd-wx-JTx" firstAttribute="centerY" secondItem="tJt-NW-07P" secondAttribute="centerY" id="l3t-QC-LU0"/>
                             <constraint firstItem="dWd-wx-JTx" firstAttribute="trailing" secondItem="igs-sO-Rpl" secondAttribute="trailing" id="mF5-If-ZLT"/>
+                            <constraint firstItem="ObQ-In-adR" firstAttribute="top" secondItem="igs-sO-Rpl" secondAttribute="top" constant="12" id="mG0-n2-TZ4"/>
+                            <constraint firstItem="igs-sO-Rpl" firstAttribute="trailing" secondItem="ObQ-In-adR" secondAttribute="trailing" constant="9" id="q6I-pR-gG5"/>
                             <constraint firstItem="qRZ-g3-eNc" firstAttribute="top" secondItem="htb-21-o4C" secondAttribute="top" id="rXR-OP-Qbb"/>
                             <constraint firstItem="tJt-NW-07P" firstAttribute="bottom" secondItem="igs-sO-Rpl" secondAttribute="bottom" id="tUF-dk-5A4"/>
                         </constraints>
@@ -124,6 +131,12 @@
                     <connections>
                         <outlet property="myGifView" destination="fwd-XU-5yJ" id="aBW-iC-2rv"/>
                         <outlet property="recordView" destination="Ayp-T7-Jxh" id="Kc9-Wc-rq5"/>
+                        <outletCollection property="selectedButton" destination="qw5-HA-Okf" collectionClass="NSMutableArray" id="b6R-kw-lNH"/>
+                        <outletCollection property="selectedButton" destination="b6Q-jQ-mfN" collectionClass="NSMutableArray" id="du0-Zy-kDT"/>
+                        <outletCollection property="selectedButton" destination="omc-hb-gRF" collectionClass="NSMutableArray" id="oLT-rV-VaP"/>
+                        <outletCollection property="selectedButton" destination="dAe-uY-tew" collectionClass="NSMutableArray" id="gX0-xc-aDD"/>
+                        <outletCollection property="selectedButton" destination="SA0-sI-PvH" collectionClass="NSMutableArray" id="JvA-Rh-HHv"/>
+                        <outletCollection property="selectedButton" destination="iwK-6r-gJe" collectionClass="NSMutableArray" id="X1m-wO-fEo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIs-NM-03p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,11 +241,122 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="yYe-5U-1Le"/>
                 </view>
-                <view contentMode="scaleToFill" id="Qi6-Mm-pPF">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                <view contentMode="scaleToFill" id="CPi-2W-PrO">
+                    <rect key="frame" x="0.0" y="0.0" width="341" height="318"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXC-Mf-cqD">
+                            <rect key="frame" x="1" y="0.0" width="340" height="403"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-YJ-4Va">
+                                    <rect key="frame" x="0.0" y="44" width="340" height="94"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-Pg-5yY">
+                                            <rect key="frame" x="31" y="24" width="279" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </slider>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０％" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAa-Zf-by6">
+                                            <rect key="frame" x="8" y="26" width="23" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOu-7S-3En">
+                                            <rect key="frame" x="309" y="26" width="31" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxF-gp-B43">
+                                            <rect key="frame" x="132" y="56" width="77" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="今天不抽！">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你現在多想抽煙呢？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qy-vl-vEA">
+                                    <rect key="frame" x="92" y="15" width="156" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw5-HA-Okf">
+                                    <rect key="frame" x="44" y="181" width="62" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="壓力很大">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omc-hb-gRF">
+                                    <rect key="frame" x="243" y="181" width="31" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="喝酒">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6Q-jQ-mfN">
+                                    <rect key="frame" x="145" y="181" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="喝咖啡">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAe-uY-tew">
+                                    <rect key="frame" x="44" y="234" width="62" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="休息時間">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwK-6r-gJe">
+                                    <rect key="frame" x="212" y="234" width="108" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="與朋友一起抽菸">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SA0-sI-PvH">
+                                    <rect key="frame" x="153" y="234" width="31" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="悲傷">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="現在在做什麼呢？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSq-FQ-WIN">
+                                    <rect key="frame" x="101" y="146" width="138.66666666666663" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTv-4V-Pbf">
+                                    <rect key="frame" x="101" y="272" width="143" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="下一頁"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.90042144059999996" green="0.96670645479999995" blue="0.863026917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <viewLayoutGuide key="safeArea" id="aFR-de-rad"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0Z-D2-2PY">
+                            <rect key="frame" x="10" y="10" width="20" height="22"/>
+                            <state key="normal" image="叉叉離開"/>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <viewLayoutGuide key="safeArea" id="m4T-lX-5bm"/>
+                    <constraints>
+                        <constraint firstItem="e0Z-D2-2PY" firstAttribute="leading" secondItem="CPi-2W-PrO" secondAttribute="leading" constant="10" id="ClI-d6-cs1"/>
+                        <constraint firstItem="e0Z-D2-2PY" firstAttribute="top" secondItem="CPi-2W-PrO" secondAttribute="top" constant="10" id="akN-iu-BQi"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="aj3-V8-FdJ"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="143.3497536945813"/>
@@ -277,15 +401,17 @@
         <image name="feed" width="200" height="200"/>
         <image name="上" width="29" height="17"/>
         <image name="下" width="29" height="17"/>
+        <image name="下一頁" width="143" height="36"/>
         <image name="叉叉離開" width="20" height="20"/>
-        <image name="日曆" width="128" height="128"/>
-        <image name="書櫃" width="128" height="128"/>
+        <image name="日曆" width="35" height="54"/>
+        <image name="書櫃" width="121" height="152"/>
         <image name="桌子" width="128" height="128"/>
         <image name="沙發" width="128" height="128"/>
         <image name="背景圖" width="375" height="667"/>
+        <image name="設定BTN" width="200" height="200"/>
         <image name="跳台" width="128" height="128"/>
-        <image name="電視" width="128" height="128"/>
-        <image name="電話" width="128" height="128"/>
+        <image name="電視" width="171" height="187"/>
+        <image name="電話" width="38" height="70"/>
         <image name="飼料" width="128" height="128"/>
     </resources>
 </document>
