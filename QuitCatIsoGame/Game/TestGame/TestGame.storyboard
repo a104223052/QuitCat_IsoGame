@@ -34,12 +34,12 @@
                                     <constraint firstAttribute="width" constant="90" id="frQ-x7-eaI"/>
                                     <constraint firstAttribute="height" constant="90" id="jj4-iG-yQ1"/>
                                 </constraints>
-                                <state key="normal" image="feed.png"/>
+                                <state key="normal" image="feed"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-4f-97O">
                                 <rect key="frame" x="231" y="269" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="電話.png"/>
+                                <state key="normal" image="電話"/>
                                 <connections>
                                     <segue destination="ADA-b8-Awl" kind="show" id="iEg-Fd-cPW"/>
                                 </connections>
@@ -47,22 +47,22 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-X9-drH">
                                 <rect key="frame" x="171" y="394" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="飼料.png"/>
+                                <state key="normal" image="飼料"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKg-vY-LY7">
                                 <rect key="frame" x="102" y="472" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="桌子.png"/>
+                                <state key="normal" image="桌子"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5i-H9-lgc">
                                 <rect key="frame" x="123" y="362" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="跳台.png"/>
+                                <state key="normal" image="跳台"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glm-Th-Yd9">
                                 <rect key="frame" x="247" y="417" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="書櫃.png"/>
+                                <state key="normal" image="書櫃"/>
                                 <connections>
                                     <segue destination="TIh-7C-2zD" kind="show" id="Zv3-gM-52K"/>
                                 </connections>
@@ -70,7 +70,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQi-hn-13g">
                                 <rect key="frame" x="20" y="375" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="電視.png"/>
+                                <state key="normal" image="電視"/>
                                 <connections>
                                     <segue destination="g5F-eL-AJ3" kind="show" id="MvU-NH-64Q"/>
                                 </connections>
@@ -78,7 +78,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-hg-p21">
                                 <rect key="frame" x="71" y="237" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="日曆.png"/>
+                                <state key="normal" image="日曆"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-wx-JTx">
                                 <rect key="frame" x="152" y="708" width="70" height="70"/>
@@ -103,7 +103,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-cQ-tXT">
                                 <rect key="frame" x="184" y="510" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="沙發.png"/>
+                                <state key="normal" image="沙發"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -245,15 +245,15 @@
     <resources>
         <image name="CART" width="200" height="200"/>
         <image name="FISH" width="200" height="200"/>
-        <image name="feed.png" width="200" height="200"/>
-        <image name="日曆.png" width="128" height="128"/>
-        <image name="書櫃.png" width="128" height="128"/>
-        <image name="桌子.png" width="128" height="128"/>
-        <image name="沙發.png" width="128" height="128"/>
+        <image name="feed" width="200" height="200"/>
+        <image name="日曆" width="128" height="128"/>
+        <image name="書櫃" width="128" height="128"/>
+        <image name="桌子" width="128" height="128"/>
+        <image name="沙發" width="128" height="128"/>
         <image name="背景圖" width="375" height="667"/>
-        <image name="跳台.png" width="128" height="128"/>
-        <image name="電視.png" width="128" height="128"/>
-        <image name="電話.png" width="128" height="128"/>
-        <image name="飼料.png" width="128" height="128"/>
+        <image name="跳台" width="128" height="128"/>
+        <image name="電視" width="128" height="128"/>
+        <image name="電話" width="128" height="128"/>
+        <image name="飼料" width="128" height="128"/>
     </resources>
 </document>
