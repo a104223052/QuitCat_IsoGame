@@ -18,6 +18,10 @@ class EditContactViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var consultationOptionButton: [UIButton]!
     
+    @IBOutlet weak var question1: UITextField!
+    @IBOutlet weak var question2: UITextField!
+    @IBOutlet weak var question3: UITextField!
+    
     var dateSelector = 0
     
     
@@ -109,6 +113,11 @@ class EditContactViewController: UIViewController {
             }
         }
         dateSelector = 0
+        
+        question1.text = "王小明"
+        question2.text = "0933113123"
+        question3.text = "18"
+        
     }
     
     @IBAction func submitContact(_ sender: Any) {
