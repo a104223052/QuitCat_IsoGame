@@ -16,6 +16,7 @@ target 'QuitCatIsoGame' do
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'CSVImporter'
 
 
   target 'QuitCatIsoGameTests' do

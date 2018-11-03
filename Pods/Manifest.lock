@@ -11,6 +11,8 @@ PODS:
   - BoringSSL/Implementation (10.0.6):
     - BoringSSL/Interface (= 10.0.6)
   - BoringSSL/Interface (10.0.6)
+  - CSVImporter (1.9.0):
+    - HandySwift (~> 2.5)
   - FBSDKCoreKit (4.37.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.37.0):
@@ -151,6 +153,7 @@ PODS:
   - GTMSessionFetcher/Core (1.2.0)
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
+  - HandySwift (2.6.0)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -164,6 +167,7 @@ PODS:
 
 DEPENDENCIES:
   - Bolts
+  - CSVImporter
   - FBSDKCoreKit
   - FBSDKLoginKit
   - Firebase/Auth
@@ -178,6 +182,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
     - BoringSSL
+    - CSVImporter
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -200,6 +205,7 @@ SPEC REPOS:
     - gRPC-RxLibrary
     - GTMOAuth2
     - GTMSessionFetcher
+    - HandySwift
     - leveldb-library
     - nanopb
     - Protobuf
@@ -208,6 +214,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
+  CSVImporter: 34c3f9a2f47c61c7e2c830073002b00a682c32ee
   FBSDKCoreKit: fe5f3474499a81963e11e3f3a5c753d0a95ca2b4
   FBSDKLoginKit: 2f7249686d1e30ce8a5ef5400eedf50b3e3df332
   Firebase: 6691d47562a780c26281ce8464518faafc90c610
@@ -230,11 +237,12 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: 3c305f32155024b116b780f389323c73a28197e6
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
+  HandySwift: 510039979f68ab2c6866f1707634815654ed329b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 344686799c74fc3950f6f219d7c4f2888ae71f91
+PODFILE CHECKSUM: 528581b62ea49fc90d9801c3583c63ea99fa8801
 
 COCOAPODS: 1.5.3
