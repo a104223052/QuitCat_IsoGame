@@ -22,6 +22,7 @@
 		B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B811F5AE2185C94B0099D148 /* Setting.storyboard */; };
 		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
 		B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BB1462188600800A6C1E6 /* EditContactViewController.swift */; };
+		B82CEF9A218C9820008F1FDF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CEF99218C9820008F1FDF /* ResultViewController.swift */; };
 		B84442602188F666000C69E0 /* cccadd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844425F2188F666000C69E0 /* cccadd2ViewController.swift */; };
 		B8444262218A241E000C69E0 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8444261218A241E000C69E0 /* gif.swift */; };
 		B8444264218A248D000C69E0 /* PStest.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8444263218A248D000C69E0 /* PStest.gif */; };
@@ -92,6 +93,7 @@
 		B811F5AE2185C94B0099D148 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B811F5B12185C9C10099D148 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B81BB1462188600800A6C1E6 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		B82CEF99218C9820008F1FDF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B844425F2188F666000C69E0 /* cccadd2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cccadd2ViewController.swift; sourceTree = "<group>"; };
 		B8444261218A241E000C69E0 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		B8444263218A248D000C69E0 /* PStest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PStest.gif; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				B8FD1501217C39500019FAA0 /* Login.storyboard */,
+				B82CEF99218C9820008F1FDF /* ResultViewController.swift */,
 				B844425F2188F666000C69E0 /* cccadd2ViewController.swift */,
 				B8FD1503217C3A250019FAA0 /* InformationSettingViewController.swift */,
 				B8FD1506217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift */,
@@ -652,6 +655,7 @@
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
+				B82CEF9A218C9820008F1FDF /* ResultViewController.swift in Sources */,
 				B8444262218A241E000C69E0 /* gif.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
 				B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */,

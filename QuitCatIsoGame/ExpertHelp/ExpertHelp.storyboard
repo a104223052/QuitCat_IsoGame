@@ -471,6 +471,9 @@
                         <outlet property="datePicker" destination="c5S-2R-1iX" id="80R-D0-9Y9"/>
                         <outlet property="datePickerView" destination="6l0-dt-UIv" id="bdV-SH-L2k"/>
                         <outlet property="otherTextView" destination="iEN-hq-hmE" id="Gqm-BC-CrN"/>
+                        <outlet property="question1" destination="CSx-DG-h2C" id="6bY-w8-47v"/>
+                        <outlet property="question2" destination="7NW-lZ-vFs" id="fAx-kJ-2uP"/>
+                        <outlet property="question3" destination="xHR-db-SXV" id="avw-2d-Orc"/>
                         <outletCollection property="selectDateView" destination="1hM-ey-1ry" collectionClass="NSMutableArray" id="wfq-DD-M27"/>
                         <outletCollection property="selectDateView" destination="Hrs-3w-NB6" collectionClass="NSMutableArray" id="vKt-RI-Gla"/>
                         <outletCollection property="selectDateLabel" destination="ove-ah-vdP" collectionClass="NSMutableArray" id="xut-ma-1bI"/>

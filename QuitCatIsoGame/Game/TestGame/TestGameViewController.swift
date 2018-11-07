@@ -12,47 +12,179 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     func didSelectButton(selectedButton: UIButton?) {
         
     }
-    
 
     @IBOutlet weak var myGifView: UIImageView!
-    @IBOutlet var recordView: UIView!
+    @IBOutlet weak var feedView: UIView!
     @IBOutlet var selectedButton: [UIButton]!
+    @IBOutlet weak var settingBar: UISlider!
+    @IBOutlet weak var settinglabel: UILabel!
+    
+    
+    @IBOutlet var recordView: [UIView]!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var ddcountlabel: UILabel!
+    
+    var record = 0
+    var count = 1
+    
     var radioButtonController1: SSRadioButtonsController?
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        recordView.layer.borderWidth = 3
-        recordView.layer.borderColor = UIColor.white.cgColor
         
         myGifView.loadGif(name: "standtest_0")
-        feedView.layer.cornerRadius = 10
         
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
-        radioButtonController1!.shouldLetDeSelect = true//cp
+        radioButtonController1!.shouldLetDeSelect = true
+        
+        feedView.layer.cornerRadius = 10
         
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        view.addSubview(feedCompleteView)
-        feedCompleteView.translatesAutoresizingMaskIntoConstraints = false
         
-//        feedCompleteView.heightAnchor.constraint(equalToConstant: 128).isActive = true
-//        feedCompleteView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-//        feedCompleteView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        let c = feedCompleteView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -128)
-        c.identifier = "pickerViewBottom"
-        c.isActive = true
-        
-        feedView.layer.cornerRadius = 10
-        
+        for myView in recordView
+        {
+            view.addSubview(myView)
+            
+            
+            myView.layer.cornerRadius = 10
+            
+            myView.translatesAutoresizingMaskIntoConstraints = false
+            myView.widthAnchor.constraint(equalToConstant: 340).isActive = true
+            myView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+            
+            if myView.tag == 0{
+                let c = myView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 318)
+                myView.heightAnchor.constraint(equalToConstant: 318).isActive = true
+                c.identifier = "recordView1Bottom"
+                c.isActive = true
+            }
+            else if myView.tag == 1{
+                let c = myView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 255)
+                myView.heightAnchor.constraint(equalToConstant: 255).isActive = true
+                c.identifier = "recordView2Bottom"
+                c.isActive = true
+            }else if myView.tag == 2{
+                let c = myView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 223)
+                myView.heightAnchor.constraint(equalToConstant: 223).isActive = true
+                c.identifier = "recordView3Bottom"
+                c.isActive = true
+            }
+            
+            
+        }
         super.viewWillAppear(animated)
     }
     
     
+    @IBAction func UP(_ sender: Any) {
+        count += 1
+        countLabel.text = String(count)
+        ddcountlabel.text = "剩餘 " + String(10 - count) + " 支"
+    }
+    
+    @IBAction func down(_ sender: Any) {
+        if count != 0 {
+            count -= 1
+            countLabel.text = String(count)
+            ddcountlabel.text = "剩餘 " + String(10 - count) + " 支"
+        }
+    }
+    
+    @IBAction func settingBar(_ sender: Any) {
+        if settingBar.value == Float(0) {
+            settinglabel.text = "今天不抽"
+        }
+        else{
+            settinglabel.text = String(Int(settingBar.value * 100)) + "%"
+        }
+    }
+    
+    @IBAction func feeding(_ sender: Any) {
+        displayDatePickerView(true)
+    }
+    @IBAction func feeding1(_ sender: Any) {
+        displayDatePickerView(true)
+    }
+    @IBAction func feeding2(_ sender: Any) {
+        displayDatePickerView(true)
+    }
+    
+    @IBAction func feeding3(_ sender: Any) {
+        displayDatePickerView(true)
+    }
+    
+    func displayDatePickerView(_ show: Bool)
+    {
+        for c in view.constraints
+        {
+            if(record == 0)
+            {
+                if c.identifier == "recordView1Bottom"
+                {
+                    record = 1
+                    c.constant = (show) ? -40 : 318
+                    break
+                }
+            }
+            else if (record == 1)
+            {
+                if c.identifier == "recordView1Bottom"
+                {
+                    c.constant = (show) ? 318 : -40
+                    
+                    for cc in view.constraints
+                    {
+                        if cc.identifier == "recordView2Bottom"
+                        {
+                            record = 2
+                            cc.constant = (show) ? -40 : 255
+                            break
+                        }
+                    }
+                    break
+                }
+                
+            }
+            else if (record == 2)
+            {
+                if c.identifier == "recordView2Bottom"
+                {
+                    c.constant = (show) ? 255 : -40
+                    
+                    for cc in view.constraints
+                    {
+                        if cc.identifier == "recordView3Bottom"
+                        {
+                            record = 3
+                            cc.constant = (show) ? -40 : 223
+                            break
+                        }
+                    }
+                    break
+                }
+            }
+            else if (record == 3)
+            {
+                if c.identifier == "recordView3Bottom"
+                {
+                    record = 0
+                    c.constant = (show) ? 223 : -40
+                    break
+                }
+            }
+        }
+        
+        UIView.animate(withDuration: 0.5)
+        {
+            self.view.layoutIfNeeded()
+        }
+    }
     /*
     // MARK: - Navigation
 
