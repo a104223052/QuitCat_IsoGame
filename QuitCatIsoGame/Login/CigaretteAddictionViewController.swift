@@ -14,7 +14,7 @@ import UIKit
  */
 
 
-class CigaretteAddictionViewController: UIViewController, SSRadioButtonControllerDelegate {
+class CigaretteAddictionViewController: UIViewController, SSRadioButtonControllerDelegate {//cp this
     
     func didSelectButton(selectedButton: UIButton?) {
         
@@ -28,7 +28,7 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
     @IBOutlet var Question3Button: [UIButton]!
     
     
-    var radioButtonController1: SSRadioButtonsController?
+    var radioButtonController1: SSRadioButtonsController?//cp this
     var radioButtonController2: SSRadioButtonsController?
     var radioButtonController3: SSRadioButtonsController?
     
@@ -41,11 +41,11 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
         TestQuestionView.layer.shadowColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0).cgColor
 
         
-        radioButtonController1 = SSRadioButtonsController(buttons: Question1Button)
+        radioButtonController1 = SSRadioButtonsController(buttons: Question1Button)//cp this
         radioButtonController2 = SSRadioButtonsController(buttons: Question2Button)
         radioButtonController3 = SSRadioButtonsController(buttons: Question3Button)
-        radioButtonController1!.delegate = self
-        radioButtonController1!.shouldLetDeSelect = true
+        radioButtonController1!.delegate = self//cp this
+        radioButtonController1!.shouldLetDeSelect = true//cp this
         // Do any additional setup after loading the view.
     }
     

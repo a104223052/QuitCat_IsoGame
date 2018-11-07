@@ -8,12 +8,18 @@
 
 import UIKit
 
-class TestGameViewController: UIViewController {
+class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
+    func didSelectButton(selectedButton: UIButton?) {
+        
+    }
+    
 
     @IBOutlet weak var myGifView: UIImageView!
     @IBOutlet var recordView: UIView!
-    @IBOutlet weak var feedView: UIView!
-    @IBOutlet var feedCompleteView: UIView!
+    @IBOutlet var selectedButton: [UIButton]!
+    var radioButtonController1: SSRadioButtonsController?
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +28,10 @@ class TestGameViewController: UIViewController {
         
         myGifView.loadGif(name: "standtest_0")
         feedView.layer.cornerRadius = 10
+        
+        radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
+        radioButtonController1!.delegate = self//cp this
+        radioButtonController1!.shouldLetDeSelect = true//cp
         
         // Do any additional setup after loading the view.
     }
