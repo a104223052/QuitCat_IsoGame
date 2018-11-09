@@ -23,7 +23,8 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
 
     @IBOutlet weak var PersonalPhotoImage: UIButton!
     
-    let db = Firestore.firestore()
+    var db:Firestore!
+
     var img :UIImageView!
     var sheet:UIAlertController!
     var sourceType = UIImagePickerController.SourceType.photoLibrary //將sourceType賦一個初值類型，防止調用時不賦值出現崩潰
@@ -39,6 +40,8 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
+
         PersonalPhotoImage.layer.cornerRadius = PersonalPhotoImage.frame.size.width/2
         PersonalPhotoImage.layer.borderColor = UIColor.init(red: 83/255, green: 120/255, blue: 158/255, alpha: 1).cgColor
         PersonalPhotoImage.layer.borderWidth = 4

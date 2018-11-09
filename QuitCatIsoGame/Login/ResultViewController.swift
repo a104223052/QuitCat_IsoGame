@@ -14,7 +14,7 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
         
     }
 
-    let db = Firestore.firestore()
+    var db:Firestore!
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var radioButton: [UIButton]!
@@ -24,7 +24,10 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        db = Firestore.firestore()
+
         scoreView.layer.cornerRadius = 10
         contentView.layer.cornerRadius = 10
         radioButtonController = SSRadioButtonsController(buttons: radioButton)
@@ -32,6 +35,7 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
         radioButtonController!.shouldLetDeSelect = true
         // Do any additional setup after loading the view.
     }
+    
     //Kai neet to fill
     //輸入完成之後要叫下面這一串 userID,upload兩格要填
     //setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokeaddiction", upload: "")
