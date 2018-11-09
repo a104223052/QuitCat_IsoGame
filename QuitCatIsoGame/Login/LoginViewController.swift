@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     //Login to Facebook by btn
     @IBAction func onClickLoginWithFacebook(_ sender: Any) {
         let fbLoginManager = FBSDKLoginManager()
@@ -31,8 +30,6 @@ class LoginViewController: UIViewController {
                 print("Failed to login: \(error?.localizedDescription)")
                 return
             }
-            
-            
             // 取得登入者的token失敗敗
             if FBSDKAccessToken.current() == nil {
                 print("Failed to get access token")
@@ -46,14 +43,19 @@ class LoginViewController: UIViewController {
             
             // 呼叫Firebase的API處理登入的動作
             Auth.auth().signIn(with: credential, completion: { (user, error) in
-                
                 if error != nil {
                     print((error?.localizedDescription)!)
                     return
                 }
-                
                 // 使用FB登入成功
                 print("使用FB登入成功")
+                let user = Auth.auth().currentUser
+                if let user = user{
+                    let uid = user.uid
+                    print(uid)
+                    //UID 需在每個畫面都有
+                }
+                
             })
             
         }

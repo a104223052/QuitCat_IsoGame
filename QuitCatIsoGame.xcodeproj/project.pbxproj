@@ -83,6 +83,7 @@
 		4EACCAAC218CB07700249FB3 /* UICollectionGridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionGridViewCell.swift; sourceTree = "<group>"; };
 		4EACCAAE218CB09300249FB3 /* UICollectionGridViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionGridViewLayout.swift; sourceTree = "<group>"; };
 		4EACCAB0218CB0DF00249FB3 /* ClinicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewController.swift; sourceTree = "<group>"; };
+		4EC51E81219575620029854F /* QuitCatIsoGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuitCatIsoGame.entitlements; sourceTree = "<group>"; };
 		62E3C21770FBD2981804E0F2 /* Pods_QuitCatIsoGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9953CB022180E73A00F6044A /* DBFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFunc.swift; sourceTree = "<group>"; };
 		996EB431217FA0FC009DC764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 		B8FD14BB2177299D0019FAA0 /* QuitCatIsoGame */ = {
 			isa = PBXGroup;
 			children = (
+				4EC51E81219575620029854F /* QuitCatIsoGame.entitlements */,
 				B84C186E2188D18600E08A47 /* Yuanti.ttc */,
 				996EB431217FA0FC009DC764 /* GoogleService-Info.plist */,
 				B8FD14BC2177299D0019FAA0 /* AppDelegate.swift */,
@@ -418,6 +420,14 @@
 				TargetAttributes = {
 					B8FD14B82177299D0019FAA0 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					B8FD14D22177299F0019FAA0 = {
 						CreatedOnToolsVersion = 10.0;
@@ -849,6 +859,7 @@
 			baseConfigurationReference = F0C92B3F6E308DB827262C32 /* Pods-QuitCatIsoGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuitCatIsoGame/QuitCatIsoGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K569772QX4;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
@@ -868,6 +879,7 @@
 			baseConfigurationReference = D8A386CE118E8BEF671EC6A1 /* Pods-QuitCatIsoGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuitCatIsoGame/QuitCatIsoGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K569772QX4;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;

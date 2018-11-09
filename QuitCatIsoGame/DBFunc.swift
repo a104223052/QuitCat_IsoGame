@@ -175,7 +175,7 @@ class DBFunc {
         }
     }
     
-    func setFunc(schema:String,collection:String,document:String,upload:String){
+    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
         
         db.collection("Users").document(userID).collection(collection).document(document).updateData(
             [schema:upload]

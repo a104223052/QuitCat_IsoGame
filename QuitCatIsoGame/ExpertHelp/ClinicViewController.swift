@@ -45,12 +45,6 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
  
     }
     
-    
-    
-    
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         view.addSubview(cityView)
         view.addSubview(regionView)

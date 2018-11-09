@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 /***
  #database
  1. 需要讀取使用者的好友清單與資訊 （包含uIDㄉ等等
@@ -20,6 +20,7 @@ class CommunityViewController: UIViewController {
     @IBOutlet weak var ContentView: UIView!
     @IBOutlet var OptionView: [UIView]!
     @IBOutlet weak var friendPhotoImage: UIButton!
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()

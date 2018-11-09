@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import Firebase
 
 /***
  database
@@ -22,6 +23,7 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
 
     @IBOutlet weak var PersonalPhotoImage: UIButton!
     
+    let db = Firestore.firestore()
     var img :UIImageView!
     var sheet:UIAlertController!
     var sourceType = UIImagePickerController.SourceType.photoLibrary //將sourceType賦一個初值類型，防止調用時不賦值出現崩潰
@@ -41,10 +43,10 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         PersonalPhotoImage.layer.borderColor = UIColor.init(red: 83/255, green: 120/255, blue: 158/255, alpha: 1).cgColor
         PersonalPhotoImage.layer.borderWidth = 4
         PersonalPhotoImage.clipsToBounds = true
-        
         radioButtonController = SSRadioButtonsController(buttons: quitedButtonCollection)
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
+        
         
     }
     
@@ -165,9 +167,28 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         question1.text = "王小明"
         question2.text = "1年"
         question3.text = "10支"
+        //Kai need to fill
+        //userID , upload text need to fill
+        setFunc(userID: "", collection: "userdata", document: "userdata", schema: "name", upload: "")
+        setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokeage", upload: "")
+        setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokecount", upload: "")
+
         dismiss(animated:true, completion: nil) //4
     }
     
+    
+    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
+        
+        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+            [schema:upload]
+        ) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
