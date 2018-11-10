@@ -11,8 +11,6 @@ import FirebaseFirestore
 import Firebase
 import UIKit
 
-
-
 class DBFunc {
     
     var db: Firestore!
@@ -21,8 +19,7 @@ class DBFunc {
     var local_pet:Pet!
     var local_pet_environment:Pet_Environment!
     var local_useritem:Useritem!
-    var local_smokerecord_October:Smokerecord_October!
-    var local_smokerecord_November:Smokerecord_November!
+    var local_Smokerecord:Smokerecord!
     var local_smokerecord_Mood:Smokerecord_Mood!
     var local_smokerecord_Situation:Smokerecord_Situation!
     var local_house:House!
@@ -35,8 +32,7 @@ class DBFunc {
         queryPet()
         queryPet_Environment()
         queryUseritem()
-        querySmokerecord_October()
-        querySmokerecord_November()
+        querySmokerecord()
         querySmokerecord_Mood()
         querySmokerecord_Situation()
         queryHouse()
@@ -102,29 +98,19 @@ class DBFunc {
         }
     }
     //querySmokerecord_October
-    func querySmokerecord_October() {
+    func querySmokerecord() {
         let docRef = self.db.collection("Users").document(userID).collection("smokerecord").document("October")
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let aUser = Smokerecord_October(aDoc: document)
-                self.local_smokerecord_October = aUser
+                let aUser = Smokerecord(aDoc: document)
+                self.local_Smokerecord = aUser
             } else {
                 print("Document does not exist")
             }
         }
     }
     //querySmokerecord_November
-    func querySmokerecord_November() {
-        let docRef = self.db.collection("Users").document(userID).collection("smokerecord").document("November")
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let aUser = Smokerecord_November(aDoc: document)
-                self.local_smokerecord_November = aUser
-            } else {
-                print("Document does not exist")
-            }
-        }
-    }
+    
     //querySmokerecord_Mood
     func querySmokerecord_Mood() {
         let docRef = self.db.collection("Users").document(userID).collection("smokerecord").document("mood")

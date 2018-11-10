@@ -172,6 +172,7 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         question3.text = "10支"
         //Kai need to fill
         //userID , upload text need to fill
+        //upload = 姓名,菸齡,每日菸量
         setFunc(userID: "", collection: "userdata", document: "userdata", schema: "name", upload: "")
         setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokeage", upload: "")
         setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokecount", upload: "")

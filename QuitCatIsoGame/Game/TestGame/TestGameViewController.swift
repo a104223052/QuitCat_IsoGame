@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     func didSelectButton(selectedButton: UIButton?) {
@@ -23,7 +24,8 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet var recordView: [UIView]!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var ddcountlabel: UILabel!
-    
+    var db:Firestore!
+    var local_userdata: Usersdata!
     var record = 0
     var count = 1
     
@@ -32,17 +34,20 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        db = Firestore.firestore()
         
         myGifView.loadGif(name: "standtest_0")
         
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true
-        
         feedView.layer.cornerRadius = 10
-        
         // Do any additional setup after loading the view.
+        
+        //kai need to fill userID
+        //queryAUser(userID: "userID")
+        //And you can call like  let score = local_userdata.score  to get score
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,8 +55,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         for myView in recordView
         {
             view.addSubview(myView)
-            
-            
             myView.layer.cornerRadius = 10
             
             myView.translatesAutoresizingMaskIntoConstraints = false
@@ -183,6 +186,47 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         UIView.animate(withDuration: 0.5)
         {
             self.view.layoutIfNeeded()
+        }
+        //kai neet to fill
+        //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
+        //addSmokeRecordFunc(userID: "userID", time: "", ratio: "", doing: "", daysmokecount: "")
+    }
+    
+    func addSmokeRecordFunc(userID:String,time:String,ratio:String,doing:String,daysmokecount:String){
+        db.collection("Users").document(userID).collection("smokerecord").addDocument(data:[
+            "time" :time ,
+            "ratio" : ratio,
+            "doing" : doing,
+            "daysmokecount" : daysmokecount
+        ]){err in
+            if let err = err{
+                print("Error add")
+            }else{
+                print("Document add")
+            }
+        }
+    }
+    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
+        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+            [schema:upload]
+        ) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
+    //queryUserdata
+    func queryAUser(userID : String) {
+        let docRef = self.db.collection("Users").document(userID).collection("userdata").document("userdata")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let aUser = Usersdata(aDoc: document)
+                self.local_userdata = aUser
+            } else {
+                print("Document does not exist")
+            }
         }
     }
     /*

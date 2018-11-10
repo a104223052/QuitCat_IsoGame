@@ -12,14 +12,11 @@ import Firebase
 
 struct Usersdata {
     let uid:String?
-    let facebook:String?
-    let google : String?
     let name : String?
-    let age : Int?
-    let birthday : String?
     let smokeage  : Int?
     let smokeaddiction : Int?
-    let smokebrand  : String?
+    let smokecount : Int?
+    let days : Int?
     let gold : Int?
     let score : Int?
     let fish : Int?
@@ -27,14 +24,11 @@ struct Usersdata {
     let userimage  : String?
     init(aDoc: DocumentSnapshot) {
         self.uid = aDoc.get("uid") as? String ?? ""
-        self.facebook = aDoc.get("facebook") as? String ?? ""
-        self.google = aDoc.get("google") as? String ?? ""
         self.name = aDoc.get("name") as? String ?? ""
-        self.age = aDoc.get("age") as? Int ?? 0
-        self.birthday = aDoc.get("birthday") as? String ?? ""
         self.smokeage = aDoc.get("smokeage") as? Int ?? 0
         self.smokeaddiction = aDoc.get("smokeaddiction") as? Int ?? 0
-        self.smokebrand = aDoc.get("smokebrand") as? String ?? ""
+        self.smokecount = aDoc.get("smokecount") as? Int ?? 0
+        self.days = aDoc.get("days") as? Int ?? 0
         self.gold = aDoc.get("gold") as? Int ?? 0
         self.score = aDoc.get("score") as? Int ?? 0
         self.fish = aDoc.get("fish") as? Int ?? 0
@@ -42,6 +36,7 @@ struct Usersdata {
         self.userimage = aDoc.get("userimage") as? String ?? ""
     }
 }
+
 struct Friend {
     let uid:String?
     let friendName:String?
@@ -91,46 +86,22 @@ struct Useritem {
         self.fishcan = aDoc.get("fishcan") as? Int ?? 0
     }
 }
-struct Smokerecord_October {
-    let _1st:Int?
-    let _2nd:Int?
-    let _3rd:Int?
-    let _4th:Int?
-    let _5th:Int?
-    let _6th:Int?
-    let _7th:Int?
-    let first_week:Int?
+
+struct Smokerecord {
+    
+    let time:String?
+    let ratio:String?
+    let doing:String?
+    let daysmokecount:String?
+    
     init(aDoc:DocumentSnapshot){
-        self._1st = aDoc.get("1st") as? Int ?? 0
-        self._2nd = aDoc.get("2nd") as? Int ?? 0
-        self._3rd = aDoc.get("3rd") as? Int ?? 0
-        self._4th = aDoc.get("4th") as? Int ?? 0
-        self._5th = aDoc.get("5th") as? Int ?? 0
-        self._6th = aDoc.get("6th") as? Int ?? 0
-        self._7th = aDoc.get("7th") as? Int ?? 0
-        self.first_week = aDoc.get("first_week") as? Int ?? 0
+        self.time = aDoc.get("time") as? String ?? ""
+        self.ratio = aDoc.get("ratio") as? String ?? ""
+        self.doing = aDoc.get("doing") as? String ?? ""
+        self.daysmokecount = aDoc.get("daysmokecount") as? String ?? ""
     }
 }
-struct Smokerecord_November {
-    let _1st:Int?
-    let _2nd:Int?
-    let _3rd:Int?
-    let _4th:Int?
-    let _5th:Int?
-    let _6th:Int?
-    let _7th:Int?
-    let first_week:Int?
-    init(aDoc:DocumentSnapshot){
-        self._1st = aDoc.get("1st") as? Int ?? 0
-        self._2nd = aDoc.get("2nd") as? Int ?? 0
-        self._3rd = aDoc.get("3rd") as? Int ?? 0
-        self._4th = aDoc.get("4th") as? Int ?? 0
-        self._5th = aDoc.get("5th") as? Int ?? 0
-        self._6th = aDoc.get("6th") as? Int ?? 0
-        self._7th = aDoc.get("7th") as? Int ?? 0
-        self.first_week = aDoc.get("first_week") as? Int ?? 0
-    }
-}
+
 struct Smokerecord_Mood {
     let awesome:Int?
     let sin:Int?
