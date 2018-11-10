@@ -37,13 +37,12 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
     }
     
     //Kai neet to fill
-    //輸入完成之後要叫下面這一串 userID,upload兩格要填
+    //輸入完成之後要叫下面這一串 userID,upload兩格要填 upload = 煙癮程度數字
     //setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokeaddiction", upload: "")
 
     
 
     func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
-        
         db.collection("Users").document(userID).collection(collection).document(document).updateData(
             [schema:upload]
         ) { err in
