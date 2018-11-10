@@ -152,7 +152,7 @@ class UICollectionGridViewLayout: UICollectionViewLayout {
             NSAttributedString.Key.underlineStyle:NSUnderlineStyle.single.rawValue
             ])
         //如果有剩余的空间则都给第一列
-        if columnIndex == 1 {
+        if columnIndex == 0 {
             return CGSize(width:max(remainingWidth, size.width + 17),
                           height:size.height + 10)
         }

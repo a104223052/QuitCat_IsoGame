@@ -39,10 +39,10 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
         sessionSimpleDownload()
         
         gridViewController = UICollectionGridViewController()
-        gridViewController.setColumns(columns: ["名稱", "地址", "電話", "給藥", "衛教" ])
+        gridViewController.setColumns(columns: ["名稱", "電話", "給藥", "衛教" ])
         view.addSubview(gridViewController.view)
-        
- 
+        gridViewController.view.removeFromSuperview()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +70,6 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
         
         cityView.layer.cornerRadius = 10
         regionView.layer.cornerRadius = 10
-        
         super.viewWillAppear(animated)
         
     }
@@ -79,20 +78,14 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
     @IBAction func showClinic(_ sender: Any) {
         sessionSimpleDownload()
         gridViewController = UICollectionGridViewController()
-        gridViewController.setColumns(columns: ["名稱", "地址", "電話", "給藥", "衛教" ])
+        gridViewController.setColumns(columns: ["名稱", "地圖"  ,"電話", "給藥", "衛教" ])
         for (index,element) in name.enumerated() {
-            gridViewController.addRow(row: [element, address[index] , phone[index] , administration[index] , guardian[index]] )
+            gridViewController.addRow(row: [element , "123"  , phone[index] , administration[index] , guardian[index]] )
         }
-        /*
-        gridViewController.addRow(row: ["hangge", "100", "8", "60%"])
-        gridViewController.addRow(row: ["张三", "223", "16", "81%"])
-        gridViewController.addRow(row: ["李四", "143", "25", "93%"])
-        gridViewController.addRow(row: ["王五", "75", "2", "53%"])
-        gridViewController.addRow(row: ["韩梅梅", "43", "12", "33%"])
-        gridViewController.addRow(row: ["李雷", "33", "27", "45%"])
-        gridViewController.addRow(row: ["王大力", "33", "22", "15%"])*/
         view.addSubview(gridViewController.view)
+        
     }
+    
      override func viewDidLayoutSubviews() {
      gridViewController.view.frame = CGRect(x:0, y:320, width:view.frame.width,
      height:400)
@@ -103,8 +96,9 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
     
     
     
-    
-    
+    @IBAction func clear(_ sender: Any) {
+        gridViewController.view.removeFromSuperview()
+    }
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -152,7 +146,6 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
         let titleCity = cityList[pickerCityView.selectedRow(inComponent: 0)]
         cityButton.setTitle(titleCity , for: .normal)
         citySelect = titleCity
-        
         displayPickerCityView(false)
     }
     
