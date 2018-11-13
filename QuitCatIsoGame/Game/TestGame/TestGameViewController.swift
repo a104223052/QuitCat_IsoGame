@@ -46,6 +46,7 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
         //kai need to fill userID
         //queryAUser(userID: "userID")
+        
         //And you can call like  let score = local_userdata.score  to get score
 
     }
@@ -120,6 +121,11 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     
     @IBAction func feeding3(_ sender: Any) {
         displayDatePickerView(true)
+        
+        //kai neet to fill
+        
+        //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
+//        addSmokeRecordFunc(userID: "userID", time: "", ratio: "", doing: "", daysmokecount: "")
     }
     
     func displayDatePickerView(_ show: Bool)
@@ -187,9 +193,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         {
             self.view.layoutIfNeeded()
         }
-        //kai neet to fill
-        //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
-        //addSmokeRecordFunc(userID: "userID", time: "", ratio: "", doing: "", daysmokecount: "")
     }
     
     func addSmokeRecordFunc(userID:String,time:String,ratio:String,doing:String,daysmokecount:String){

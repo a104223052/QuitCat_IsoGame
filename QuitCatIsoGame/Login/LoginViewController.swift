@@ -10,13 +10,21 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 
+
+
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        contentView.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
+    
+    var delegate: getUserIDDelegate?
+    var userID = ""
     
     //Login to Facebook by btn
     @IBAction func onClickLoginWithFacebook(_ sender: Any) {
@@ -51,9 +59,19 @@ class LoginViewController: UIViewController {
                 print("使用FB登入成功")
                 let user = Auth.auth().currentUser
                 if let user = user{
-                    let uid = user.uid
-                    print(uid)
+                    self.userID = user.uid
                     //UID 需在每個畫面都有
+                }
+                
+                
+                let switchPages = SwitchPages()
+                switchPages.switchFromRight(viewControllew: self)
+//                switchPages.switchPagesByPresent(viewController: self, ID: "InformationSettingViewController")
+                
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: ID) {
+                    self.present(controller, animated: false, completion: nil)
+                    self.delegate = controller as! getUserIDDelegate
+                    self.delegate?.getUserID(self.userID)
                 }
                 
             })
@@ -64,10 +82,11 @@ class LoginViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller. //把sender傳遞過來的資料強制轉型成UIButton的型態
     }
-    */
+     */
 
 }

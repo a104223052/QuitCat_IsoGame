@@ -39,7 +39,7 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
         TestQuestionView.layer.shadowOpacity = 0.7
         TestQuestionView.layer.shadowRadius = 5
         TestQuestionView.layer.shadowColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0).cgColor
-
+        
         
         radioButtonController1 = SSRadioButtonsController(buttons: Question1Button)//cp this
         radioButtonController2 = SSRadioButtonsController(buttons: Question2Button)
@@ -47,6 +47,10 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true//cp this
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

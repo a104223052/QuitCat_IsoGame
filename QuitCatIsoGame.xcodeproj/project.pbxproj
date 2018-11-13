@@ -31,6 +31,7 @@
 		B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18712188DC7100E08A47 /* TestGameViewController.swift */; };
 		B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18742188DE5500E08A47 /* GameViewController.swift */; };
 		B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */; };
+		B891B0BF219B35E5004B9FCE /* SwitchPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B891B0BE219B35E5004B9FCE /* SwitchPages.swift */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
 		B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */; };
 		B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */; };
@@ -104,6 +105,7 @@
 		B84C18712188DC7100E08A47 /* TestGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameViewController.swift; sourceTree = "<group>"; };
 		B84C18742188DE5500E08A47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		B891B0BE219B35E5004B9FCE /* SwitchPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchPages.swift; sourceTree = "<group>"; };
 		B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpertHelp.storyboard; sourceTree = "<group>"; };
@@ -268,9 +270,9 @@
 			children = (
 				4EC51E81219575620029854F /* QuitCatIsoGame.entitlements */,
 				B84C186E2188D18600E08A47 /* Yuanti.ttc */,
-				996EB431217FA0FC009DC764 /* GoogleService-Info.plist */,
 				B8FD14BC2177299D0019FAA0 /* AppDelegate.swift */,
 				B8FD14C02177299D0019FAA0 /* Actions.sks */,
+				996EB431217FA0FC009DC764 /* GoogleService-Info.plist */,
 				B8FD1505217C3A2D0019FAA0 /* Login */,
 				B8FD1500217C38970019FAA0 /* Game */,
 				B8DFF0792180E08200B1B4ED /* Community */,
@@ -287,6 +289,7 @@
 				9953CB022180E73A00F6044A /* DBFunc.swift */,
 				4E2FD645218214C800D66222 /* DB_Data.swift */,
 				B8444261218A241E000C69E0 /* gif.swift */,
+				B891B0BE219B35E5004B9FCE /* SwitchPages.swift */,
 			);
 			path = QuitCatIsoGame;
 			sourceTree = "<group>";
@@ -422,7 +425,7 @@
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -661,6 +664,7 @@
 				B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */,
 				B8FD14C32177299D0019FAA0 /* GameScene.swift in Sources */,
 				B81034482181F61F0082D003 /* MissionViewController.swift in Sources */,
+				B891B0BF219B35E5004B9FCE /* SwitchPages.swift in Sources */,
 				B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */,
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */,

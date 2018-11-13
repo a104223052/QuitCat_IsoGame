@@ -1,43 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="97J-vH-VZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HT5-qe-sa0">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yuanti.ttc">
+            <string>STYuanti-SC-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tqT-Pw-aXX">
             <objects>
-                <viewController id="HT5-qe-sa0" customClass="LoginViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="HT5-qe-sa0" customClass="LoginViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ylK-Tz-kzP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se7-S5-4st">
-                                <rect key="frame" x="161" y="343" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="FB 登入"/>
-                                <connections>
-                                    <action selector="onClickLoginWithFacebook:" destination="HT5-qe-sa0" eventType="touchUpInside" id="N8U-Dj-BId"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50K-ng-W8k">
+                                <rect key="frame" x="16" y="60" width="343" height="702"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MpM-hw-3mX">
+                                        <rect key="frame" x="131.66666666666666" y="90" width="80" height="91"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="9tf-1h-XOv"/>
+                                            <constraint firstAttribute="width" secondItem="MpM-hw-3mX" secondAttribute="height" multiplier="80:91" id="ijZ-b6-mIF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIT CAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TX-os-94U">
+                                        <rect key="frame" x="114.66666666666666" y="189" width="114" height="38"/>
+                                        <fontDescription key="fontDescription" name="STYuanti-SC-Bold" family="Yuanti SC" pointSize="27"/>
+                                        <color key="textColor" red="0.25490196079999999" green="0.45882352939999999" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se7-S5-4st">
+                                        <rect key="frame" x="28.666666666666657" y="325" width="286" height="52"/>
+                                        <state key="normal" image="fb登入"/>
+                                        <connections>
+                                            <action selector="onClickLoginWithFacebook:" destination="HT5-qe-sa0" eventType="touchUpInside" id="N8U-Dj-BId"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3TX-os-94U" firstAttribute="centerX" secondItem="50K-ng-W8k" secondAttribute="centerX" id="1CT-lV-Roe"/>
+                                    <constraint firstItem="Se7-S5-4st" firstAttribute="centerX" secondItem="50K-ng-W8k" secondAttribute="centerX" id="74x-WB-gFX"/>
+                                    <constraint firstItem="Se7-S5-4st" firstAttribute="centerY" secondItem="50K-ng-W8k" secondAttribute="centerY" id="JDX-sP-Rbe"/>
+                                    <constraint firstItem="3TX-os-94U" firstAttribute="centerX" secondItem="MpM-hw-3mX" secondAttribute="centerX" id="LzK-gC-HkJ"/>
+                                    <constraint firstItem="MpM-hw-3mX" firstAttribute="top" secondItem="50K-ng-W8k" secondAttribute="top" constant="90" id="Nlg-PX-KV7"/>
+                                    <constraint firstItem="MpM-hw-3mX" firstAttribute="centerX" secondItem="50K-ng-W8k" secondAttribute="centerX" id="X0v-J1-6Ue"/>
+                                    <constraint firstItem="3TX-os-94U" firstAttribute="top" secondItem="MpM-hw-3mX" secondAttribute="bottom" constant="8" id="sBH-he-vQB"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.98039215686274506" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="50K-ng-W8k" firstAttribute="top" secondItem="NcB-u9-Hpi" secondAttribute="top" constant="16" id="7TW-X3-emH"/>
+                            <constraint firstItem="NcB-u9-Hpi" firstAttribute="bottom" secondItem="50K-ng-W8k" secondAttribute="bottom" constant="16" id="Bck-9a-DJS"/>
+                            <constraint firstItem="NcB-u9-Hpi" firstAttribute="trailing" secondItem="50K-ng-W8k" secondAttribute="trailing" constant="16" id="Fzs-nG-eQG"/>
+                            <constraint firstItem="50K-ng-W8k" firstAttribute="leading" secondItem="NcB-u9-Hpi" secondAttribute="leading" constant="16" id="qhX-Hf-1zI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NcB-u9-Hpi"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="50K-ng-W8k" id="h2m-gP-peq"/>
+                        <segue destination="97J-vH-VZN" kind="presentation" id="Elq-Cp-AhU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uG-6u-Zky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-826" y="166"/>
+            <point key="canvasLocation" x="-826.39999999999998" y="165.51724137931035"/>
         </scene>
         <!--Information Setting View Controller-->
         <scene sceneID="Aw4-vw-zSL">
             <objects>
-                <viewController id="97J-vH-VZN" customClass="InformationSettingViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InformationSettingViewController" id="97J-vH-VZN" customClass="InformationSettingViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DXp-ib-rfJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +88,7 @@
                                 <rect key="frame" x="103" y="692" width="169" height="36"/>
                                 <state key="normal" image="進入"/>
                                 <connections>
-                                    <segue destination="2Sa-Pf-VfT" kind="show" id="8vU-JS-vzG"/>
+                                    <action selector="enterButtonClick:" destination="97J-vH-VZN" eventType="touchUpInside" id="ara-5Y-6Gl"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="你平均一天抽幾隻煙呢？" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ek2-5u-3k6">
@@ -54,9 +96,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="question3:" destination="97J-vH-VZN" eventType="editingDidEnd" id="L8J-aw-2sP"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="你抽菸多久了呢？" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfC-ox-wLd">
                                 <rect key="frame" x="57" y="363" width="261" height="30"/>
@@ -175,8 +214,10 @@
                         <outlet property="question1" destination="JNL-kz-qO2" id="pOc-Sy-q6F"/>
                         <outlet property="question2" destination="AfC-ox-wLd" id="UVP-df-Wbi"/>
                         <outlet property="question3" destination="Ek2-5u-3k6" id="AXo-hS-x09"/>
+                        <outlet property="userIDLabel" destination="mkb-i7-aKw" id="bfs-rG-Y9U"/>
                         <outletCollection property="quitedButtonCollection" destination="bXw-P3-Qfr" collectionClass="NSMutableArray" id="2wa-fa-EFr"/>
                         <outletCollection property="quitedButtonCollection" destination="g0c-hs-eUW" collectionClass="NSMutableArray" id="otk-I9-VM7"/>
+                        <segue destination="2Sa-Pf-VfT" kind="presentation" id="a9k-BU-N9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-Cl-Ybs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,7 +227,7 @@
         <!--Cigarette Addiction View Controller-->
         <scene sceneID="DT1-Gx-pXP">
             <objects>
-                <viewController id="2Sa-Pf-VfT" customClass="CigaretteAddictionViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CigaretteAddictionViewController" id="2Sa-Pf-VfT" customClass="CigaretteAddictionViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Bd-oS-WL2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,7 +385,7 @@
                     </view>
                     <connections>
                         <outlet property="Question1View" destination="ZxM-pX-h4e" id="ugt-OG-kSj"/>
-                        <outlet property="TestQuestionView" destination="egt-od-yyV" id="UXu-0c-4kv"/>
+                        <outlet property="TestQuestionView" destination="egt-od-yyV" id="zI0-w3-xGi"/>
                         <outletCollection property="Question1Button" destination="M7H-FJ-nsk" collectionClass="NSMutableArray" id="bm8-fq-cN1"/>
                         <outletCollection property="Question1Button" destination="FxU-nB-o4B" collectionClass="NSMutableArray" id="y4q-AF-m9c"/>
                         <outletCollection property="Question1Button" destination="JCe-24-lKK" collectionClass="NSMutableArray" id="u8j-v3-N8b"/>
@@ -710,6 +751,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogo" width="160" height="182"/>
+        <image name="fb登入" width="286" height="52"/>
         <image name="下一頁" width="143" height="36"/>
         <image name="完成" width="143" height="36"/>
         <image name="進入" width="169" height="36"/>

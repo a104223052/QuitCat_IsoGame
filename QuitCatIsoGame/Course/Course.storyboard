@@ -164,18 +164,169 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="知識問與答" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-2s-ITt">
                                         <rect key="frame" x="26" y="-11" width="67" height="53"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCx-gJ-EXT">
-                                        <rect key="frame" x="144" y="539" width="46" height="30"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE0-sP-oAD">
+                                        <rect key="frame" x="10" y="50" width="317" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ｑ 1 :吸菸所造成傷害，何者為是？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-g6-PQd">
+                                                <rect key="frame" x="8" y="8" width="264" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2j-yb-Y7W" customClass="radio">
+                                                <rect key="frame" x="16" y="48" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">A、	皮膚系統</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4b-3f-mMe">
+                                                <rect key="frame" x="192" y="48" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">B、	血管組織</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9f-pp-sfF">
+                                                <rect key="frame" x="16" y="86" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">C、	呼吸系統</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h79-w8-4Bb">
+                                                <rect key="frame" x="192" y="86" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">D、	以上皆是</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGo-7J-RN5">
+                                        <rect key="frame" x="10" y="186" width="317" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ｑ 2 : 吸菸會造成依賴感嗎？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-ZX-S09">
+                                                <rect key="frame" x="8" y="8" width="219" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-y5-BRP">
+                                                <rect key="frame" x="38" y="48" width="44" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">A、	會</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBC-Ky-w10">
+                                                <rect key="frame" x="208" y="48" width="59" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">B、	不會</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ok2-2n-CIO">
+                                                <rect key="frame" x="28" y="86" width="74" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">C、	不知道</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTz-wB-W8T">
+                                                <rect key="frame" x="204" y="86" width="74" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">D、	不一定</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-1o-kgA">
+                                        <rect key="frame" x="10" y="322" width="317" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ｑ 3 : 成人暴露二手菸中，會有那些症狀？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAv-0W-SfC">
+                                                <rect key="frame" x="8" y="8" width="323" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIw-xF-Owp">
+                                                <rect key="frame" x="5" y="48" width="136" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">A、	頭痛、頭暈不適</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU6-Xw-kk3">
+                                                <rect key="frame" x="5" y="86" width="177" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">C、	增加10-30％肺癌機率</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef4-4y-fvD">
+                                                <rect key="frame" x="195" y="86" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">D、	以上皆是</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-3u-O6d">
+                                                <rect key="frame" x="195" y="48" width="120" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <string key="title">B、	增加心臟疾病</string>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWL-z0-Yjp">
+                                        <rect key="frame" x="96" y="603" width="143" height="36"/>
+                                        <state key="normal" image="下一頁"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pWL-z0-Yjp" secondAttribute="bottom" constant="25" id="13D-iq-lwX"/>
                                     <constraint firstItem="7Bj-GH-Vyh" firstAttribute="top" secondItem="cxL-mE-P5v" secondAttribute="top" constant="10" id="HnG-hu-r06"/>
                                     <constraint firstItem="7Bj-GH-Vyh" firstAttribute="leading" secondItem="iE0-2s-ITt" secondAttribute="trailing" constant="8.5" id="KJJ-Z0-npX"/>
                                     <constraint firstItem="7Bj-GH-Vyh" firstAttribute="centerX" secondItem="cxL-mE-P5v" secondAttribute="centerX" id="WmT-gW-gNs"/>
                                     <constraint firstItem="iE0-2s-ITt" firstAttribute="bottom" secondItem="7Bj-GH-Vyh" secondAttribute="bottom" id="ajn-P6-30z"/>
+                                    <constraint firstItem="pWL-z0-Yjp" firstAttribute="centerX" secondItem="cxL-mE-P5v" secondAttribute="centerX" id="dVK-eM-5FO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -194,7 +345,20 @@
                         <viewLayoutGuide key="safeArea" id="TBo-fp-cWh"/>
                     </view>
                     <connections>
-                        <outlet property="ContentView" destination="cxL-mE-P5v" id="XHi-oI-sSb"/>
+                        <outlet property="ContentView" destination="cxL-mE-P5v" id="HCm-Q6-cQT"/>
+                        <outlet property="Question1View" destination="CE0-sP-oAD" id="ffI-f1-veI"/>
+                        <outletCollection property="Question1Button" destination="o2j-yb-Y7W" collectionClass="NSMutableArray" id="rWy-k0-cC2"/>
+                        <outletCollection property="Question1Button" destination="n4b-3f-mMe" collectionClass="NSMutableArray" id="tpg-Dy-4qk"/>
+                        <outletCollection property="Question1Button" destination="v9f-pp-sfF" collectionClass="NSMutableArray" id="h0S-wF-ums"/>
+                        <outletCollection property="Question1Button" destination="h79-w8-4Bb" collectionClass="NSMutableArray" id="bVt-fz-nmi"/>
+                        <outletCollection property="Question3Button" destination="e6G-3u-O6d" collectionClass="NSMutableArray" id="ivI-Wr-45B"/>
+                        <outletCollection property="Question3Button" destination="aIw-xF-Owp" collectionClass="NSMutableArray" id="Fn3-mt-RKm"/>
+                        <outletCollection property="Question3Button" destination="HU6-Xw-kk3" collectionClass="NSMutableArray" id="Ehf-Rt-QBL"/>
+                        <outletCollection property="Question3Button" destination="ef4-4y-fvD" collectionClass="NSMutableArray" id="Kl5-F9-OBn"/>
+                        <outletCollection property="Question2Button" destination="1Tu-y5-BRP" collectionClass="NSMutableArray" id="bbk-jV-qn3"/>
+                        <outletCollection property="Question2Button" destination="QBC-Ky-w10" collectionClass="NSMutableArray" id="kft-gF-CxD"/>
+                        <outletCollection property="Question2Button" destination="Ok2-2n-CIO" collectionClass="NSMutableArray" id="dk0-82-EBj"/>
+                        <outletCollection property="Question2Button" destination="mTz-wB-W8T" collectionClass="NSMutableArray" id="X0d-Ll-ce9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tic-xt-VzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,6 +473,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="下一頁" width="143" height="36"/>
         <image name="知識問與答" width="67" height="53"/>
         <image name="課堂任務" width="53" height="53"/>
     </resources>

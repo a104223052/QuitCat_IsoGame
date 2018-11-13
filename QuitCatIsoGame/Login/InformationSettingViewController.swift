@@ -15,25 +15,31 @@ import Firebase
  1. 大頭照編輯完需上傳
  */
 
-class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, SSRadioButtonControllerDelegate {
+class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, SSRadioButtonControllerDelegate,getUserIDDelegate {
+    func getUserID(_ userID: String) {
+        userIDLabel.text = "ID : " + userID
+        self.userID = userID
+        print(self.userID)
+    }
+    
+    
     func didSelectButton(selectedButton: UIButton?) {
         
     }
     
-
-    @IBOutlet weak var PersonalPhotoImage: UIButton!
+    var userID: String = ""
     
     var db:Firestore!
-
     var img :UIImageView!
     var sheet:UIAlertController!
     var sourceType = UIImagePickerController.SourceType.photoLibrary //將sourceType賦一個初值類型，防止調用時不賦值出現崩潰
     
+    @IBOutlet weak var userIDLabel: UILabel!
     @IBOutlet var quitedButtonCollection: [UIButton]!
-    
     @IBOutlet weak var question1: UITextField!
     @IBOutlet weak var question2: UITextField!
     @IBOutlet weak var question3: UITextField!
+    @IBOutlet weak var PersonalPhotoImage: UIButton!
     
     
     var radioButtonController: SSRadioButtonsController?
@@ -49,8 +55,6 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         radioButtonController = SSRadioButtonsController(buttons: quitedButtonCollection)
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
-        
-        
     }
     
     @IBAction func setHeaderImage(_ sender: Any) {
@@ -123,9 +127,9 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     
     /**
      判斷相機權限
-     
      - returns: 有權限返回true，沒權限返回false
      */
+    
     func cameraPermissions() -> Bool{
         
         let authStatus:AVAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
@@ -170,14 +174,9 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         question1.text = "王小明"
         question2.text = "1年"
         question3.text = "10支"
-        //Kai need to fill
-        //userID , upload text need to fill
-        //upload = 姓名,菸齡,每日菸量
-        setFunc(userID: "", collection: "userdata", document: "userdata", schema: "name", upload: "")
-        setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokeage", upload: "")
-        setFunc(userID: "", collection: "userdata", document: "userdata", schema: "smokecount", upload: "")
 
-        dismiss(animated:true, completion: nil) //4
+
+        self.dismiss(animated:true, completion: nil) //4
     }
     
     
@@ -193,6 +192,24 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
             }
         }
     }
+    
+    @IBAction func enterButtonClick(_ sender: Any) {
+        //Kai need to fill
+        //userID , upload text need to fill
+        //upload = 姓名,菸齡,每日菸量
+        setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "name", upload: question1.text!)
+        setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokeage", upload: question2.text!)
+        setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokecount", upload: question3.text!)
+    }
+    
+//    @IBAction func backButton(_ sender: Any) {
+//        let transition = CATransition()
+//        transition.duration = 0.5
+//        transition.type = CATransitionType.push
+//        transition.subtype = CATransitionSubtype.fromLeft
+//        self.view.window!.layer.add(transition, forKey: kCATransition)
+//        self.dismiss(animated: false, completion: nil)
+//    }
     /*
     // MARK: - Navigation
 
