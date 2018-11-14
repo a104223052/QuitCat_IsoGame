@@ -15,24 +15,19 @@ import Firebase
  1. 大頭照編輯完需上傳
  */
 
-class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, SSRadioButtonControllerDelegate,getUserIDDelegate {
-    func getUserID(_ userID: String) {
-        userIDLabel.text = "ID : " + userID
-        self.userID = userID
-        print(self.userID)
-    }
-    
-    
+class InformationSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, SSRadioButtonControllerDelegate {
     func didSelectButton(selectedButton: UIButton?) {
         
     }
     
-    var userID: String = ""
     
     var db:Firestore!
     var img :UIImageView!
     var sheet:UIAlertController!
     var sourceType = UIImagePickerController.SourceType.photoLibrary //將sourceType賦一個初值類型，防止調用時不賦值出現崩潰
+    
+    let userDefault = UserDefaults.standard
+    var userID: String = ""
     
     @IBOutlet weak var userIDLabel: UILabel!
     @IBOutlet var quitedButtonCollection: [UIButton]!
@@ -55,6 +50,11 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         radioButtonController = SSRadioButtonsController(buttons: quitedButtonCollection)
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
+        
+        if let userID = self.userDefault.string(forKey: "userID") {
+            self.userIDLabel.text = "ID : " + userID
+            self.userID = userID
+        }
     }
     
     @IBAction func setHeaderImage(_ sender: Any) {
@@ -200,6 +200,13 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "name", upload: question1.text!)
         setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokeage", upload: question2.text!)
         setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokecount", upload: question3.text!)
+        
+        let switchPages = SwitchPages()
+        switchPages.switchFromRight(viewControllew: self)
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "CigaretteAddictionViewController") {
+            self.present(controller, animated: false, completion: nil)
+        }
     }
     
 //    @IBAction func backButton(_ sender: Any) {

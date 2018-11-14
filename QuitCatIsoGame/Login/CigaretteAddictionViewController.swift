@@ -49,8 +49,14 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    
+    @IBAction func nextButtonClick(_ sender: Any) {
+        let switchPages = SwitchPages()
+        switchPages.switchFromRight(viewControllew: self)
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "cccadd2ViewController") {
+            self.present(controller, animated: false, completion: nil)
+        }
     }
     
 

@@ -12,6 +12,9 @@ protocol getUserIDDelegate {
 }
 
 class SwitchPages {
+    
+    var delegate: getUserIDDelegate?
+    
     func switchFromRight(viewControllew: UIViewController) {
         let transition = CATransition()
         transition.duration = 0.2
@@ -20,9 +23,15 @@ class SwitchPages {
         viewControllew.view.window!.layer.add(transition, forKey: kCATransition)
     }
     
-    func switchPagesByPresent(viewController: UIViewController, ID: String) {
-        if let controller = viewController.storyboard?.instantiateViewController(withIdentifier: ID) {
-            viewController.present(controller, animated: false, completion: nil)
-        }
+    func switchFromLeft(viewControllew: UIViewController) {
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        viewControllew.view.window!.layer.add(transition, forKey: kCATransition)
+    }
+    
+    func createPagesByPresent(viewController: UIViewController, ID: String) {
+    viewController.storyboard?.instantiateViewController(withIdentifier: "InformationSettingViewController")
     }
 }

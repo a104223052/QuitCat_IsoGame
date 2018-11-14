@@ -23,8 +23,8 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var delegate: getUserIDDelegate?
-    var userID = ""
+    let userDefault = UserDefaults.standard
+//    var userID = ""
     
     //Login to Facebook by btn
     @IBAction func onClickLoginWithFacebook(_ sender: Any) {
@@ -59,23 +59,19 @@ class LoginViewController: UIViewController {
                 print("使用FB登入成功")
                 let user = Auth.auth().currentUser
                 if let user = user{
-                    self.userID = user.uid
+                    let userID = user.uid
+                    self.userDefault.set(userID, forKey: "userID")
+                    self.userDefault.synchronize()
                     //UID 需在每個畫面都有
                 }
                 
-                
                 let switchPages = SwitchPages()
                 switchPages.switchFromRight(viewControllew: self)
-//                switchPages.switchPagesByPresent(viewController: self, ID: "InformationSettingViewController")
                 
-                if let controller = self.storyboard?.instantiateViewController(withIdentifier: ID) {
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "InformationSettingViewController") {
                     self.present(controller, animated: false, completion: nil)
-                    self.delegate = controller as! getUserIDDelegate
-                    self.delegate?.getUserID(self.userID)
                 }
-                
             })
-            
         }
     }
     /*

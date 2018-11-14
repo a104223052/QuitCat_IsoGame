@@ -69,7 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="50K-ng-W8k" id="h2m-gP-peq"/>
-                        <segue destination="97J-vH-VZN" kind="presentation" id="Elq-Cp-AhU"/>
+                        <segue destination="97J-vH-VZN" kind="show" id="3Ng-fy-MLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uG-6u-Zky" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,12 +217,12 @@
                         <outlet property="userIDLabel" destination="mkb-i7-aKw" id="bfs-rG-Y9U"/>
                         <outletCollection property="quitedButtonCollection" destination="bXw-P3-Qfr" collectionClass="NSMutableArray" id="2wa-fa-EFr"/>
                         <outletCollection property="quitedButtonCollection" destination="g0c-hs-eUW" collectionClass="NSMutableArray" id="otk-I9-VM7"/>
-                        <segue destination="2Sa-Pf-VfT" kind="presentation" id="a9k-BU-N9D"/>
+                        <segue destination="2Sa-Pf-VfT" kind="show" id="xqZ-9c-2r3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-Cl-Ybs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8.8000000000000007" y="164.16791604197903"/>
+            <point key="canvasLocation" x="100" y="163"/>
         </scene>
         <!--Cigarette Addiction View Controller-->
         <scene sceneID="DT1-Gx-pXP">
@@ -252,7 +252,7 @@
                                         <rect key="frame" x="97" y="603" width="143" height="36"/>
                                         <state key="normal" image="下一頁"/>
                                         <connections>
-                                            <segue destination="Es2-u7-FhC" kind="show" id="OAg-dq-8FT"/>
+                                            <action selector="nextButtonClick:" destination="2Sa-Pf-VfT" eventType="touchUpInside" id="TKv-wp-Qz7"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZxM-pX-h4e">
@@ -274,7 +274,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-FJ-nsk">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-FJ-nsk">
                                                 <rect key="frame" x="203" y="48" width="68" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -282,7 +282,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCe-24-lKK">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCe-24-lKK">
                                                 <rect key="frame" x="23" y="86" width="75" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -290,7 +290,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pic-Sf-Hz6">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pic-Sf-Hz6">
                                                 <rect key="frame" x="197" y="86" width="80" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -320,7 +320,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9d-7P-icL">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9d-7P-icL">
                                                 <rect key="frame" x="222" y="48" width="31" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -350,7 +350,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-Ul-Rzg">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-Ul-Rzg">
                                                 <rect key="frame" x="222" y="48" width="31" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -394,6 +394,7 @@
                         <outletCollection property="Question2Button" destination="s9d-7P-icL" collectionClass="NSMutableArray" id="JYI-Qc-Oxa"/>
                         <outletCollection property="Question3Button" destination="cRc-xb-1o7" collectionClass="NSMutableArray" id="gn2-oR-7mv"/>
                         <outletCollection property="Question3Button" destination="ci8-Ul-Rzg" collectionClass="NSMutableArray" id="YQF-UQ-GZy"/>
+                        <segue destination="Es2-u7-FhC" kind="show" id="2o9-BG-Hze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1G-6q-vbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -576,7 +577,7 @@
         <!--Cccadd2 View Controller-->
         <scene sceneID="tL9-Wu-C0U">
             <objects>
-                <viewController id="Es2-u7-FhC" customClass="cccadd2ViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cccadd2ViewController" id="Es2-u7-FhC" customClass="cccadd2ViewController" customModule="QuitCatIsoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m8e-dO-q5E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -616,7 +617,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-R1-c1X">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-R1-c1X">
                                                 <rect key="frame" x="209" y="48" width="57" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -624,7 +625,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-cO-LMj">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-cO-LMj">
                                                 <rect key="frame" x="32" y="86" width="57" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -632,7 +633,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-2G-ZCj">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-2G-ZCj">
                                                 <rect key="frame" x="198" y="86" width="78" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -662,7 +663,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zI-cB-ytK">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zI-cB-ytK">
                                                 <rect key="frame" x="222" y="48" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -692,7 +693,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNG-I2-m01">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNG-I2-m01">
                                                 <rect key="frame" x="222" y="48" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.56862745100000001" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>

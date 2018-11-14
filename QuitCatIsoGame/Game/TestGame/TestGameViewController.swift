@@ -24,6 +24,9 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet var recordView: [UIView]!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var ddcountlabel: UILabel!
+    
+    
+    let userDefault = UserDefaults.standard
     var db:Firestore!
     var local_userdata: Usersdata!
     var record = 0
@@ -125,8 +128,16 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         //kai neet to fill
         
         //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
-//        addSmokeRecordFunc(userID: "userID", time: "", ratio: "", doing: "", daysmokecount: "")
+        
+        if let userID = self.userDefault.string(forKey: "userID") {
+            addSmokeRecordFunc(userID: userID, time: getUTCDate(), ratio: String(format: "%.2f", settingBar.value), doing: (radioButtonController1?.selectedButton()?.titleLabel?.text)!, daysmokecount: countLabel.text!)
+        }
     }
+    
+    @IBAction func cancelFeeding(_ sender: Any) {
+        cancelDatePickerView()
+    }
+    
     
     func displayDatePickerView(_ show: Bool)
     {
@@ -195,6 +206,38 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
     }
     
+    func cancelDatePickerView() {
+        var count: Int = 3
+        record = 0
+        for c in view.constraints
+        {
+            if c.identifier == "recordView1Bottom"
+            {
+                c.constant = 318
+                count -= 1
+            }
+            if c.identifier == "recordView2Bottom"
+            {
+                c.constant = 255
+                count -= 1
+            }
+            if c.identifier == "recordView3Bottom"
+            {
+                c.constant = 223
+                count -= 1
+            }
+            if count == 0
+            {
+                break
+            }
+        }
+        
+        UIView.animate(withDuration: 0.5)
+        {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     func addSmokeRecordFunc(userID:String,time:String,ratio:String,doing:String,daysmokecount:String){
         db.collection("Users").document(userID).collection("smokerecord").addDocument(data:[
             "time" :time ,
@@ -231,6 +274,31 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
                 print("Document does not exist")
             }
         }
+    }
+    
+    func getUTCDate() -> String
+    {
+        // 獲取當前時間
+        let now:Date = Date()
+        
+        // 建立時間格式
+        let dateFormat:DateFormatter = DateFormatter()
+        dateFormat.dateFormat = "yyyy/MM/dd/HH:mm:ss"
+        
+        // 將當下時間轉換成設定的時間格式
+        let dateString:String = dateFormat.string(from: now)
+        
+        return dateString
+    }
+    
+    func getSelectedButton(buttonCollection: [UIButton]) -> UIButton {
+        var btn = UIButton()
+        for button in buttonCollection {
+            if button.isSelected {
+                btn = button
+            }
+        }
+        return btn
     }
     /*
     // MARK: - Navigation
