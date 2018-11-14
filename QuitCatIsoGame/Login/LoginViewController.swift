@@ -16,15 +16,24 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     
+    
+    let userDefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//          分辨登入狀況
+//        print(self.userDefault.string(forKey: "userID"))
+//        if self.userDefault.string(forKey: "userID") != "" {
+//
+//            let storyboard = UIStoryboard(name: "TestGame", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "TestGameViewController")
+//            self.present(controller, animated: false, completion: nil)
+//        }
+        
+        
         contentView.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
-    
-    let userDefault = UserDefaults.standard
-//    var userID = ""
     
     //Login to Facebook by btn
     @IBAction func onClickLoginWithFacebook(_ sender: Any) {

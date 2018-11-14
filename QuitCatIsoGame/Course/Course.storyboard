@@ -20,9 +20,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WR-xY-H9l">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huV-Vf-euY">
-                                        <rect key="frame" x="17" y="47" width="34" height="30"/>
-                                        <state key="normal" title="Back"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huV-Vf-euY">
+                                        <rect key="frame" x="26" y="42" width="24" height="41"/>
+                                        <state key="normal" image="Btn_返回"/>
                                         <connections>
                                             <segue destination="W1L-1a-Tbt" kind="show" id="mDf-4X-DVE"/>
                                         </connections>
@@ -30,9 +30,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.60392156862745094" green="0.74901960784313726" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="huV-Vf-euY" firstAttribute="top" secondItem="5WR-xY-H9l" secondAttribute="top" constant="47" id="PC5-Ew-ahO"/>
+                                    <constraint firstItem="huV-Vf-euY" firstAttribute="top" secondItem="5WR-xY-H9l" secondAttribute="top" constant="42" id="CkV-o5-Jfl"/>
                                     <constraint firstAttribute="height" constant="125" id="RYf-dR-4f1"/>
-                                    <constraint firstItem="huV-Vf-euY" firstAttribute="leading" secondItem="5WR-xY-H9l" secondAttribute="leading" constant="17" id="fr0-Sz-o6K"/>
+                                    <constraint firstItem="huV-Vf-euY" firstAttribute="leading" secondItem="5WR-xY-H9l" secondAttribute="leading" constant="26" id="xMi-sP-HZG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru2-Ts-A4c">
@@ -147,9 +147,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3r3-UB-l4e">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gif-KJ-HlB">
+                                        <rect key="frame" x="21" y="42" width="24" height="41"/>
+                                        <state key="normal" image="Btn_返回"/>
+                                        <connections>
+                                            <action selector="back:" destination="OVn-tB-sxz" eventType="touchUpInside" id="nom-0c-Ybh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.60392156860000001" green="0.74901960779999999" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="gif-KJ-HlB" firstAttribute="top" secondItem="3r3-UB-l4e" secondAttribute="top" constant="42" id="9vc-mI-L6h"/>
                                     <constraint firstAttribute="height" constant="125" id="GVa-c1-RFr"/>
+                                    <constraint firstItem="gif-KJ-HlB" firstAttribute="leading" secondItem="3r3-UB-l4e" secondAttribute="leading" constant="21" id="HTy-LT-cbg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-mE-P5v">
@@ -473,6 +484,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Btn_返回" width="24" height="41"/>
         <image name="下一頁" width="143" height="36"/>
         <image name="知識問與答" width="67" height="53"/>
         <image name="課堂任務" width="53" height="53"/>

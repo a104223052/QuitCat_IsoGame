@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mh6-5U-kls">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mh6-5U-kls">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,8 +12,8 @@
         <!--TestGame-->
         <scene sceneID="Gfh-kv-428">
             <objects>
-                <viewControllerPlaceholder storyboardName="TestGame" id="OWW-FO-vlL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGz-rS-jV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TestGame" id="OWW-FO-vlL" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="748" y="174"/>
         </scene>
@@ -28,15 +28,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="綜合資訊_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-9e-Z9W">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-Hp-u2Z">
-                                <rect key="frame" x="22" y="54" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="OWW-FO-vlL" kind="show" id="Bgx-Kw-GYX"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cho-sa-iEL">
-                                <rect key="frame" x="8" y="92" width="359" height="678"/>
+                                <rect key="frame" x="8" y="103" width="359" height="667"/>
                                 <subviews>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5f-87-GZN">
                                         <rect key="frame" x="15" y="144" width="329" height="128"/>
@@ -245,6 +238,13 @@
                                     <constraint firstAttribute="trailing" secondItem="xF4-86-bAo" secondAttribute="trailing" constant="15" id="wT3-DV-3VU"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-Hp-u2Z">
+                                <rect key="frame" x="16" y="54" width="24" height="41"/>
+                                <state key="normal" image="Btn_返回"/>
+                                <connections>
+                                    <segue destination="OWW-FO-vlL" kind="show" id="Bgx-Kw-GYX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -283,6 +283,16 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro7-cw-xfN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-kc-8nm">
+                                        <rect key="frame" x="24" y="42" width="24" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Btn_返回"/>
+                                        <connections>
+                                            <action selector="back:" destination="Dgh-kN-VBI" eventType="touchUpInside" id="STg-2e-nYb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.60392156860000001" green="0.74901960779999999" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="MZL-H2-maj"/>
@@ -693,6 +703,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Btn_返回" width="24" height="41"/>
         <image name="Btn_送出" width="143" height="36"/>
         <image name="戒菸Line@" width="50" height="50"/>
         <image name="戒菸專線" width="50" height="50"/>

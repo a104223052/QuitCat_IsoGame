@@ -300,6 +300,13 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
         return btn
     }
+    
+//    @IBAction func goExpertHelp(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "ExpertHelp", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "ExpertHelpViewController")
+//        self.present(controller, animated: false, completion: nil)
+//    }
+    
     /*
     // MARK: - Navigation
 

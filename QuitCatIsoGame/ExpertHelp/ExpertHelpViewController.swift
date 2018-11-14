@@ -96,7 +96,7 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
             completion: nil)
     }
     
-    @IBAction func back(_ sender: Any) {
+    @IBAction func backButtonClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     /*

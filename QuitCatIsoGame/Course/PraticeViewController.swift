@@ -54,6 +54,9 @@ class PraticeViewController: UIViewController, SSRadioButtonControllerDelegate {
         radioButtonController1!.shouldLetDeSelect = true//cp this
     }
     
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     /*
      // MARK: - Navigation
