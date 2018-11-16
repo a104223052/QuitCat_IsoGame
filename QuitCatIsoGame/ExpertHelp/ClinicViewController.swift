@@ -149,7 +149,6 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
             }else if(citySelect == "新北市"){
                 return regionList[row]
             }
-            
             return nullList[row]
         }
     }
@@ -163,7 +162,6 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
             titleRegion = taipeiList[pickerRegionView.selectedRow(inComponent: 0)]
         }else if(citySelect == "新北市"){
             titleRegion = regionList[pickerRegionView.selectedRow(inComponent: 0)]
-            
         }
         regionButton.setTitle(titleRegion , for: .normal)
         regionSelect = titleRegion
@@ -250,9 +248,12 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
             let fileManager = FileManager.default
             let myDirectory = NSHomeDirectory() + "/Documents/"
             let fileArray = fileManager.subpaths(atPath: myDirectory)
+            
             for fn in fileArray!{
                 try! fileManager.removeItem(atPath: myDirectory + "/\(fn)")
             }
+            
+            
             let exist = fileManager.fileExists(atPath: documnets)
             if(exist == false){
                 try! fileManager.moveItem(atPath: locationPath, toPath: documnets)
@@ -288,6 +289,13 @@ class ClinicViewController: UIViewController , UIPickerViewDataSource , UIPicker
          for items in address{
          print(items)
          }*/
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        let switchPages = SwitchPages()
+        switchPages.switchFromRight(viewControllew: self)
+        
+            self.dismiss(animated: true, completion: nil)
     }
 }
 extension String {

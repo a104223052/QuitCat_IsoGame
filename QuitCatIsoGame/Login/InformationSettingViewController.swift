@@ -181,7 +181,6 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     
     
     func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
-        
         db.collection("Users").document(userID).collection(collection).document(document).updateData(
             [schema:upload]
         ) { err in
@@ -197,9 +196,16 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         //Kai need to fill
         //userID , upload text need to fill
         //upload = 姓名,菸齡,每日菸量
-        setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "name", upload: question1.text!)
-        setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokeage", upload: question2.text!)
-        setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokecount", upload: question3.text!)
+        //setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "name", upload: question1.text!)
+        //setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokeage", upload: question2.text!)
+        //setFunc(userID: self.userID, collection: "userdata", document: "userdata", schema: "smokecount", upload: question3.text!)
+        
+        /*db.collection("Users").document(self.userID).collection("userdata").document("userdata").setData(
+            ["name" : question1.text!,
+             "smokeage" : question2.text!,
+             "smokecount" : question3.text!]
+        )*/
+        
         
         let switchPages = SwitchPages()
         switchPages.switchFromRight(viewControllew: self)

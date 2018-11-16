@@ -96,8 +96,13 @@ class ExpertHelpViewController: UIViewController, SFSafariViewControllerDelegate
             completion: nil)
     }
     
-    @IBAction func backButtonClick(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func goClinic(_ sender: Any) {
+        let switchPages = SwitchPages()
+        switchPages.switchFromLeft(viewControllew: self)
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ClinicViewController") {
+            self.present(controller, animated: false, completion: nil)
+        }
     }
     /*
     // MARK: - Navigation
