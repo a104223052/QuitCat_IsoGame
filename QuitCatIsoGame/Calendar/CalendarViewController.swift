@@ -1,7 +1,7 @@
 import UIKit
 import CVCalendar
 
-class ViewController: UIViewController {
+class CalendarViewController: UIViewController {
     //星期菜单栏
     private var menuView: CVCalendarMenuView!
     //日历主视图
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: CVCalendarViewDelegate,CVCalendarMenuViewDelegate {
+extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDelegate {
     //视图模式
     func presentationMode() -> CalendarMode {
         //使用月视图
