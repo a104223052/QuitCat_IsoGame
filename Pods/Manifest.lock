@@ -13,6 +13,7 @@ PODS:
   - BoringSSL/Interface (10.0.6)
   - CSVImporter (1.9.0):
     - HandySwift (~> 2.5)
+  - CVCalendar (1.6.1)
   - FBSDKCoreKit (4.38.0):
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.38.0):
@@ -156,6 +157,7 @@ PODS:
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
   - HandySwift (2.6.0)
+  - JTAppleCalendar (7.1.6)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -170,6 +172,7 @@ PODS:
 DEPENDENCIES:
   - Bolts
   - CSVImporter
+  - CVCalendar
   - FBSDKCoreKit
   - FBSDKLoginKit
   - Firebase/Auth
@@ -178,6 +181,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - FirebaseUI/Auth
   - FirebaseUI/Google
+  - JTAppleCalendar
   - SDWebImage
 
 SPEC REPOS:
@@ -185,6 +189,7 @@ SPEC REPOS:
     - Bolts
     - BoringSSL
     - CSVImporter
+    - CVCalendar
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -209,6 +214,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - HandySwift
+    - JTAppleCalendar
     - leveldb-library
     - nanopb
     - Protobuf
@@ -218,6 +224,7 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
   CSVImporter: 34c3f9a2f47c61c7e2c830073002b00a682c32ee
+  CVCalendar: 505c11b11a088b43f159806e791eba1c2540853b
   FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
   FBSDKLoginKit: 634fa27e72e33620eb6389253337342c03d4a407
   Firebase: b48f9e653da971ecce5b8c749684bc8bb2d26bd3
@@ -242,11 +249,12 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   HandySwift: 510039979f68ab2c6866f1707634815654ed329b
+  JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 528581b62ea49fc90d9801c3583c63ea99fa8801
+PODFILE CHECKSUM: 84501defc296dc4a81c930771d27b146ce71fa71
 
 COCOAPODS: 1.5.3
