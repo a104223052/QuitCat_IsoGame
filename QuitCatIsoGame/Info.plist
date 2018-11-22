@@ -49,9 +49,9 @@
 		<string>Yuanti.ttc</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>Login</string>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Calendar</string>
+	<string>Login</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

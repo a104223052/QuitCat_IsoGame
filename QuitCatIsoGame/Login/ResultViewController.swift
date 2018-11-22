@@ -18,6 +18,9 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var radioButton: [UIButton]!
+    @IBOutlet weak var totalScoreLabel: UILabel!
+    
+    var totalScore: Int = 0
     
     
     var radioButtonController: SSRadioButtonsController?
@@ -33,6 +36,8 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
         radioButtonController = SSRadioButtonsController(buttons: radioButton)
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
+        
+        totalScoreLabel.text = "尼古丁成癮度：" + String(totalScore) + " 分"
         // Do any additional setup after loading the view.
     }
     

@@ -77,7 +77,7 @@ class LoginViewController: UIViewController {
                 let switchPages = SwitchPages()
                 switchPages.switchFromRight(viewControllew: self)
                 
-                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "InformationSettingViewController") {
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "InformationSettingNavigationController") {
                     self.present(controller, animated: false, completion: nil)
                 }
             })

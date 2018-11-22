@@ -46,28 +46,46 @@ class CigaretteAddictionViewController: UIViewController, SSRadioButtonControlle
         radioButtonController3 = SSRadioButtonsController(buttons: Question3Button)
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true//cp this
+        
+//        let leftBarBtn = UIBarButtonItem(title: "", style: .plain, target: self,
+//                                         action: #selector(backToPrevious))
+//        leftBarBtn.image = UIImage(named: "Btn_返回")
+//        self.navigationItem.setLeftBarButton(leftBarBtn, animated: true)
         // Do any additional setup after loading the view.
     }
     
     
-    @IBAction func nextButtonClick(_ sender: Any) {
-        let switchPages = SwitchPages()
-        switchPages.switchFromRight(viewControllew: self)
+    @IBAction func nextButtonClick(_ sender: UIButton) {
+        let tag1 = radioButtonController1?.selectedButton()?.tag
+        let tag2 = radioButtonController2?.selectedButton()?.tag
+        let tag3 = radioButtonController3?.selectedButton()?.tag
         
-        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "cccadd2ViewController") {
-            self.present(controller, animated: false, completion: nil)
+        if tag1 != nil && tag2 != nil && tag3 != nil {
+            self.performSegue(withIdentifier: "CigaretteAddictionViewController2CigaretteAddiction2ViewController", sender: sender.tag)
         }
+        else {
+            let alert = UIAlertController(title: nil, message: "尚未填寫所有選項", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        let tag1 = radioButtonController1?.selectedButton()?.tag
+        let tag2 = radioButtonController2?.selectedButton()?.tag
+        let tag3 = radioButtonController3?.selectedButton()?.tag
+        
+        
+        let controller = segue.destination as! cccadd2ViewController
+        
+        controller.answerScore = [tag1, tag2, tag3] as! [Int]
+        
     }
-    */
 
 }

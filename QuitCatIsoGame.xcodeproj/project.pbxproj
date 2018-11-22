@@ -24,8 +24,6 @@
 		B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B811F5AE2185C94B0099D148 /* Setting.storyboard */; };
 		B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811F5B12185C9C10099D148 /* SettingViewController.swift */; };
 		B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BB1462188600800A6C1E6 /* EditContactViewController.swift */; };
-		B82CEF9A218C9820008F1FDF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CEF99218C9820008F1FDF /* ResultViewController.swift */; };
-		B84442602188F666000C69E0 /* cccadd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844425F2188F666000C69E0 /* cccadd2ViewController.swift */; };
 		B8444262218A241E000C69E0 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8444261218A241E000C69E0 /* gif.swift */; };
 		B8444264218A248D000C69E0 /* PStest.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8444263218A248D000C69E0 /* PStest.gif */; };
 		B844426A218A2C02000C69E0 /* standtest_0.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8444269218A2C01000C69E0 /* standtest_0.gif */; };
@@ -34,10 +32,15 @@
 		B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C18742188DE5500E08A47 /* GameViewController.swift */; };
 		B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */; };
 		B891B0BF219B35E5004B9FCE /* SwitchPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B891B0BE219B35E5004B9FCE /* SwitchPages.swift */; };
+		B8D2E07A21A6F83900BE7FB0 /* CigaretteAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D2E07421A6F83700BE7FB0 /* CigaretteAddictionViewController.swift */; };
+		B8D2E07B21A6F83900BE7FB0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D2E07521A6F83800BE7FB0 /* LoginViewController.swift */; };
+		B8D2E07C21A6F83900BE7FB0 /* cccadd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D2E07621A6F83800BE7FB0 /* cccadd2ViewController.swift */; };
+		B8D2E07D21A6F83900BE7FB0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D2E07721A6F83800BE7FB0 /* Login.storyboard */; };
+		B8D2E07E21A6F83900BE7FB0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D2E07821A6F83900BE7FB0 /* ResultViewController.swift */; };
+		B8D2E07F21A6F83900BE7FB0 /* InformationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D2E07921A6F83900BE7FB0 /* InformationSettingViewController.swift */; };
 		B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */; };
 		B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */; };
 		B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */; };
-		B8DFF074218096D900B1B4ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF073218096D900B1B4ED /* LoginViewController.swift */; };
 		B8DFF076218097DC00B1B4ED /* ExpertHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DFF075218097DC00B1B4ED /* ExpertHelpViewController.swift */; };
 		B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DFF0772180E07D00B1B4ED /* Community.storyboard */; };
 		B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14BC2177299D0019FAA0 /* AppDelegate.swift */; };
@@ -53,9 +56,6 @@
 		B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14F82178B7FF0019FAA0 /* Character.swift */; };
 		B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14FA2179D9CE0019FAA0 /* PathFinder.swift */; };
 		B8FD14FD2179DAA60019FAA0 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14FC2179DAA60019FAA0 /* Global.swift */; };
-		B8FD1502217C39500019FAA0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD1501217C39500019FAA0 /* Login.storyboard */; };
-		B8FD1504217C3A250019FAA0 /* InformationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD1503217C3A250019FAA0 /* InformationSettingViewController.swift */; };
-		B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD1506217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift */; };
 		C5026E751B5827DA1324C3CF /* Pods_QuitCatIsoGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E3C21770FBD2981804E0F2 /* Pods_QuitCatIsoGameUITests.framework */; };
 		D43614605A1DA48384C4D73F /* Pods_QuitCatIsoGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C75ADF2621C8D73B8398138 /* Pods_QuitCatIsoGameTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,8 +99,6 @@
 		B811F5AE2185C94B0099D148 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B811F5B12185C9C10099D148 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B81BB1462188600800A6C1E6 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
-		B82CEF99218C9820008F1FDF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		B844425F2188F666000C69E0 /* cccadd2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cccadd2ViewController.swift; sourceTree = "<group>"; };
 		B8444261218A241E000C69E0 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		B8444263218A248D000C69E0 /* PStest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PStest.gif; sourceTree = "<group>"; };
 		B8444269218A2C01000C69E0 /* standtest_0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = standtest_0.gif; sourceTree = "<group>"; };
@@ -110,10 +108,15 @@
 		B84C18742188DE5500E08A47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		B891B0BE219B35E5004B9FCE /* SwitchPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchPages.swift; sourceTree = "<group>"; };
+		B8D2E07421A6F83700BE7FB0 /* CigaretteAddictionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CigaretteAddictionViewController.swift; sourceTree = "<group>"; };
+		B8D2E07521A6F83800BE7FB0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B8D2E07621A6F83800BE7FB0 /* cccadd2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cccadd2ViewController.swift; sourceTree = "<group>"; };
+		B8D2E07721A6F83800BE7FB0 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B8D2E07821A6F83900BE7FB0 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B8D2E07921A6F83900BE7FB0 /* InformationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationSettingViewController.swift; sourceTree = "<group>"; };
 		B8DFF06B217F3C5400B1B4ED /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		B8DFF06C217F3C5400B1B4ED /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		B8DFF06F217F519400B1B4ED /* ExpertHelp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpertHelp.storyboard; sourceTree = "<group>"; };
-		B8DFF073218096D900B1B4ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B8DFF075218097DC00B1B4ED /* ExpertHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertHelpViewController.swift; sourceTree = "<group>"; };
 		B8DFF0772180E07D00B1B4ED /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		B8FD14B92177299D0019FAA0 /* QuitCatIsoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitCatIsoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,9 +138,6 @@
 		B8FD14F82178B7FF0019FAA0 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B8FD14FA2179D9CE0019FAA0 /* PathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
 		B8FD14FC2179DAA60019FAA0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		B8FD1501217C39500019FAA0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		B8FD1503217C3A250019FAA0 /* InformationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationSettingViewController.swift; sourceTree = "<group>"; };
-		B8FD1506217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigaretteAddictionViewController.swift; sourceTree = "<group>"; };
 		BABC18DDA9D205281C1072DA /* Pods-QuitCatIsoGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitCatIsoGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitCatIsoGameUITests/Pods-QuitCatIsoGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE22FE3DB6963C0473E91AF0 /* Pods-QuitCatIsoGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitCatIsoGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitCatIsoGameTests/Pods-QuitCatIsoGameTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD192BBBC83247D3207AAA8A /* Pods-QuitCatIsoGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitCatIsoGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitCatIsoGameTests/Pods-QuitCatIsoGameTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -344,12 +344,12 @@
 		B8FD1505217C3A2D0019FAA0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B8FD1501217C39500019FAA0 /* Login.storyboard */,
-				B82CEF99218C9820008F1FDF /* ResultViewController.swift */,
-				B844425F2188F666000C69E0 /* cccadd2ViewController.swift */,
-				B8FD1503217C3A250019FAA0 /* InformationSettingViewController.swift */,
-				B8FD1506217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift */,
-				B8DFF073218096D900B1B4ED /* LoginViewController.swift */,
+				B8D2E07621A6F83800BE7FB0 /* cccadd2ViewController.swift */,
+				B8D2E07421A6F83700BE7FB0 /* CigaretteAddictionViewController.swift */,
+				B8D2E07921A6F83900BE7FB0 /* InformationSettingViewController.swift */,
+				B8D2E07721A6F83800BE7FB0 /* Login.storyboard */,
+				B8D2E07521A6F83800BE7FB0 /* LoginViewController.swift */,
+				B8D2E07821A6F83900BE7FB0 /* ResultViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -489,9 +489,9 @@
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
 				B81034412181E47D0082D003 /* Course.storyboard in Resources */,
 				B844426A218A2C02000C69E0 /* standtest_0.gif in Resources */,
+				B8D2E07D21A6F83900BE7FB0 /* Login.storyboard in Resources */,
 				B8FD14CA2177299F0019FAA0 /* Assets.xcassets in Resources */,
 				B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */,
-				B8FD1502217C39500019FAA0 /* Login.storyboard in Resources */,
 				B8FD14CD2177299F0019FAA0 /* LaunchScreen.storyboard in Resources */,
 				B8FD14F5217739D30019FAA0 /* sprites.atlas in Resources */,
 				B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */,
@@ -677,33 +677,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8DFF074218096D900B1B4ED /* LoginViewController.swift in Sources */,
+				B8D2E07B21A6F83900BE7FB0 /* LoginViewController.swift in Sources */,
 				9953CB032180E73A00F6044A /* DBFunc.swift in Sources */,
-				B84442602188F666000C69E0 /* cccadd2ViewController.swift in Sources */,
 				B81BB1472188600800A6C1E6 /* EditContactViewController.swift in Sources */,
 				B8FD14C32177299D0019FAA0 /* GameScene.swift in Sources */,
 				B81034482181F61F0082D003 /* MissionViewController.swift in Sources */,
+				B8D2E07E21A6F83900BE7FB0 /* ResultViewController.swift in Sources */,
 				B891B0BF219B35E5004B9FCE /* SwitchPages.swift in Sources */,
 				B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */,
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
-				B82CEF9A218C9820008F1FDF /* ResultViewController.swift in Sources */,
 				4E6625AC21A4138600325088 /* CalendarViewController.swift in Sources */,
+				B8D2E07C21A6F83900BE7FB0 /* cccadd2ViewController.swift in Sources */,
 				B8444262218A241E000C69E0 /* gif.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
 				B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */,
 				B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */,
 				4EACCAAB218CA26B00249FB3 /* UICollectionGridViewController.swift in Sources */,
 				B81034442181E75B0082D003 /* CourseViewController.swift in Sources */,
+				B8D2E07A21A6F83900BE7FB0 /* CigaretteAddictionViewController.swift in Sources */,
 				4EACCAAD218CB07700249FB3 /* UICollectionGridViewCell.swift in Sources */,
-				B8FD1504217C3A250019FAA0 /* InformationSettingViewController.swift in Sources */,
 				4EACCAB1218CB0DF00249FB3 /* ClinicViewController.swift in Sources */,
+				B8D2E07F21A6F83900BE7FB0 /* InformationSettingViewController.swift in Sources */,
 				4EACCAAF218CB09300249FB3 /* UICollectionGridViewLayout.swift in Sources */,
 				B8DFF076218097DC00B1B4ED /* ExpertHelpViewController.swift in Sources */,
 				B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */,
 				B81034462181F6050082D003 /* PraticeViewController.swift in Sources */,
-				B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */,
 				B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */,
 				4E2FD646218214C800D66222 /* DB_Data.swift in Sources */,
 				B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */,
@@ -885,7 +885,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = QuitCatIsoGame/QuitCatIsoGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K569772QX4;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -905,7 +905,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = QuitCatIsoGame/QuitCatIsoGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K569772QX4;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

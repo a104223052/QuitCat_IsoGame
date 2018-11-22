@@ -23,6 +23,8 @@ class cccadd2ViewController: UIViewController, SSRadioButtonControllerDelegate {
     var radioButtonController2: SSRadioButtonsController?
     var radioButtonController3: SSRadioButtonsController?
     
+    var answerScore: [Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TestQuestionView.layer.cornerRadius = 20
@@ -31,24 +33,44 @@ class cccadd2ViewController: UIViewController, SSRadioButtonControllerDelegate {
         TestQuestionView.layer.shadowRadius = 5
         TestQuestionView.layer.shadowColor = UIColor(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1.0).cgColor
         
-        
         radioButtonController1 = SSRadioButtonsController(buttons: Question1Button)
         radioButtonController2 = SSRadioButtonsController(buttons: Question2Button)
         radioButtonController3 = SSRadioButtonsController(buttons: Question3Button)
         radioButtonController1!.delegate = self
         radioButtonController1!.shouldLetDeSelect = true
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func finishButtonClick(_ sender: UIButton) {
+        let tag1 = radioButtonController1?.selectedButton()?.tag
+        let tag2 = radioButtonController2?.selectedButton()?.tag
+        let tag3 = radioButtonController3?.selectedButton()?.tag
+        
+        if tag1 != nil && tag2 != nil && tag3 != nil {
+            self.performSegue(withIdentifier: "cccadd2ViewController2ResultViewController", sender: sender.tag)
+        }
+        else {
+            let alert = UIAlertController(title: nil, message: "尚未填寫所有選項", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! ResultViewController
+        var total: Int = 0
+        
+        answerScore.append((radioButtonController1?.selectedButton()?.tag)!)
+        answerScore.append((radioButtonController2?.selectedButton()?.tag)!)
+        answerScore.append((radioButtonController3?.selectedButton()?.tag)!)
+        
+        for score in answerScore {
+            total += score
+        }
+        
+        controller.totalScore = total
+    }
 
 }

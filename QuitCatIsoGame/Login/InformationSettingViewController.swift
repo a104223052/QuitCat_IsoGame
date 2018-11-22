@@ -43,6 +43,11 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
         super.viewDidLoad()
         db = Firestore.firestore()
 
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationItem.leftBarButtonItems?.image = UIImage(named: "Btn_返回")
+        
+        
         PersonalPhotoImage.layer.cornerRadius = PersonalPhotoImage.frame.size.width/2
         PersonalPhotoImage.layer.borderColor = UIColor.init(red: 83/255, green: 120/255, blue: 158/255, alpha: 1).cgColor
         PersonalPhotoImage.layer.borderWidth = 4
@@ -214,6 +219,7 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
             self.present(controller, animated: false, completion: nil)
         }
     }
+    
     
 //    @IBAction func backButton(_ sender: Any) {
 //        let transition = CATransition()
