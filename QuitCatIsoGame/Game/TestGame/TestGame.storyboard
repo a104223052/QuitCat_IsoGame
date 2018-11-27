@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ju6-rt-JIy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ju6-rt-JIy">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -113,6 +113,14 @@
                                 </constraints>
                                 <state key="normal" image="CART"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isL-h1-5D2" userLabel="ShowContainerViewButton">
+                                <rect key="frame" x="205" y="646" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ShowContainerButton:" destination="Ju6-rt-JIy" eventType="touchUpInside" id="c4J-UJ-oPv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -134,10 +142,15 @@
                     <connections>
                         <outlet property="countLabel" destination="0oq-Bl-JMk" id="bWR-Pw-J0i"/>
                         <outlet property="ddcountlabel" destination="KGC-Q3-T0P" id="Myz-r9-PLR"/>
+                        <outlet property="environmentslider" destination="BRo-Pm-Ms0" id="GiD-m5-R3d"/>
                         <outlet property="feedView" destination="qad-zn-fVw" id="ePP-72-iMe"/>
+                        <outlet property="hungryslider" destination="6gl-Hf-FKS" id="xLO-Nz-LxP"/>
+                        <outlet property="lifeslider" destination="CmH-pK-1qp" id="j7r-Zg-76c"/>
+                        <outlet property="moodslider" destination="fxy-XK-CCe" id="6MO-6n-o8g"/>
                         <outlet property="myGifView" destination="fwd-XU-5yJ" id="aBW-iC-2rv"/>
                         <outlet property="settingBar" destination="TnP-Pg-5yY" id="feF-5B-75R"/>
                         <outlet property="settinglabel" destination="CDJ-k5-Pgv" id="1wh-UD-fLa"/>
+                        <outlet property="statusView" destination="gK4-MZ-xKg" id="mH9-R0-TEP"/>
                         <outletCollection property="recordView" destination="CPi-2W-PrO" collectionClass="NSMutableArray" id="fXd-0W-jRq"/>
                         <outletCollection property="recordView" destination="Ayp-T7-Jxh" collectionClass="NSMutableArray" id="xgl-8b-GDK"/>
                         <outletCollection property="recordView" destination="Hk3-Uy-MOm" collectionClass="NSMutableArray" id="hhr-2n-fSx"/>
@@ -492,6 +505,74 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="feS-iv-SFJ"/>
+                </view>
+                <view contentMode="scaleToFill" id="gK4-MZ-xKg" userLabel="StatusView">
+                    <rect key="frame" x="0.0" y="0.0" width="146" height="136"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="寵物的小資訊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWe-Rw-htq">
+                            <rect key="frame" x="16" y="5" width="114" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.88627450980392153" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name=".PingFangTC-Regular" family=".PingFang TC" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生命" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vA-TR-eM4">
+                            <rect key="frame" x="10" y="40" width="18" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="心情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecm-D8-Nd0">
+                            <rect key="frame" x="10" y="83" width="18" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="環境值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-m5-a54">
+                            <rect key="frame" x="10" y="104" width="25" height="12"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="飢餓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mb-gP-pMW">
+                            <rect key="frame" x="10" y="62" width="18" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CmH-pK-1qp">
+                            <rect key="frame" x="40" y="31" width="95" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="minimumTrackTintColor" red="1" green="0.26666666666666666" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </slider>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fxy-XK-CCe">
+                            <rect key="frame" x="40" y="75" width="95" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="minimumTrackTintColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </slider>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BRo-Pm-Ms0">
+                            <rect key="frame" x="40" y="96" width="95" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="minimumTrackTintColor" red="1" green="0.82352941180000006" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </slider>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6gl-Hf-FKS">
+                            <rect key="frame" x="40" y="54" width="95" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="minimumTrackTintColor" red="0.12941176470588234" green="0.62745098039215685" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" red="0.68235294117647061" green="0.792156862745098" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                    <viewLayoutGuide key="safeArea" id="8pi-vG-k8h"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="143.3497536945813"/>

@@ -24,11 +24,25 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet var recordView: [UIView]!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var ddcountlabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet var statusView: UIView!
+    
+    @IBOutlet weak var lifeslider: UISlider!
+    @IBOutlet weak var hungryslider: UISlider!
+    @IBOutlet weak var moodslider: UISlider!
+    @IBOutlet weak var environmentslider: UISlider!
+    
+    
+    
     
     
     let userDefault = UserDefaults.standard
     var db:Firestore!
     var local_userdata: Usersdata!
+    var local_pet:Pet!
+    var local_pet_environment:Pet_Environment!
+    var gradientlayer:CAGradientLayer!
+    var viewname:String = ""
     var record = 0
     var count = 1
     
@@ -38,20 +52,19 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
-        
         myGifView.loadGif(name: "standtest_0")
-        
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true
         feedView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
-        
         //kai need to fill userID
-        //queryAUser(userID: "userID")
+        queryAUser(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
+        queryPet(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
+        queryPet_Environment(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         
-        //And you can call like  let score = local_userdata.score  to get score
-
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,11 +73,9 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         {
             view.addSubview(myView)
             myView.layer.cornerRadius = 10
-            
             myView.translatesAutoresizingMaskIntoConstraints = false
             myView.widthAnchor.constraint(equalToConstant: 340).isActive = true
             myView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-            
             if myView.tag == 0{
                 let c = myView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 318)
                 myView.heightAnchor.constraint(equalToConstant: 318).isActive = true
@@ -82,11 +93,17 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
                 c.identifier = "recordView3Bottom"
                 c.isActive = true
             }
-            
-            
         }
         super.viewWillAppear(animated)
+        
+        
     }
+    
+    
+    
+    
+    
+    
     
     
     @IBAction func UP(_ sender: Any) {
@@ -112,6 +129,9 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
     }
     
+    
+    
+    
     @IBAction func feeding(_ sender: Any) {
         displayDatePickerView(true)
     }
@@ -121,21 +141,23 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBAction func feeding2(_ sender: Any) {
         displayDatePickerView(true)
     }
-    
     @IBAction func feeding3(_ sender: Any) {
         displayDatePickerView(true)
-        
         //kai neet to fill
-        
         //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
-        
         if let userID = self.userDefault.string(forKey: "userID") {
             addSmokeRecordFunc(userID: userID, time: getUTCDate(), ratio: String(format: "%.2f", settingBar.value), doing: (radioButtonController1?.selectedButton()?.titleLabel?.text)!, daysmokecount: countLabel.text!)
         }
     }
-    
     @IBAction func cancelFeeding(_ sender: Any) {
         cancelDatePickerView()
+    }
+    
+    
+    func creatGradientLayer(){
+        gradientlayer = CAGradientLayer()
+        gradientlayer.frame = self.view.bounds
+        
     }
     
     
@@ -276,11 +298,34 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
     }
     
+    func queryPet(userID : String) {
+        let docRef = self.db.collection("Users").document(userID).collection("pet").document("pet")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let aUser = Pet(aDoc: document)
+                self.local_pet = aUser
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    //queryPet_Environment
+    func queryPet_Environment(userID : String) {
+        let docRef = self.db.collection("Users").document(userID).collection("pet").document("environment")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let aUser = Pet_Environment(aDoc: document)
+                self.local_pet_environment = aUser
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
     func getUTCDate() -> String
     {
         // 獲取當前時間
         let now:Date = Date()
-        
         // 建立時間格式
         let dateFormat:DateFormatter = DateFormatter()
         dateFormat.dateFormat = "yyyy/MM/dd/HH:mm:ss"
@@ -300,21 +345,27 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
         return btn
     }
-    
-//    @IBAction func goExpertHelp(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "ExpertHelp", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "ExpertHelpViewController")
-//        self.present(controller, animated: false, completion: nil)
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    */
+
 
 }

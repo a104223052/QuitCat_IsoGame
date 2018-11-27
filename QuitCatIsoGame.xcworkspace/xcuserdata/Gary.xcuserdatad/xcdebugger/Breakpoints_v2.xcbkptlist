@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuitCatIsoGame/Login/InformationSettingViewController.swift"
-            timestampString = "563921380.880295"
+            filePath = "QuitCatIsoGame/Game/TestGame/TestGameViewController.swift"
+            timestampString = "564991693.590258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "InformationSettingViewController"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "TestGameViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
