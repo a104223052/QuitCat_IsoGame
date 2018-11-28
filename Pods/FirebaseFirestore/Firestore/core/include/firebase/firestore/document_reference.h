@@ -387,8 +387,6 @@ class DocumentReference {
   friend class DocumentSnapshotInternal;
   friend class FieldValueInternal;
   friend class FirestoreInternal;
-  friend class TransactionInternal;
-  friend class WriteBatchInternal;
 
   // TODO(zxu123): investigate possibility to use std::unique_ptr or
   // firebase::UniquePtr.

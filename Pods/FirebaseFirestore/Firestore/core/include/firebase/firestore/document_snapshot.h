@@ -223,11 +223,9 @@ class DocumentSnapshot {
   explicit DocumentSnapshot(DocumentSnapshotInternal* internal);
 
  private:
-  friend class DocumentChangeInternal;
   friend class EventListenerInternal;
   friend class FirestoreInternal;
   friend class QueryInternal;
-  friend class TransactionInternal;
   friend class Wrapper;
 
   DocumentSnapshotInternal* internal_ = nullptr;

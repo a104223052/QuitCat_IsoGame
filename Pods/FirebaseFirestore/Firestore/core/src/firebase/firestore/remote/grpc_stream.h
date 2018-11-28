@@ -25,7 +25,6 @@
 #include <utility>
 #include <vector>
 
-#include "Firestore/core/src/firebase/firestore/remote/grpc_call.h"
 #include "Firestore/core/src/firebase/firestore/remote/grpc_completion.h"
 #include "Firestore/core/src/firebase/firestore/remote/grpc_stream_observer.h"
 #include "Firestore/core/src/firebase/firestore/util/async_queue.h"
@@ -39,7 +38,6 @@ namespace firebase {
 namespace firestore {
 namespace remote {
 
-class GrpcConnection;
 class GrpcStream;
 
 namespace internal {
@@ -116,13 +114,14 @@ class BufferedWriter {
  * `grpc::GenericClientAsyncReaderWriter`. See the source file for comments on
  * implementation details.
  */
-class GrpcStream : public GrpcCall {
+class GrpcStream {
  public:
+  using MetadataT = std::multimap<grpc::string_ref, grpc::string_ref>;
+
   GrpcStream(std::unique_ptr<grpc::ClientContext> context,
              std::unique_ptr<grpc::GenericClientAsyncReaderWriter> call,
-             util::AsyncQueue* worker_queue,
-             GrpcConnection* grpc_connection,
-             GrpcStreamObserver* observer);
+             GrpcStreamObserver* observer,
+             util::AsyncQueue* worker_queue);
   ~GrpcStream();
 
   void Start();
@@ -144,10 +143,7 @@ class GrpcStream : public GrpcCall {
   // of tens of milliseconds.
   //
   // Can be called on a stream before it opens.
-  void FinishImmediately() override;
-
-  // Like `FinishImmediately`, but will notify the observer.
-  void FinishAndNotify(const util::Status& status) override;
+  void Finish();
 
   /**
    * Writes the given message and finishes the stream as soon as this final
@@ -170,22 +166,15 @@ class GrpcStream : public GrpcCall {
    *
    * Can only be called once the stream has opened.
    */
-  Metadata GetResponseHeaders() const override;
-
-  /** For tests only */
-  grpc::ClientContext* context() override {
-    return context_.get();
-  }
+  MetadataT GetResponseHeaders() const;
 
  private:
   void Read();
   void MaybeWrite(absl::optional<internal::BufferedWrite> maybe_write);
 
-  void Shutdown();
   void UnsetObserver() {
     observer_ = nullptr;
   }
-  void MaybeUnregister();
 
   void OnStart();
   void OnRead(const grpc::ByteBuffer& message);
@@ -195,8 +184,7 @@ class GrpcStream : public GrpcCall {
   void RemoveCompletion(const GrpcCompletion* to_remove);
 
   using OnSuccess = std::function<void(const GrpcCompletion*)>;
-  GrpcCompletion* NewCompletion(GrpcCompletion::Type type,
-                                const OnSuccess& callback);
+  GrpcCompletion* NewCompletion(const OnSuccess& callback);
 
   // Blocks until all the completions issued by this stream come out from the
   // gRPC completion queue. Once they do, it is safe to delete this `GrpcStream`
@@ -221,7 +209,6 @@ class GrpcStream : public GrpcCall {
   std::unique_ptr<grpc::GenericClientAsyncReaderWriter> call_;
 
   util::AsyncQueue* worker_queue_ = nullptr;
-  GrpcConnection* grpc_connection_ = nullptr;
 
   GrpcStreamObserver* observer_ = nullptr;
   internal::BufferedWriter buffered_writer_;

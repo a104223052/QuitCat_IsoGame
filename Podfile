@@ -18,7 +18,7 @@ target 'QuitCatIsoGame' do
   pod 'FBSDKLoginKit'
   pod 'CSVImporter'
   pod 'CVCalendar'
-  pod 'JTAppleCalendar'
+  pod 'Charts'
 
 
   target 'QuitCatIsoGameTests' do

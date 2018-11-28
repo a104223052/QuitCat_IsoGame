@@ -1,11 +1,15 @@
 import UIKit
 import CVCalendar
+import Charts
 
 class CalendarViewController: UIViewController {
     //星期菜单栏
     private var menuView: CVCalendarMenuView!
+    
     //日历主视图
     private var calendarView: CVCalendarView!
+    
+    private var chartView: PieChartView!
     
     var currentCalendar: Calendar!
     
@@ -14,15 +18,15 @@ class CalendarViewController: UIViewController {
         
         currentCalendar = Calendar.init(identifier: .gregorian)
         
-        //初始化的时候导航栏显示当年当月
         self.title = CVDate(date: Date(), calendar: currentCalendar).globalDescription
+        //初始化的时候导航栏显示当年当月
         
         //初始化星期菜单栏
-        self.menuView = CVCalendarMenuView(frame: CGRect(x:0, y:80, width:300, height:15))
+        self.menuView = CVCalendarMenuView(frame: CGRect(x:0, y:100, width:375, height:15))
         
         //初始化日历主视图
-        self.calendarView = CVCalendarView(frame: CGRect(x:0, y:110, width:300,
-                                                         height:450))
+        self.calendarView = CVCalendarView(frame: CGRect(x:0, y:130, width:375,
+                                                         height:300))
         //星期菜单栏代理
         self.menuView.menuViewDelegate = self
         
@@ -32,6 +36,7 @@ class CalendarViewController: UIViewController {
         //将菜单视图和日历视图添加到主视图上
         self.view.addSubview(menuView)
         self.view.addSubview(calendarView)
+        drawPieChart()
     }
     
     //今天按钮点击
@@ -42,14 +47,42 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         //更新日历frame
         self.menuView.commitMenuViewUpdate()
         self.calendarView.commitCalendarViewUpdate()
+        self.calendarView.contentController.refreshPresentedMonth()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func drawPieChart() {
+        //创建饼图组件对象
+        chartView = PieChartView()
+        chartView.frame = CGRect(x: 20, y: 500, width: self.view.bounds.width - 40,
+                                 height: 260)
+        self.view.addSubview(chartView)
+        
+        //生成5条随机数据
+        let dataEntries = (0..<5).map { (i) -> PieChartDataEntry in
+            return PieChartDataEntry(value: Double(arc4random_uniform(50) + 10),
+                                     label: "数据\(i)")
+        }
+        let chartDataSet = PieChartDataSet(values: dataEntries, label: "数据分布")
+        //设置颜色
+        chartDataSet.colors = ChartColorTemplates.vordiplom()
+            + ChartColorTemplates.joyful()
+            + ChartColorTemplates.colorful()
+            + ChartColorTemplates.liberty()
+            + ChartColorTemplates.pastel()
+        let chartData = PieChartData(dataSet: chartDataSet)
+        
+        //设置饼状图数据
+        chartView.data = chartData
+    }
+
 }
 
 extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDelegate {
@@ -61,13 +94,13 @@ extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDeleg
     
     //每周的第一天
     func firstWeekday() -> Weekday {
-        //从星期一开始
-        return .monday
+        //从星期日开始
+        return .sunday
     }
     
     func presentedDateUpdated(_ date: CVDate) {
         //导航栏显示当前日历的年月
-        self.title = date.globalDescription
+        //navigationItem.title = date.globalDescription
     }
     
     //每个日期上面是否添加横线(连在一起就形成每行的分隔线)
@@ -95,5 +128,46 @@ extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDeleg
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func shouldShowWeekdaysOut() -> Bool { //顯示非當月日期
+        return true
+    }
+    
+    func dayOfWeekTextColor(by weekday: Weekday) -> UIColor {//星期文字颜色设置
+        return weekday == .sunday || weekday == .saturday ?
+            UIColor(red: 1.0, green: 0, blue: 0, alpha: 1.0) : UIColor.black
+    }
+    
+    func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool {
+        if !dayView.isHidden && dayView.date != nil {
+            //获取该日期视图的年月日
+            let year = dayView.date.year
+            let month = dayView.date.month
+            let day = dayView.date.day
+            //判断日期是否符合要求
+            if year == 2018 && month == 11 && day >= 1 && day <= 3 {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func dotMarker(colorOnDayView dayView: DayView) -> [UIColor] {
+        switch dayView.date.day {
+        case 1:
+            return [UIColor.orange]
+        default:
+            return [UIColor.orange]
+        }
+    }
+    
+    func dotMarker(moveOffsetOnDayView dayView: DayView) -> CGFloat {
+        return 15
+    }
+    
+    //标记点的尺寸大小
+    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
+        return 5
+    }
+    
 }
-
