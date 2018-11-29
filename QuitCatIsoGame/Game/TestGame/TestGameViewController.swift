@@ -25,17 +25,19 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var ddcountlabel: UILabel!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet var statusView: UIView!
     
+    @IBOutlet var statusView: UIView!
     @IBOutlet weak var lifeslider: UISlider!
     @IBOutlet weak var hungryslider: UISlider!
     @IBOutlet weak var moodslider: UISlider!
     @IBOutlet weak var environmentslider: UISlider!
+    @IBOutlet weak var statuslabel: UILabel!
     
     
     
+    let screenBoundsHeight = UIScreen.main.bounds.size.height
     
-    
+    let screenBoundsWidth  = UIScreen.main.bounds.size.width
     let userDefault = UserDefaults.standard
     var db:Firestore!
     var local_userdata: Usersdata!
@@ -45,6 +47,7 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     var viewname:String = ""
     var record = 0
     var count = 1
+    var status:Bool = true
     
     var radioButtonController1: SSRadioButtonsController?
     
@@ -53,9 +56,23 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         super.viewDidLoad()
         db = Firestore.firestore()
         myGifView.loadGif(name: "standtest_0")
+        myGifView.isUserInteractionEnabled = true
+        myGifView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true
+        
+        let size = CGSize(width: 1, height: 1)
+        UIGraphicsBeginImageContext(size)
+        let finalImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        lifeslider.setThumbImage(finalImage, for: .normal)
+        hungryslider.setThumbImage(finalImage, for: .normal)
+        moodslider.setThumbImage(finalImage, for: .normal)
+        environmentslider.setThumbImage(finalImage, for: .normal)
+
+        
+        
         feedView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
         //kai need to fill userID
@@ -66,9 +83,11 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
         
     }
-    
+    @objc func imageTap(){
+        displayPetStatusView(true)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
-        
         for myView in recordView
         {
             view.addSubview(myView)
@@ -94,17 +113,24 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
                 c.isActive = true
             }
         }
+        
+        view.addSubview(statusView)
+        statusView.layer.cornerRadius = 10
+        statuslabel.layer.cornerRadius = 10
+        statuslabel.layer.masksToBounds = true
+        statusView.translatesAutoresizingMaskIntoConstraints = false
+        statusView.widthAnchor.constraint(equalToConstant: 244).isActive = true
+        statusView.heightAnchor.constraint(equalToConstant: 130).isActive = true
+        statusView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: (screenBoundsWidth-244)/2).isActive=true
+        
+        let cd = statusView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 341)
+        
+        cd.identifier = "petStatus"
+        cd.isActive = true
         super.viewWillAppear(animated)
         
         
     }
-    
-    
-    
-    
-    
-    
-    
     
     @IBAction func UP(_ sender: Any) {
         count += 1
@@ -129,9 +155,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
     }
     
-    
-    
-    
     @IBAction func feeding(_ sender: Any) {
         displayDatePickerView(true)
     }
@@ -152,14 +175,41 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBAction func cancelFeeding(_ sender: Any) {
         cancelDatePickerView()
     }
-    
-    
     func creatGradientLayer(){
         gradientlayer = CAGradientLayer()
         gradientlayer.frame = self.view.bounds
-        
     }
     
+    func displayPetStatusView(_ show:Bool){
+        lifeslider.setValue(Float(local_pet.life!), animated: true)
+        hungryslider.setValue(Float(local_pet.hungry!), animated: true)
+        moodslider.setValue(Float(local_pet.mood!), animated: true)
+        environmentslider.setValue(Float(local_pet_environment.oxygen! - local_pet_environment.co2!), animated: true)
+        var tempHeight = (screenBoundsHeight-130)/2
+        if(status == true){
+            for c in view.constraints{
+                if c.identifier == "petStatus"
+                {
+                    c.constant = (show) ? -40 : tempHeight
+                    status = false
+                    break
+                }
+            }
+        }else if(status == false){
+            for c in view.constraints{
+                if c.identifier == "petStatus"
+                {
+                    c.constant = (show) ? tempHeight : -40
+                    status = true
+                    break
+                }
+            }
+        }
+        UIView.animate(withDuration: 0.5)
+        {
+            self.view.layoutIfNeeded()
+        }
+    }
     
     func displayDatePickerView(_ show: Bool)
     {
@@ -304,6 +354,7 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
             if let document = document, document.exists {
                 let aUser = Pet(aDoc: document)
                 self.local_pet = aUser
+                print("Success query")
             } else {
                 print("Document does not exist")
             }
@@ -345,6 +396,7 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
         return btn
     }
+    
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
@@ -358,7 +410,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
         var rgbValue:UInt32 = 0
         Scanner(string: cString).scanHexInt32(&rgbValue)
-        
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
