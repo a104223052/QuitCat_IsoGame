@@ -5,44 +5,49 @@ import Charts
 class CalendarViewController: UIViewController {
     //星期菜单栏
     private var menuView: CVCalendarMenuView!
-    
     //日历主视图
     private var calendarView: CVCalendarView!
     
     private var chartView: PieChartView!
     
     var currentCalendar: Calendar!
+    @IBOutlet weak var calendarTitle: UINavigationItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         currentCalendar = Calendar.init(identifier: .gregorian)
         
-        self.title = CVDate(date: Date(), calendar: currentCalendar).globalDescription
+         calendarTitle.title = CVDate(date: Date(), calendar: currentCalendar).globalDescription
         //初始化的时候导航栏显示当年当月
         
         //初始化星期菜单栏
-        self.menuView = CVCalendarMenuView(frame: CGRect(x:0, y:100, width:375, height:15))
+        self.menuView = CVCalendarMenuView(frame: CGRect(x:0, y:100, width:self.view.bounds.width , height:15))
         
         //初始化日历主视图
-        self.calendarView = CVCalendarView(frame: CGRect(x:0, y:130, width:375,
-                                                         height:300))
+        self.calendarView = CVCalendarView(frame: CGRect(x:0, y:130, width:self.view.bounds.width ,height:300))
         //星期菜单栏代理
         self.menuView.menuViewDelegate = self
         
         //日历代理
         self.calendarView.calendarDelegate = self
         
+        //日历样式代理
+        self.calendarView.calendarAppearanceDelegate = self
+        
         //将菜单视图和日历视图添加到主视图上
         self.view.addSubview(menuView)
         self.view.addSubview(calendarView)
-        drawPieChart()
+        
     }
     
     //今天按钮点击
     @IBAction func todayButtonTapped(_ sender: AnyObject) {
         let today = Date()
         self.calendarView.toggleViewWithDate(today)
+        drawPieChart()
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,10 +66,9 @@ class CalendarViewController: UIViewController {
     func drawPieChart() {
         //创建饼图组件对象
         chartView = PieChartView()
-        chartView.frame = CGRect(x: 20, y: 500, width: self.view.bounds.width - 40,
+        chartView.frame = CGRect(x: 0, y: 500, width: self.view.bounds.width ,
                                  height: 260)
         self.view.addSubview(chartView)
-        
         //生成5条随机数据
         let dataEntries = (0..<5).map { (i) -> PieChartDataEntry in
             return PieChartDataEntry(value: Double(arc4random_uniform(50) + 10),
@@ -85,8 +89,9 @@ class CalendarViewController: UIViewController {
 
 }
 
-extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDelegate {
+extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDelegate,CVCalendarViewAppearanceDelegate {
     //视图模式
+    
     func presentationMode() -> CalendarMode {
         //使用月视图
         return .monthView
@@ -100,7 +105,7 @@ extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDeleg
     
     func presentedDateUpdated(_ date: CVDate) {
         //导航栏显示当前日历的年月
-        //navigationItem.title = date.globalDescription
+        calendarTitle.title = date.globalDescription
     }
     
     //每个日期上面是否添加横线(连在一起就形成每行的分隔线)
@@ -127,10 +132,12 @@ extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDeleg
         let okAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
+        drawPieChart()
+        
     }
     
     func shouldShowWeekdaysOut() -> Bool { //顯示非當月日期
-        return true
+        return false
     }
     
     func dayOfWeekTextColor(by weekday: Weekday) -> UIColor {//星期文字颜色设置
@@ -169,5 +176,36 @@ extension CalendarViewController: CVCalendarViewDelegate,CVCalendarMenuViewDeleg
     func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
         return 5
     }
+    
+    struct Color {
+        static let selectionBackground = UIColor(red: 88/255, green: 135/255, blue: 65/255,
+                                                 alpha: 1.0)
+        static let holidayText = UIColor(red: 166/255, green: 166/255, blue: 166/255, alpha: 1.0)
+
+        static let holidaySelectionBackground = holidayText
+    }
+    
+    //文字颜色设置
+    func dayLabelColor(by weekDay: Weekday, status: CVStatus, present: CVPresent)
+        -> UIColor? {
+            switch (weekDay, status, present) {
+            case (_, .selected, _), (_, .highlighted, _): return Color.holidaySelectionBackground
+            case (.sunday, .in, _): return Color.holidayText
+            case (.saturday, .in, _): return Color.holidayText
+            case (_, .in, _): return UIColor.black
+            default: return UIColor.gray
+            }
+    }
+
+    //文字背景色设置
+    func dayLabelBackgroundColor(by weekDay: Weekday, status: CVStatus,
+                                 present: CVPresent) -> UIColor? {
+        switch (weekDay, status, present) {
+        case (_, .selected, _),(_, .highlighted, _): return Color.selectionBackground
+        default: return nil
+        }
+    }
+    
+
     
 }

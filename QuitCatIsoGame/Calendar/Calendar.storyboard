@@ -17,28 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwN-Vf-iGH">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfa-Cg-35P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-ai-H2d">
+                                        <rect key="frame" x="8" y="28" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Back"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65995758770000001" green="0.78018242120000003" blue="0.55547761920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="a4g-38-pBG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="s1p-Hh-B0h"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5K1-0s-TEv">
+                                <rect key="frame" x="67" y="342" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq8-K7-klS">
+                                <rect key="frame" x="0.0" y="125" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="S8k-E4-60X"/>
+                                    <navigationItem title="Title" id="MHX-xK-u5b">
+                                        <barButtonItem key="leftBarButtonItem" title="返回" id="tVC-w9-ZJQ"/>
+                                        <barButtonItem key="rightBarButtonItem" title="今日" id="izX-e4-Osd">
+                                            <connections>
+                                                <action selector="todayButtonTapped:" destination="Gnb-bN-MLt" id="J1B-Av-SJt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFf-gL-uaV">
-                                <rect key="frame" x="48" y="510" width="278" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zq8-K7-klS" firstAttribute="top" secondItem="Wfa-Cg-35P" secondAttribute="bottom" constant="194" id="Bgg-ZO-wlI"/>
+                            <constraint firstItem="Wfa-Cg-35P" firstAttribute="leading" secondItem="CmO-aj-dAH" secondAttribute="leading" id="Zez-Fd-vhB"/>
+                            <constraint firstItem="Wfa-Cg-35P" firstAttribute="trailing" secondItem="CmO-aj-dAH" secondAttribute="trailing" id="gFo-3R-q6L"/>
+                            <constraint firstItem="Wfa-Cg-35P" firstAttribute="top" secondItem="jc4-Ki-azW" secondAttribute="top" id="uZr-a0-C6l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CmO-aj-dAH"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarTitle" destination="MHX-xK-u5b" id="tow-Zs-n7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nI-E1-Od2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <containerView opaque="NO" contentMode="scaleToFill" id="2Hq-9F-SQD">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                </containerView>
             </objects>
             <point key="canvasLocation" x="-271.19999999999999" y="62.807881773399018"/>
         </scene>
