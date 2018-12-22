@@ -113,11 +113,14 @@
                                 </constraints>
                                 <state key="normal" image="CART"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isL-h1-5D2" userLabel="ShowContainerViewButton">
-                                <rect key="frame" x="205" y="646" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQF-9Q-e61">
+                                <rect key="frame" x="231" y="510" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-nn-dMY">
+                                <rect key="frame" x="171" y="698" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -141,12 +144,17 @@
                         <outlet property="ddcountlabel" destination="KGC-Q3-T0P" id="Myz-r9-PLR"/>
                         <outlet property="environmentslider" destination="BRo-Pm-Ms0" id="GiD-m5-R3d"/>
                         <outlet property="feedView" destination="qad-zn-fVw" id="ePP-72-iMe"/>
+                        <outlet property="fishImageView" destination="8uv-nn-dMY" id="bcw-CH-FNJ"/>
                         <outlet property="hungryslider" destination="6gl-Hf-FKS" id="xLO-Nz-LxP"/>
                         <outlet property="lifeslider" destination="CmH-pK-1qp" id="j7r-Zg-76c"/>
+                        <outlet property="moneyText" destination="KcY-jJ-Bo5" id="h9O-iZ-Nxx"/>
+                        <outlet property="moneyView" destination="Ys6-vP-euk" id="zyc-7E-m4u"/>
                         <outlet property="moodslider" destination="fxy-XK-CCe" id="6MO-6n-o8g"/>
                         <outlet property="myGifView" destination="fwd-XU-5yJ" id="aBW-iC-2rv"/>
+                        <outlet property="scoreText" destination="ITn-hM-le6" id="jcU-gz-4Eh"/>
                         <outlet property="settingBar" destination="TnP-Pg-5yY" id="feF-5B-75R"/>
                         <outlet property="settinglabel" destination="CDJ-k5-Pgv" id="1wh-UD-fLa"/>
+                        <outlet property="shitImageView" destination="xQF-9Q-e61" id="7H0-fC-eHu"/>
                         <outlet property="statusView" destination="gK4-MZ-xKg" id="mH9-R0-TEP"/>
                         <outlet property="statuslabel" destination="iWe-Rw-htq" id="5pu-YQ-RaS"/>
                         <outletCollection property="recordView" destination="CPi-2W-PrO" collectionClass="NSMutableArray" id="fXd-0W-jRq"/>
@@ -569,8 +577,44 @@
                             <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </slider>
                     </subviews>
-                    <color key="backgroundColor" red="0.68235294117647061" green="0.792156862745098" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85882352939999995" green="0.96078431369999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                     <viewLayoutGuide key="safeArea" id="8pi-vG-k8h"/>
+                </view>
+                <view contentMode="scaleToFill" id="Ys6-vP-euk">
+                    <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="魚幣+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-Px-u9r">
+                            <rect key="frame" x="0.0" y="5" width="46" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=",總分+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZl-5f-pl6">
+                            <rect key="frame" x="77" y="5" width="50" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITn-hM-le6">
+                            <rect key="frame" x="126" y="5" width="29" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcY-jJ-Bo5">
+                            <rect key="frame" x="45" y="5" width="29" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.83921568627450982" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                    <viewLayoutGuide key="safeArea" id="7fg-V7-41h"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="143.3497536945813"/>

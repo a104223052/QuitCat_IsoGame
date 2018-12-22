@@ -37,7 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        UserDefaults.standard.set(false, forKey:"everLaunched")
         
+        if (!(UserDefaults.standard.bool(forKey: "everLaunched"))) {
+            UserDefaults.standard.set(true, forKey:"everLaunched")
+            let guideViewController = GuideViewController()
+            self.window!.rootViewController=guideViewController
+            print("guideview launched!")
+        }
         return true
     }
     
@@ -66,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
         // Print full message.
         print(userInfo)
         

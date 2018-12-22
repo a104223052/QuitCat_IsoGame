@@ -29,8 +29,6 @@ class LoginViewController: UIViewController {
 //            let controller = storyboard.instantiateViewController(withIdentifier: "TestGameViewController")
 //            self.present(controller, animated: false, completion: nil)
 //        }
-        
-        
         contentView.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
@@ -41,7 +39,6 @@ class LoginViewController: UIViewController {
         // 使用FB登入的SDK，並請求可以讀取用戶的基本資料和取得用戶email的權限
         fbLoginManager.logOut()
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
-            
             // 登入失敗
             if error != nil {
                 print("Failed to login: \(error?.localizedDescription)")
@@ -70,6 +67,10 @@ class LoginViewController: UIViewController {
                 if let user = user{
                     let userID = user.uid
                     self.userDefault.set(userID, forKey: "userID")
+                    self.userDefault.set(0, forKey: "fish")
+                    self.userDefault.set(0, forKey: "shit")
+                    self.userDefault.set(1, forKey: "FishTime")
+                    self.userDefault.set(1, forKey: "ShitTime")
                     self.userDefault.synchronize()
                     //UID 需在每個畫面都有
                 }

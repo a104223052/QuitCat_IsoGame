@@ -14,6 +14,8 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
     }
 
+    @IBOutlet weak var fishImageView: UIImageView!
+    @IBOutlet weak var shitImageView: UIImageView!
     @IBOutlet weak var myGifView: UIImageView!
     @IBOutlet weak var feedView: UIView!
     @IBOutlet var selectedButton: [UIButton]!
@@ -33,10 +35,13 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet weak var environmentslider: UISlider!
     @IBOutlet weak var statuslabel: UILabel!
     
+    @IBOutlet var moneyView: UIView!
+    @IBOutlet weak var moneyText: UILabel!
+    @IBOutlet weak var scoreText: UILabel!
+    
     
     
     let screenBoundsHeight = UIScreen.main.bounds.size.height
-    
     let screenBoundsWidth  = UIScreen.main.bounds.size.width
     let userDefault = UserDefaults.standard
     var db:Firestore!
@@ -55,13 +60,30 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
+        
+        //設置petImage
         myGifView.loadGif(name: "standtest_0")
         myGifView.isUserInteractionEnabled = true
-        myGifView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
+        myGifView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imagePetTap)))
+        
+        //設置fishImage
+        fishImageView.image = UIImage(named: "FISH")
+        fishImageView.isUserInteractionEnabled = true
+        fishImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.fishImageViewTap)))
+        fishImageView.isHidden = true
+
+        //設置shitImage
+        shitImageView.image = UIImage(named: "FISH")
+        shitImageView.isUserInteractionEnabled = true
+        shitImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.shitImageViewTap)))
+        shitImageView.isHidden = true
+        
+        
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true
         
+        //slider 消除圓點
         let size = CGSize(width: 1, height: 1)
         UIGraphicsBeginImageContext(size)
         let finalImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -70,20 +92,63 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         hungryslider.setThumbImage(finalImage, for: .normal)
         moodslider.setThumbImage(finalImage, for: .normal)
         environmentslider.setThumbImage(finalImage, for: .normal)
-
-        
-        
         feedView.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
         //kai need to fill userID
         queryAUser(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         queryPet(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         queryPet_Environment(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         
+        self.userDefault.set(0, forKey: "fish")
+        self.userDefault.set(0, forKey: "shit")
+        self.userDefault.set(1545393695, forKey: "FishTime")
+        self.userDefault.set(1545393695, forKey: "ShitTime")
+        //判斷時間 大便跟魚產生
+        let pastShitTime:Int = userDefault.value(forKey: "ShitTime") as! Int
+        let pastFishTime:Int = userDefault.value(forKey: "FishTime") as! Int
+        let fish:Int = userDefault.value(forKey: "fish") as! Int
+        let shit:Int = userDefault.value(forKey: "shit") as! Int
+        let nowTime:Int = getNowTimeDate()
+        
+        if(fish == 1){
+            fishImageView.isHidden = false
+        }
+        if(shit == 1){
+            shitImageView.isHidden = false
+        }
+        
+        print(nowTime)
+        
+        if( (nowTime - pastFishTime) >= 200){
+            fishImageView.isHidden = false
+            userDefault.set(1, forKey: "fish")
+            userDefault.synchronize()
+        }
+        if( (nowTime - pastShitTime) >= 14400){
+            shitImageView.isHidden = false
+            userDefault.set(1, forKey: "fish")
+            userDefault.synchronize()
+        }
+    }
+    
+    @objc func fishImageViewTap(){
+        let nowTime:Int = getNowTimeDate()
+        userDefault.set(nowTime, forKey: "FishTime")
+        userDefault.synchronize()
         
         
     }
-    @objc func imageTap(){
+    @objc func shitImageViewTap(){
+        let nowTime:Int = getNowTimeDate()
+        userDefault.set(nowTime, forKey: "ShitTime")
+        userDefault.synchronize()
+        
+        
+    }
+    
+    
+    @objc func imagePetTap(){
         displayPetStatusView(true)
     }
 
@@ -124,7 +189,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         statusView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: (screenBoundsWidth-244)/2).isActive=true
         
         let cd = statusView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 341)
-        
         cd.identifier = "petStatus"
         cd.isActive = true
         super.viewWillAppear(animated)
@@ -145,7 +209,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
             ddcountlabel.text = "剩餘 " + String(10 - count) + " 支"
         }
     }
-    
     @IBAction func settingBar(_ sender: Any) {
         if settingBar.value == Float(0) {
             settinglabel.text = "今天不抽"
@@ -372,6 +435,12 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
             }
         }
     }
+    func getNowTimeDate() -> Int{
+        let now:Date = Date()
+        let timeInterval:TimeInterval = now.timeIntervalSince1970
+        let time:Int = Int(timeInterval)
+        return time
+    }
     
     func getUTCDate() -> String
     {
@@ -383,7 +452,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
         // 將當下時間轉換成設定的時間格式
         let dateString:String = dateFormat.string(from: now)
-        
         return dateString
     }
     
@@ -399,7 +467,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
@@ -407,7 +474,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         if ((cString.count) != 6) {
             return UIColor.gray
         }
-        
         var rgbValue:UInt32 = 0
         Scanner(string: cString).scanHexInt32(&rgbValue)
         return UIColor(
