@@ -39,8 +39,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet weak var moneyText: UILabel!
     @IBOutlet weak var scoreText: UILabel!
     
-    
-    
     let screenBoundsHeight = UIScreen.main.bounds.size.height
     let screenBoundsWidth  = UIScreen.main.bounds.size.width
     let userDefault = UserDefaults.standard
@@ -53,6 +51,17 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     var record = 0
     var count = 1
     var status:Bool = true
+    
+    var life = 0
+    var hurgry = 0
+    var mood = 0
+    var environment = 0
+    var o2 = 0
+    var co2 = 0
+    var score = 0
+    var fishcoin = 0
+    
+    
     
     var radioButtonController1: SSRadioButtonsController?
     
@@ -78,7 +87,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         shitImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.shitImageViewTap)))
         shitImageView.isHidden = true
         
-        
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true
@@ -100,6 +108,10 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         queryPet(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         queryPet_Environment(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         
+        
+        
+        
+        
         self.userDefault.set(0, forKey: "fish")
         self.userDefault.set(0, forKey: "shit")
         self.userDefault.set(1545393695, forKey: "FishTime")
@@ -120,7 +132,7 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
         print(nowTime)
         
-        if( (nowTime - pastFishTime) >= 200){
+        if( (nowTime - pastFishTime) >= 7200){
             fishImageView.isHidden = false
             userDefault.set(1, forKey: "fish")
             userDefault.synchronize()

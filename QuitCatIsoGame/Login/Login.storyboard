@@ -33,7 +33,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIT CAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TX-os-94U">
-                                        <rect key="frame" x="114.66666666666666" y="189" width="114" height="38"/>
+                                        <rect key="frame" x="111.33333333333334" y="189" width="120.33333333333334" height="31.666666666666657"/>
                                         <fontDescription key="fontDescription" name="STYuanti-SC-Bold" family="Yuanti SC" pointSize="27"/>
                                         <color key="textColor" red="0.25490196079999999" green="0.45882352939999999" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
