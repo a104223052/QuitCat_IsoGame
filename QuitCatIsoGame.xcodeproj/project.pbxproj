@@ -15,6 +15,8 @@
 		4EACCAAD218CB07700249FB3 /* UICollectionGridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACCAAC218CB07700249FB3 /* UICollectionGridViewCell.swift */; };
 		4EACCAAF218CB09300249FB3 /* UICollectionGridViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACCAAE218CB09300249FB3 /* UICollectionGridViewLayout.swift */; };
 		4EACCAB1218CB0DF00249FB3 /* ClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACCAB0218CB0DF00249FB3 /* ClinicViewController.swift */; };
+		89519D7921DE49D800B5F5FE /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89519D7821DE49D800B5F5FE /* FriendsTableViewController.swift */; };
+		89AD7BBB21C71817003320EA /* CommuntiyUITest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89AD7BBA21C71817003320EA /* CommuntiyUITest.storyboard */; };
 		9935984A21AB41FC00CFAF1E /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935984921AB41FC00CFAF1E /* ChartsViewController.swift */; };
 		9953CB032180E73A00F6044A /* DBFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953CB022180E73A00F6044A /* DBFunc.swift */; };
 		996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996EB431217FA0FC009DC764 /* GoogleService-Info.plist */; };
@@ -91,6 +93,8 @@
 		4EACCAB0218CB0DF00249FB3 /* ClinicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewController.swift; sourceTree = "<group>"; };
 		4EC51E81219575620029854F /* QuitCatIsoGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuitCatIsoGame.entitlements; sourceTree = "<group>"; };
 		62E3C21770FBD2981804E0F2 /* Pods_QuitCatIsoGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89519D7821DE49D800B5F5FE /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		89AD7BBA21C71817003320EA /* CommuntiyUITest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommuntiyUITest.storyboard; sourceTree = "<group>"; };
 		9935984921AB41FC00CFAF1E /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		9953CB022180E73A00F6044A /* DBFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFunc.swift; sourceTree = "<group>"; };
 		996EB431217FA0FC009DC764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 			children = (
 				B8DFF0772180E07D00B1B4ED /* Community.storyboard */,
 				B86A694021873EEE00D9EEA4 /* CommunityViewController.swift */,
+				89AD7BBA21C71817003320EA /* CommuntiyUITest.storyboard */,
+				89519D7821DE49D800B5F5FE /* FriendsTableViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				B8444264218A248D000C69E0 /* PStest.gif in Resources */,
 				B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */,
 				4E6625B021A4169600325088 /* Calendar.storyboard in Resources */,
+				89AD7BBB21C71817003320EA /* CommuntiyUITest.storyboard in Resources */,
 				B8FD14C82177299D0019FAA0 /* Main.storyboard in Resources */,
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
 				B81034412181E47D0082D003 /* Course.storyboard in Resources */,
@@ -688,6 +695,7 @@
 				B82CEF9A218C9820008F1FDF /* ResultViewController.swift in Sources */,
 				4E6625AC21A4138600325088 /* CalendarViewController.swift in Sources */,
 				B8444262218A241E000C69E0 /* gif.swift in Sources */,
+				89519D7921DE49D800B5F5FE /* FriendsTableViewController.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
 				B86A694121873EEE00D9EEA4 /* CommunityViewController.swift in Sources */,
 				B8DFF06E217F3C5400B1B4ED /* SSRadioButton.swift in Sources */,

@@ -10,7 +10,11 @@ import UIKit
 import Firebase
 /***
  #database
- 1. 需要讀取使用者的好友清單與資訊 （包含uIDㄉ等等
+ 1. 需要讀取使用者的好友清單與資訊 （
+ //uid name photo promise smokeCountYesterday score reduceRate friend's smoke record(collection) -> 8 items
+ 
+ ArrayList -> []
+ 
  2. 點擊畫面有邊小房子要連結好友的
  */
 

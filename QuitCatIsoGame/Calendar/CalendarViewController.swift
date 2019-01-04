@@ -23,10 +23,10 @@ class CalendarViewController: UIViewController {
         //初始化的时候导航栏显示当年当月
         
         //初始化星期菜单栏
-        self.menuView = CVCalendarMenuView(frame: CGRect(x:0, y:100, width:self.view.bounds.width , height:15))
+        self.menuView = CVCalendarMenuView(frame: CGRect(x:0, y:170, width:self.view.bounds.width , height:15))
         
         //初始化日历主视图
-        self.calendarView = CVCalendarView(frame: CGRect(x:0, y:130, width:self.view.bounds.width ,height:300))
+        self.calendarView = CVCalendarView(frame: CGRect(x:0, y:200, width:self.view.bounds.width ,height:300))
         //星期菜单栏代理
         self.menuView.menuViewDelegate = self
         
