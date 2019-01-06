@@ -15,6 +15,15 @@
 		4EACCAAD218CB07700249FB3 /* UICollectionGridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACCAAC218CB07700249FB3 /* UICollectionGridViewCell.swift */; };
 		4EACCAAF218CB09300249FB3 /* UICollectionGridViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACCAAE218CB09300249FB3 /* UICollectionGridViewLayout.swift */; };
 		4EACCAB1218CB0DF00249FB3 /* ClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EACCAB0218CB0DF00249FB3 /* ClinicViewController.swift */; };
+		6A11D31D21A5A411009541B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A11D31C21A5A411009541B7 /* Assets.xcassets */; };
+		6A11D32321A5AF09009541B7 /* gif4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6A11D32221A5AF09009541B7 /* gif4.gif */; };
+		6A2E396421A45B820050F530 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E396321A45B820050F530 /* Shop.storyboard */; };
+		6A2E396A21A4648B0050F530 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E396921A4648B0050F530 /* ShopViewController.swift */; };
+		6A6D930621ADA22B009066BA /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D930521ADA22B009066BA /* FoodDetailViewController.swift */; };
+		6AECD82A21A7202600AD0FA0 /* GifFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AECD82921A7202600AD0FA0 /* GifFunctions.swift */; };
+		6AF9240221A7DB0A0083EDB0 /* FurnitureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9240121A7DB0A0083EDB0 /* FurnitureViewController.swift */; };
+		6AF9240621A9436A0083EDB0 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9240521A9436A0083EDB0 /* FoodViewController.swift */; };
+		6AFDD5CF21A9484A00CE2A31 /* BgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDD5CE21A9484A00CE2A31 /* BgViewController.swift */; };
 		9953CB032180E73A00F6044A /* DBFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953CB022180E73A00F6044A /* DBFunc.swift */; };
 		996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 996EB431217FA0FC009DC764 /* GoogleService-Info.plist */; };
 		B81034412181E47D0082D003 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81034402181E47D0082D003 /* Course.storyboard */; };
@@ -44,7 +53,6 @@
 		B8FD14C12177299D0019FAA0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8FD14C02177299D0019FAA0 /* Actions.sks */; };
 		B8FD14C32177299D0019FAA0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14C22177299D0019FAA0 /* GameScene.swift */; };
 		B8FD14C82177299D0019FAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD14C62177299D0019FAA0 /* Main.storyboard */; };
-		B8FD14CA2177299F0019FAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8FD14C92177299F0019FAA0 /* Assets.xcassets */; };
 		B8FD14CD2177299F0019FAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD14CB2177299F0019FAA0 /* LaunchScreen.storyboard */; };
 		B8FD14D82177299F0019FAA0 /* QuitCatIsoGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14D72177299F0019FAA0 /* QuitCatIsoGameTests.swift */; };
 		B8FD14E32177299F0019FAA0 /* QuitCatIsoGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD14E22177299F0019FAA0 /* QuitCatIsoGameUITests.swift */; };
@@ -90,6 +98,15 @@
 		4EACCAB0218CB0DF00249FB3 /* ClinicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewController.swift; sourceTree = "<group>"; };
 		4EC51E81219575620029854F /* QuitCatIsoGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuitCatIsoGame.entitlements; sourceTree = "<group>"; };
 		62E3C21770FBD2981804E0F2 /* Pods_QuitCatIsoGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A11D31C21A5A411009541B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A11D32221A5AF09009541B7 /* gif4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif4.gif; sourceTree = "<group>"; };
+		6A2E396321A45B820050F530 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
+		6A2E396921A4648B0050F530 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		6A6D930521ADA22B009066BA /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		6AECD82921A7202600AD0FA0 /* GifFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifFunctions.swift; sourceTree = "<group>"; };
+		6AF9240121A7DB0A0083EDB0 /* FurnitureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureViewController.swift; sourceTree = "<group>"; };
+		6AF9240521A9436A0083EDB0 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		6AFDD5CE21A9484A00CE2A31 /* BgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgViewController.swift; sourceTree = "<group>"; };
 		9953CB022180E73A00F6044A /* DBFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFunc.swift; sourceTree = "<group>"; };
 		996EB431217FA0FC009DC764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B81034402181E47D0082D003 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
@@ -121,7 +138,6 @@
 		B8FD14C02177299D0019FAA0 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		B8FD14C22177299D0019FAA0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B8FD14C72177299D0019FAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B8FD14C92177299F0019FAA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8FD14CC2177299F0019FAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8FD14CE2177299F0019FAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8FD14D32177299F0019FAA0 /* QuitCatIsoGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitCatIsoGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +209,21 @@
 				4E6625AF21A4169600325088 /* Calendar.storyboard */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		6A2E396021A45B0C0050F530 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				6A2E396321A45B820050F530 /* Shop.storyboard */,
+				6AF9240521A9436A0083EDB0 /* FoodViewController.swift */,
+				6AFDD5CE21A9484A00CE2A31 /* BgViewController.swift */,
+				6A6D930521ADA22B009066BA /* FoodDetailViewController.swift */,
+				6A2E396921A4648B0050F530 /* ShopViewController.swift */,
+				6AECD82921A7202600AD0FA0 /* GifFunctions.swift */,
+				6AF9240121A7DB0A0083EDB0 /* FurnitureViewController.swift */,
+				6A11D32221A5AF09009541B7 /* gif4.gif */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		B81034422181E58B0082D003 /* Course */ = {
@@ -281,6 +312,7 @@
 		B8FD14BB2177299D0019FAA0 /* QuitCatIsoGame */ = {
 			isa = PBXGroup;
 			children = (
+				6A2E396021A45B0C0050F530 /* Shop */,
 				4E6625A821A4132300325088 /* Calendar */,
 				4EC51E81219575620029854F /* QuitCatIsoGame.entitlements */,
 				B84C186E2188D18600E08A47 /* Yuanti.ttc */,
@@ -293,7 +325,6 @@
 				B81034422181E58B0082D003 /* Course */,
 				B8DFF071217F51A500B1B4ED /* ExpertHelp */,
 				B811F5B02185C99B0099D148 /* Setting */,
-				B8FD14C92177299F0019FAA0 /* Assets.xcassets */,
 				B8FD14F4217739D30019FAA0 /* sprites.atlas */,
 				B8444263218A248D000C69E0 /* PStest.gif */,
 				B8444269218A2C01000C69E0 /* standtest_0.gif */,
@@ -304,6 +335,7 @@
 				4E2FD645218214C800D66222 /* DB_Data.swift */,
 				B8444261218A241E000C69E0 /* gif.swift */,
 				B891B0BE219B35E5004B9FCE /* SwitchPages.swift */,
+				6A11D31C21A5A411009541B7 /* Assets.xcassets */,
 			);
 			path = QuitCatIsoGame;
 			sourceTree = "<group>";
@@ -481,7 +513,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2E396421A45B820050F530 /* Shop.storyboard in Resources */,
 				B84C18702188D83100E08A47 /* TestGame.storyboard in Resources */,
+				6A11D32321A5AF09009541B7 /* gif4.gif in Resources */,
 				B8444264218A248D000C69E0 /* PStest.gif in Resources */,
 				B8DFF0782180E07D00B1B4ED /* Community.storyboard in Resources */,
 				4E6625B021A4169600325088 /* Calendar.storyboard in Resources */,
@@ -489,12 +523,12 @@
 				996EB432217FA0FC009DC764 /* GoogleService-Info.plist in Resources */,
 				B81034412181E47D0082D003 /* Course.storyboard in Resources */,
 				B844426A218A2C02000C69E0 /* standtest_0.gif in Resources */,
-				B8FD14CA2177299F0019FAA0 /* Assets.xcassets in Resources */,
 				B8DFF070217F519400B1B4ED /* ExpertHelp.storyboard in Resources */,
 				B8FD1502217C39500019FAA0 /* Login.storyboard in Resources */,
 				B8FD14CD2177299F0019FAA0 /* LaunchScreen.storyboard in Resources */,
 				B8FD14F5217739D30019FAA0 /* sprites.atlas in Resources */,
 				B811F5AF2185C94B0099D148 /* Setting.storyboard in Resources */,
+				6A11D31D21A5A411009541B7 /* Assets.xcassets in Resources */,
 				B8FD14C12177299D0019FAA0 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,10 +719,12 @@
 				B81034482181F61F0082D003 /* MissionViewController.swift in Sources */,
 				B891B0BF219B35E5004B9FCE /* SwitchPages.swift in Sources */,
 				B8DFF06D217F3C5400B1B4ED /* SSRadioButtonsController.swift in Sources */,
+				6AECD82A21A7202600AD0FA0 /* GifFunctions.swift in Sources */,
 				B8FD14F72178AFB20019FAA0 /* Texture.swift in Sources */,
 				B84C18722188DC7100E08A47 /* TestGameViewController.swift in Sources */,
 				B8FD14FB2179D9CE0019FAA0 /* PathFinder.swift in Sources */,
 				B82CEF9A218C9820008F1FDF /* ResultViewController.swift in Sources */,
+				6A2E396A21A4648B0050F530 /* ShopViewController.swift in Sources */,
 				4E6625AC21A4138600325088 /* CalendarViewController.swift in Sources */,
 				B8444262218A241E000C69E0 /* gif.swift in Sources */,
 				B8FD14F92178B7FF0019FAA0 /* Character.swift in Sources */,
@@ -697,15 +733,19 @@
 				4EACCAAB218CA26B00249FB3 /* UICollectionGridViewController.swift in Sources */,
 				B81034442181E75B0082D003 /* CourseViewController.swift in Sources */,
 				4EACCAAD218CB07700249FB3 /* UICollectionGridViewCell.swift in Sources */,
+				6AF9240621A9436A0083EDB0 /* FoodViewController.swift in Sources */,
 				B8FD1504217C3A250019FAA0 /* InformationSettingViewController.swift in Sources */,
 				4EACCAB1218CB0DF00249FB3 /* ClinicViewController.swift in Sources */,
 				4EACCAAF218CB09300249FB3 /* UICollectionGridViewLayout.swift in Sources */,
 				B8DFF076218097DC00B1B4ED /* ExpertHelpViewController.swift in Sources */,
 				B8FD14BD2177299D0019FAA0 /* AppDelegate.swift in Sources */,
 				B81034462181F6050082D003 /* PraticeViewController.swift in Sources */,
+				6AFDD5CF21A9484A00CE2A31 /* BgViewController.swift in Sources */,
 				B8FD1507217C8ACF0019FAA0 /* CigaretteAddictionViewController.swift in Sources */,
 				B811F5B22185C9C10099D148 /* SettingViewController.swift in Sources */,
+				6AF9240221A7DB0A0083EDB0 /* FurnitureViewController.swift in Sources */,
 				4E2FD646218214C800D66222 /* DB_Data.swift in Sources */,
+				6A6D930621ADA22B009066BA /* FoodDetailViewController.swift in Sources */,
 				B84C18752188DE5500E08A47 /* GameViewController.swift in Sources */,
 				B8FD14FD2179DAA60019FAA0 /* Global.swift in Sources */,
 			);
@@ -885,7 +925,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = QuitCatIsoGame/QuitCatIsoGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4VGP3358G3;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -905,7 +945,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = QuitCatIsoGame/QuitCatIsoGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4VGP3358G3;
 				INFOPLIST_FILE = QuitCatIsoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
