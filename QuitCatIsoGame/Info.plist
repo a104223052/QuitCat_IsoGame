@@ -51,7 +51,11 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
+<<<<<<< HEAD
 	<string>Login</string>
+=======
+	<string>TestGame</string>
+>>>>>>> develop_Gary
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

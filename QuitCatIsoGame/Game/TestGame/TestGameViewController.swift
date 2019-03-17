@@ -14,6 +14,8 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
     }
 
+    @IBOutlet weak var fishImageView: UIImageView!
+    @IBOutlet weak var shitImageView: UIImageView!
     @IBOutlet weak var myGifView: UIImageView!
     @IBOutlet weak var feedView: UIView!
     @IBOutlet var selectedButton: [UIButton]!
@@ -24,13 +26,42 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBOutlet var recordView: [UIView]!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var ddcountlabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet var statusView: UIView!
+    @IBOutlet weak var lifeslider: UISlider!
+    @IBOutlet weak var hungryslider: UISlider!
+    @IBOutlet weak var moodslider: UISlider!
+    @IBOutlet weak var environmentslider: UISlider!
+    @IBOutlet weak var statuslabel: UILabel!
     
+    @IBOutlet var moneyView: UIView!
+    @IBOutlet weak var moneyText: UILabel!
+    @IBOutlet weak var scoreText: UILabel!
+    
+    let screenBoundsHeight = UIScreen.main.bounds.size.height
+    let screenBoundsWidth  = UIScreen.main.bounds.size.width
     let userDefault = UserDefaults.standard
     var db:Firestore!
     var local_userdata: Usersdata!
+    var local_pet:Pet!
+    var local_pet_environment:Pet_Environment!
+    var gradientlayer:CAGradientLayer!
+    var viewname:String = ""
     var record = 0
     var count = 1
+    var status:Bool = true
+    
+    var life = 0
+    var hurgry = 0
+    var mood = 0
+    var environment = 0
+    var o2 = 0
+    var co2 = 0
+    var score = 0
+    var fishcoin = 0
+    
+    
     
     var radioButtonController1: SSRadioButtonsController?
     
@@ -39,32 +70,108 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         super.viewDidLoad()
         db = Firestore.firestore()
         
+        //設置petImage
         myGifView.loadGif(name: "standtest_0")
+        myGifView.isUserInteractionEnabled = true
+        myGifView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imagePetTap)))
+        
+        //設置fishImage
+        fishImageView.image = UIImage(named: "FISH")
+        fishImageView.isUserInteractionEnabled = true
+        fishImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.fishImageViewTap)))
+        fishImageView.isHidden = true
+
+        //設置shitImage
+        shitImageView.image = UIImage(named: "FISH")
+        shitImageView.isUserInteractionEnabled = true
+        shitImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.shitImageViewTap)))
+        shitImageView.isHidden = true
         
         radioButtonController1 = SSRadioButtonsController(buttons: selectedButton)//cp this
         radioButtonController1!.delegate = self//cp this
         radioButtonController1!.shouldLetDeSelect = true
+        
+        //slider 消除圓點
+        let size = CGSize(width: 1, height: 1)
+        UIGraphicsBeginImageContext(size)
+        let finalImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        lifeslider.setThumbImage(finalImage, for: .normal)
+        hungryslider.setThumbImage(finalImage, for: .normal)
+        moodslider.setThumbImage(finalImage, for: .normal)
+        environmentslider.setThumbImage(finalImage, for: .normal)
         feedView.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
-        
         //kai need to fill userID
-        //queryAUser(userID: "userID")
+        queryAUser(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
+        queryPet(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
+        queryPet_Environment(userID: "LWgrvASWtBeExgf9yIq2pIj0Toa2")
         
-        //And you can call like  let score = local_userdata.score  to get score
-
+        
+        
+        
+        
+        self.userDefault.set(0, forKey: "fish")
+        self.userDefault.set(0, forKey: "shit")
+        self.userDefault.set(1545393695, forKey: "FishTime")
+        self.userDefault.set(1545393695, forKey: "ShitTime")
+        //判斷時間 大便跟魚產生
+        let pastShitTime:Int = userDefault.value(forKey: "ShitTime") as! Int
+        let pastFishTime:Int = userDefault.value(forKey: "FishTime") as! Int
+        let fish:Int = userDefault.value(forKey: "fish") as! Int
+        let shit:Int = userDefault.value(forKey: "shit") as! Int
+        let nowTime:Int = getNowTimeDate()
+        
+        if(fish == 1){
+            fishImageView.isHidden = false
+        }
+        if(shit == 1){
+            shitImageView.isHidden = false
+        }
+        
+        print(nowTime)
+        
+        if( (nowTime - pastFishTime) >= 7200){
+            fishImageView.isHidden = false
+            userDefault.set(1, forKey: "fish")
+            userDefault.synchronize()
+        }
+        if( (nowTime - pastShitTime) >= 14400){
+            shitImageView.isHidden = false
+            userDefault.set(1, forKey: "fish")
+            userDefault.synchronize()
+        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    @objc func fishImageViewTap(){
+        let nowTime:Int = getNowTimeDate()
+        userDefault.set(nowTime, forKey: "FishTime")
+        userDefault.synchronize()
         
+        
+    }
+    @objc func shitImageViewTap(){
+        let nowTime:Int = getNowTimeDate()
+        userDefault.set(nowTime, forKey: "ShitTime")
+        userDefault.synchronize()
+        
+        
+    }
+    
+    
+    @objc func imagePetTap(){
+        displayPetStatusView(true)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         for myView in recordView
         {
             view.addSubview(myView)
             myView.layer.cornerRadius = 10
-            
             myView.translatesAutoresizingMaskIntoConstraints = false
             myView.widthAnchor.constraint(equalToConstant: 340).isActive = true
             myView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-            
             if myView.tag == 0{
                 let c = myView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 318)
                 myView.heightAnchor.constraint(equalToConstant: 318).isActive = true
@@ -82,12 +189,24 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
                 c.identifier = "recordView3Bottom"
                 c.isActive = true
             }
-            
-            
         }
+        
+        view.addSubview(statusView)
+        statusView.layer.cornerRadius = 10
+        statuslabel.layer.cornerRadius = 10
+        statuslabel.layer.masksToBounds = true
+        statusView.translatesAutoresizingMaskIntoConstraints = false
+        statusView.widthAnchor.constraint(equalToConstant: 244).isActive = true
+        statusView.heightAnchor.constraint(equalToConstant: 130).isActive = true
+        statusView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: (screenBoundsWidth-244)/2).isActive=true
+        
+        let cd = statusView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 341)
+        cd.identifier = "petStatus"
+        cd.isActive = true
         super.viewWillAppear(animated)
+        
+        
     }
-    
     
     @IBAction func UP(_ sender: Any) {
         count += 1
@@ -102,7 +221,6 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
             ddcountlabel.text = "剩餘 " + String(10 - count) + " 支"
         }
     }
-    
     @IBAction func settingBar(_ sender: Any) {
         if settingBar.value == Float(0) {
             settinglabel.text = "今天不抽"
@@ -121,23 +239,52 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     @IBAction func feeding2(_ sender: Any) {
         displayDatePickerView(true)
     }
-    
     @IBAction func feeding3(_ sender: Any) {
         displayDatePickerView(true)
-        
         //kai neet to fill
-        
         //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
-        
         if let userID = self.userDefault.string(forKey: "userID") {
             addSmokeRecordFunc(userID: userID, time: getUTCDate(), ratio: String(format: "%.2f", settingBar.value), doing: (radioButtonController1?.selectedButton()?.titleLabel?.text)!, daysmokecount: countLabel.text!)
         }
     }
-    
     @IBAction func cancelFeeding(_ sender: Any) {
         cancelDatePickerView()
     }
+    func creatGradientLayer(){
+        gradientlayer = CAGradientLayer()
+        gradientlayer.frame = self.view.bounds
+    }
     
+    func displayPetStatusView(_ show:Bool){
+        lifeslider.setValue(Float(local_pet.life!), animated: true)
+        hungryslider.setValue(Float(local_pet.hungry!), animated: true)
+        moodslider.setValue(Float(local_pet.mood!), animated: true)
+        environmentslider.setValue(Float(local_pet_environment.oxygen! - local_pet_environment.co2!), animated: true)
+        var tempHeight = (screenBoundsHeight-130)/2
+        if(status == true){
+            for c in view.constraints{
+                if c.identifier == "petStatus"
+                {
+                    c.constant = (show) ? -40 : tempHeight
+                    status = false
+                    break
+                }
+            }
+        }else if(status == false){
+            for c in view.constraints{
+                if c.identifier == "petStatus"
+                {
+                    c.constant = (show) ? tempHeight : -40
+                    status = true
+                    break
+                }
+            }
+        }
+        UIView.animate(withDuration: 0.5)
+        {
+            self.view.layoutIfNeeded()
+        }
+    }
     
     func displayDatePickerView(_ show: Bool)
     {
@@ -276,18 +423,47 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
     }
     
+    func queryPet(userID : String) {
+        let docRef = self.db.collection("Users").document(userID).collection("pet").document("pet")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let aUser = Pet(aDoc: document)
+                self.local_pet = aUser
+                print("Success query")
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    //queryPet_Environment
+    func queryPet_Environment(userID : String) {
+        let docRef = self.db.collection("Users").document(userID).collection("pet").document("environment")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let aUser = Pet_Environment(aDoc: document)
+                self.local_pet_environment = aUser
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    func getNowTimeDate() -> Int{
+        let now:Date = Date()
+        let timeInterval:TimeInterval = now.timeIntervalSince1970
+        let time:Int = Int(timeInterval)
+        return time
+    }
+    
     func getUTCDate() -> String
     {
         // 獲取當前時間
         let now:Date = Date()
-        
         // 建立時間格式
         let dateFormat:DateFormatter = DateFormatter()
         dateFormat.dateFormat = "yyyy/MM/dd/HH:mm:ss"
         
         // 將當下時間轉換成設定的時間格式
         let dateString:String = dateFormat.string(from: now)
-        
         return dateString
     }
     
@@ -301,20 +477,24 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         return btn
     }
     
-//    @IBAction func goExpertHelp(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "ExpertHelp", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "ExpertHelpViewController")
-//        self.present(controller, animated: false, completion: nil)
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    */
+
 
 }

@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
-
-        
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
             
@@ -31,17 +29,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UNUserNotificationCenter.current().requestAuthorization(
                 options: authOptions,
                 completionHandler: {_, _ in })
-            
         } else {
             let settings: UIUserNotificationSettings =
                 UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
         }
-        
         application.registerForRemoteNotifications()
-        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        UserDefaults.standard.set(false, forKey:"everLaunched")
+        
+        if (!(UserDefaults.standard.bool(forKey: "everLaunched"))) {
+            UserDefaults.standard.set(true, forKey:"everLaunched")
+            let guideViewController = GuideViewController()
+            self.window!.rootViewController=guideViewController
+            print("guideview launched!")
+        }
         return true
     }
     
@@ -56,7 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
         // Print full message.
         print(userInfo)
     }
@@ -71,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
         // Print full message.
         print(userInfo)
         
@@ -98,9 +99,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        
     }
+
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -120,6 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
+
 
 @available(iOS 10, *)
 extension AppDelegate : UNUserNotificationCenterDelegate {
@@ -152,17 +154,12 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
         // Print full message.
         print(userInfo)
         
         completionHandler()
     }
 }
-
-
-
-
 extension AppDelegate : MessagingDelegate {
     // [START refresh_token]
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
@@ -180,5 +177,4 @@ extension AppDelegate : MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
         print("Received data message: \(remoteMessage.appData)")
     }
-    // [END ios_10_data_message]
 }
