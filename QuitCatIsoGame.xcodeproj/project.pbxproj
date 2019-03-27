@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432F54CD2247937B00B26F6D /* QApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F54CC2247937B00B26F6D /* QApi.swift */; };
 		449EFFA6E093D896E512052F /* Pods_QuitCatIsoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8F68940DE27B4ECCA44691 /* Pods_QuitCatIsoGame.framework */; };
 		4E2FD646218214C800D66222 /* DB_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2FD645218214C800D66222 /* DB_Data.swift */; };
 		4E6625AC21A4138600325088 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6625AB21A4138600325088 /* CalendarViewController.swift */; };
@@ -84,6 +85,7 @@
 		1C75ADF2621C8D73B8398138 /* Pods_QuitCatIsoGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8F68940DE27B4ECCA44691 /* Pods_QuitCatIsoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitCatIsoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA350FB3226F3B130A3115B /* Pods-QuitCatIsoGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitCatIsoGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitCatIsoGameUITests/Pods-QuitCatIsoGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		432F54CC2247937B00B26F6D /* QApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QApi.swift; sourceTree = "<group>"; };
 		4E2FD645218214C800D66222 /* DB_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Data.swift; sourceTree = "<group>"; };
 		4E6625AB21A4138600325088 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4E6625AF21A4169600325088 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				B8FD14CE2177299F0019FAA0 /* Info.plist */,
 				B8DFF06A217F3C5400B1B4ED /* SSRadioButtonController */,
 				9953CB022180E73A00F6044A /* DBFunc.swift */,
+				432F54CC2247937B00B26F6D /* QApi.swift */,
 				4E2FD645218214C800D66222 /* DB_Data.swift */,
 				B8444261218A241E000C69E0 /* gif.swift */,
 				B891B0BE219B35E5004B9FCE /* SwitchPages.swift */,
@@ -385,7 +388,6 @@
 				B8FD14B62177299D0019FAA0 /* Frameworks */,
 				B8FD14B72177299D0019FAA0 /* Resources */,
 				5AA12147B24A482320E5BBC3 /* [CP] Embed Pods Frameworks */,
-				604B327D87714E49C8A9FB71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -556,78 +558,32 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-QuitCatIsoGame/Pods-QuitCatIsoGame-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-QuitCatIsoGame/Pods-QuitCatIsoGame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/CSVImporter/CSVImporter.framework",
 				"${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSVImporter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CVCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitCatIsoGame/Pods-QuitCatIsoGame-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		604B327D87714E49C8A9FB71 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-QuitCatIsoGame/Pods-QuitCatIsoGame-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitCatIsoGame/Pods-QuitCatIsoGame-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuitCatIsoGame/Pods-QuitCatIsoGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		70D49B04AC60045B8EA22A6A /* [CP] Check Pods Manifest.lock */ = {
@@ -703,6 +659,7 @@
 				B81034442181E75B0082D003 /* CourseViewController.swift in Sources */,
 				4EACCAAD218CB07700249FB3 /* UICollectionGridViewCell.swift in Sources */,
 				B8FD1504217C3A250019FAA0 /* InformationSettingViewController.swift in Sources */,
+				432F54CD2247937B00B26F6D /* QApi.swift in Sources */,
 				4EACCAB1218CB0DF00249FB3 /* ClinicViewController.swift in Sources */,
 				4EACCAAF218CB09300249FB3 /* UICollectionGridViewLayout.swift in Sources */,
 				B8DFF076218097DC00B1B4ED /* ExpertHelpViewController.swift in Sources */,

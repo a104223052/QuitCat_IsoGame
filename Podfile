@@ -6,12 +6,12 @@ target 'QuitCatIsoGame' do
   use_frameworks!
 
   # Pods for QuitCatIsoGame
-  pod 'Firebase/Auth'
-  pod 'Firebase/Core'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Messaging'
-  pod 'FirebaseUI/Auth'
-  pod 'FirebaseUI/Google'
+  #pod 'Firebase/Auth'
+  #pod 'Firebase/Core'
+  #pod 'Firebase/Firestore'
+  #pod 'Firebase/Messaging'
+  #pod 'FirebaseUI/Auth'
+  #pod 'FirebaseUI/Google'
   pod 'SDWebImage'
   pod 'Bolts'
   pod 'FBSDKCoreKit'

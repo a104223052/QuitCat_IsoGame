@@ -4,6 +4,8 @@
 
 ![pod](https://img.shields.io/cocoapods/v/CVCalendar.svg)
 [![License](https://img.shields.io/cocoapods/l/CVCalendar.svg)](http://cocoapods.org/pods/CVCalendar)
+[![Build Status](https://travis-ci.org/CVCalendar/CVCalendar.svg?branch=master)](https://travis-ci.org/CVCalendar/CVCalendar)
+[![Twitter](https://img.shields.io/badge/twitter-@elsesiy-blue.svg)](http://twitter.com/elsesiy)
 
 Overview
 ==========
@@ -177,13 +179,13 @@ Version matrix
 ==========
 **CVCalendar** adapts the newest swift language syntax but keeps revisions as stated below:
 
-| CVCalendar | Swift    | Xcode    | Release Notes |
-| ---------- | -------- | -------- | ------------  | 
-|     1.6    | 4.x      | 8.x, 9.x |     HEAD      |
-|     1.5    | 3.x      | 8.x, 9.x | swift3-branch |
-|     1.4    | 3.x      | 7.x, 8.0 |  Unsupported  |
-|     1.3    | 2.x      | 7.x      |  Unsupported  |
-|     1.2    | 1.x      | 7.x      |  Unsupported  |
+| CVCalendar | Swift    | Xcode          | Release Notes |
+| ---------- | -------- | -------------- | ------------  | 
+|     1.6    | 4.x      | 8.x, 9.x, 10.x |     HEAD      |
+|     1.5    | 3.x      | 8.x, 9.x       | swift3-branch |
+|     1.4    | 3.x      | 7.x, 8.0       |  Unsupported  |
+|     1.3    | 2.x      | 7.x            |  Unsupported  |
+|     1.2    | 1.x      | 7.x            |  Unsupported  |
 
 [Advanced API](https://github.com/CVCalendar/CVCalendar/wiki/Advanced-API)
 ==========

@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
     func didSelectButton(selectedButton: UIButton?) {
         
     }
 
-    var db:Firestore!
+   // var db:Firestore!
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var radioButton: [UIButton]!
@@ -26,7 +26,7 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        db = Firestore.firestore()
+      //  db = Firestore.firestore()
 
         scoreView.layer.cornerRadius = 10
         contentView.layer.cornerRadius = 10
@@ -42,17 +42,17 @@ class ResultViewController: UIViewController, SSRadioButtonControllerDelegate {
 
     
 
-    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
-        db.collection("Users").document(userID).collection(collection).document(document).updateData(
-            [schema:upload]
-        ) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-    }
+//    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
+//        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+//            [schema:upload]
+//        ) { err in
+//            if let err = err {
+//                print("Error writing document: \(err)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
+//    }
     /*
     // MARK: - Navigation
 

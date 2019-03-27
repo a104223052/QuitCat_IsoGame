@@ -8,7 +8,8 @@
 
 import UIKit
 import FBSDKLoginKit
-import Firebase
+//import Firebase
+
 
 
 
@@ -47,41 +48,43 @@ class LoginViewController: UIViewController {
                 print("Failed to login: \(error?.localizedDescription)")
                 return
             }
-            // 取得登入者的token失敗敗
+            // 取得登入者的token失敗
             if FBSDKAccessToken.current() == nil {
                 print("Failed to get access token")
                 return
             }
             
             print("tokenString: \(FBSDKAccessToken.current().tokenString)")
-            
+            let api = QApi()
+            api.regeister()
             // 擷取用戶的access token，並通過調用將其轉換為Firebase的憑證
-            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            
+//            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+//            
             // 呼叫Firebase的API處理登入的動作
-            Auth.auth().signIn(with: credential, completion: { (user, error) in
-                if error != nil {
-                    print((error?.localizedDescription)!)
-                    return
-                }
-                // 使用FB登入成功
-                print("使用FB登入成功")
-                let user = Auth.auth().currentUser
-                if let user = user{
-                    let userID = user.uid
-                    self.userDefault.set(userID, forKey: "userID")
-                    self.userDefault.synchronize()
-                    //UID 需在每個畫面都有
-                }
-                
-                let switchPages = SwitchPages()
-                switchPages.switchFromRight(viewControllew: self)
-                
-                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "InformationSettingViewController") {
-                    self.present(controller, animated: false, completion: nil)
-                }
-            })
+//            Auth.auth().signIn(with: credential, completion: { (user, error) in
+//                if error != nil {
+//                    print((error?.localizedDescription)!)
+//                    return
+//                }
+//                // 使用FB登入成功
+//                print("使用FB登入成功")
+//                let user = Auth.auth().currentUser
+//                if let user = user{
+//                    let userID = user.uid
+//                    self.userDefault.set(userID, forKey: "userID")
+//                    self.userDefault.synchronize()
+//                    //UID 需在每個畫面都有FbID:String, FbToken:String, name:String, email:String//                }
+//
+//                let switchPages = SwitchPages()
+//                switchPages.switchFromRight(viewControllew: self)
+//
+//                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "InformationSettingViewController") {
+//                    self.present(controller, animated: false, completion: nil)
+//                }
+//            })
         }
+        
+        
     }
     /*
     // MARK: - Navigation

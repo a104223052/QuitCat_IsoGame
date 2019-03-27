@@ -8,7 +8,7 @@
 
 import UIKit
 import Photos
-import Firebase
+//import Firebase
 
 /***
  database
@@ -21,7 +21,7 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     }
     
     
-    var db:Firestore!
+   // var db:Firestore!
     var img :UIImageView!
     var sheet:UIAlertController!
     var sourceType = UIImagePickerController.SourceType.photoLibrary //將sourceType賦一個初值類型，防止調用時不賦值出現崩潰
@@ -41,7 +41,7 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        db = Firestore.firestore()
+       // db = Firestore.firestore()
 
         PersonalPhotoImage.layer.cornerRadius = PersonalPhotoImage.frame.size.width/2
         PersonalPhotoImage.layer.borderColor = UIColor.init(red: 83/255, green: 120/255, blue: 158/255, alpha: 1).cgColor
@@ -180,17 +180,17 @@ class InformationSettingViewController: UIViewController, UIImagePickerControlle
     }
     
     
-    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
-        db.collection("Users").document(userID).collection(collection).document(document).updateData(
-            [schema:upload]
-        ) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-    }
+//    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
+//        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+//            [schema:upload]
+//        ) { err in
+//            if let err = err {
+//                print("Error writing document: \(err)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
+//    }
     
     @IBAction func enterButtonClick(_ sender: Any) {
         //Kai need to fill

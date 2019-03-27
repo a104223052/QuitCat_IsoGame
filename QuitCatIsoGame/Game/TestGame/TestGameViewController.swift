@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     func didSelectButton(selectedButton: UIButton?) {
@@ -27,8 +27,8 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     
     
     let userDefault = UserDefaults.standard
-    var db:Firestore!
-    var local_userdata: Usersdata!
+   // var db:Firestore!
+  //  var local_userdata: Usersdata!
     var record = 0
     var count = 1
     
@@ -37,7 +37,7 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        db = Firestore.firestore()
+      //  db = Firestore.firestore()
         
         myGifView.loadGif(name: "standtest_0")
         
@@ -129,9 +129,9 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         
         //time = 2018/11/10 , ratio = 50% , doint = "Drink" , daysmokecount = "2"
         
-        if let userID = self.userDefault.string(forKey: "userID") {
-            addSmokeRecordFunc(userID: userID, time: getUTCDate(), ratio: String(format: "%.2f", settingBar.value), doing: (radioButtonController1?.selectedButton()?.titleLabel?.text)!, daysmokecount: countLabel.text!)
-        }
+//        if let userID = self.userDefault.string(forKey: "userID") {
+//            addSmokeRecordFunc(userID: userID, time: getUTCDate(), ratio: String(format: "%.2f", settingBar.value), doing: (radioButtonController1?.selectedButton()?.titleLabel?.text)!, daysmokecount: countLabel.text!)
+//        }
     }
     
     @IBAction func cancelFeeding(_ sender: Any) {
@@ -238,43 +238,43 @@ class TestGameViewController: UIViewController, SSRadioButtonControllerDelegate{
         }
     }
     
-    func addSmokeRecordFunc(userID:String,time:String,ratio:String,doing:String,daysmokecount:String){
-        db.collection("Users").document(userID).collection("smokerecord").addDocument(data:[
-            "time" :time ,
-            "ratio" : ratio,
-            "doing" : doing,
-            "daysmokecount" : daysmokecount
-        ]){err in
-            if let err = err{
-                print("Error add")
-            }else{
-                print("Document add")
-            }
-        }
-    }
-    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
-        db.collection("Users").document(userID).collection(collection).document(document).updateData(
-            [schema:upload]
-        ) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-    }
-    //queryUserdata
-    func queryAUser(userID : String) {
-        let docRef = self.db.collection("Users").document(userID).collection("userdata").document("userdata")
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let aUser = Usersdata(aDoc: document)
-                self.local_userdata = aUser
-            } else {
-                print("Document does not exist")
-            }
-        }
-    }
+//    func addSmokeRecordFunc(userID:String,time:String,ratio:String,doing:String,daysmokecount:String){
+//        db.collection("Users").document(userID).collection("smokerecord").addDocument(data:[
+//            "time" :time ,
+//            "ratio" : ratio,
+//            "doing" : doing,
+//            "daysmokecount" : daysmokecount
+//        ]){err in
+//            if let err = err{
+//                print("Error add")
+//            }else{
+//                print("Document add")
+//            }
+//        }
+//    }
+//    func setFunc(userID:String,collection:String,document:String,schema:String,upload:String){
+//        db.collection("Users").document(userID).collection(collection).document(document).updateData(
+//            [schema:upload]
+//        ) { err in
+//            if let err = err {
+//                print("Error writing document: \(err)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
+//    }
+//    //queryUserdata
+//    func queryAUser(userID : String) {
+//        let docRef = self.db.collection("Users").document(userID).collection("userdata").document("userdata")
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let aUser = Usersdata(aDoc: document)
+//                self.local_userdata = aUser
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+//    }
     
     func getUTCDate() -> String
     {
